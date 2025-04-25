@@ -184,10 +184,7 @@ export default function CartPage() {
               <Button variant="outline" onClick={clearCart}>
                 Vider le panier
               </Button>
-              <div className="text-right">
-                <div className="text-sm text-muted-foreground mb-1">Total</div>
-                <div className="text-2xl font-bold">{cartTotal.toFixed(2)} DT</div>
-              </div>
+            
             </CardFooter>
           </Card>
 
