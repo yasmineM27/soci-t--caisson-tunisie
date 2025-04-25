@@ -13,7 +13,6 @@ interface Product {
   name: string
   description: string
   images: string[]
-  price: number
   currency: string
   slug: string
   reviews?: {
@@ -102,9 +101,7 @@ export function RelatedProducts({ products }: RelatedProductsProps) {
             </CardHeader>
             <CardContent className="pb-2">
               <p className="text-sm text-muted-foreground line-clamp-2">{product.description}</p>
-              <p className="font-bold mt-2">
-                {product.price.toFixed(2)} {product.currency}
-              </p>
+              
             </CardContent>
             <CardFooter className="pt-0 mt-auto">
               <Button asChild className="w-full">

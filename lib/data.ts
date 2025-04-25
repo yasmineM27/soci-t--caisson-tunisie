@@ -108,19 +108,19 @@ export interface Product {
   export const products: Product[] = [
     {
       id: 1,
-      name: "Coffret Tunnel pour Volet Roulant",
+      name: "Coffret volet roulant",
       slug: "coffret-tunnel-volet-roulant",
       description: "Solution légère et isolante pour l'installation de volets roulants.",
       longDescription: `
-        <p>Le coffret tunnel pour volet roulant en polystyrène expansé (EPS) est une solution innovante qui combine légèreté et performance d'isolation thermique. Conçu pour faciliter l'installation des volets roulants, ce coffret tunnel offre une excellente isolation thermique et acoustique, contribuant ainsi à l'efficacité énergétique globale du bâtiment.</p>
+        <p>Le Coffret volet roulant en polystyrène expansé (EPS) est une solution innovante qui combine légèreté et performance d'isolation thermique. Conçu pour faciliter l'installation des volets roulants, ce coffret tunnel offre une excellente isolation thermique et acoustique, contribuant ainsi à l'efficacité énergétique globale du bâtiment.</p>
         
         <p>Sa structure en polystyrène expansé garantit une durabilité exceptionnelle tout en étant facile à manipuler et à installer. Nos coffrets tunnel sont fabriqués avec des matériaux de haute qualité pour assurer une longévité maximale et une résistance optimale aux conditions climatiques.</p>
         
-        <p>Disponible en différentes dimensions pour s'adapter à tous types d'ouvertures, notre coffret tunnel pour volet roulant est la solution idéale pour les constructions neuves comme pour les projets de rénovation.</p>
+        <p>Disponible en différentes dimensions pour s'adapter à tous types d'ouvertures, notre Coffret volet roulant est la solution idéale pour les constructions neuves comme pour les projets de rénovation.</p>
       `,
       images: [
-        "/placeholder.svg?height=600&width=800",
-        "/placeholder.svg?height=600&width=800&text=Image+2",
+        "/stc/coff.jpeg",
+        "/stc/01.png",
         "/placeholder.svg?height=600&width=800&text=Image+3",
         "/placeholder.svg?height=600&width=800&text=Image+4",
         "/placeholder.svg?height=600&width=800&text=Image+5",
@@ -156,8 +156,8 @@ export interface Product {
         <p>Disponibles en différentes épaisseurs et densités, nos panneaux isolants en polystyrène expansé sont adaptés aussi bien aux constructions neuves qu'aux projets de rénovation.</p>
       `,
       images: [
-        "/placeholder.svg?height=600&width=800",
-        "/placeholder.svg?height=600&width=800&text=Image+2",
+        "/stc/plaaaaa.png",
+        "/stc/OIP.png",
         "/placeholder.svg?height=600&width=800&text=Image+3",
       ],
       features: [
@@ -532,11 +532,11 @@ export interface Product {
     },
     {
       id: 2,
-      title: "Comment choisir le bon coffret tunnel pour volet roulant",
+      title: "Comment choisir le bon Coffret volet roulant",
       slug: "choisir-coffret-tunnel-volet-roulant",
       excerpt: "Guide complet pour sélectionner le coffret tunnel adapté à vos besoins et à votre type de construction.",
       content: `
-        <p>Le choix d'un coffret tunnel pour volet roulant dépend de plusieurs facteurs importants. Dans cet article, nous vous guidons à travers les critères essentiels à prendre en compte pour sélectionner le modèle le plus adapté à votre projet.</p>
+        <p>Le choix d'un Coffret volet roulant dépend de plusieurs facteurs importants. Dans cet article, nous vous guidons à travers les critères essentiels à prendre en compte pour sélectionner le modèle le plus adapté à votre projet.</p>
         
         <h2>Comprendre le rôle du coffret tunnel</h2>
         <p>Avant de faire votre choix, il est important de comprendre la fonction du coffret tunnel. Ce composant, généralement fabriqué en polystyrène expansé (EPS), est installé au-dessus de la fenêtre ou de la porte-fenêtre et sert à loger le mécanisme du volet roulant. Il joue également un rôle crucial dans l'isolation thermique et acoustique de l'ouverture.</p>
@@ -572,7 +572,7 @@ export interface Product {
         <p>Enfin, le coût est un facteur déterminant dans le choix d'un coffret tunnel. Les prix varient en fonction des dimensions, des performances thermiques et acoustiques, et des options supplémentaires. Il est recommandé de comparer plusieurs offres et de considérer le rapport qualité-prix plutôt que de se focaliser uniquement sur le coût initial.</p>
         
         <h2>Conclusion</h2>
-        <p>Le choix d'un coffret tunnel pour volet roulant doit être fait avec soin, en tenant compte de nombreux facteurs techniques et esthétiques. Chez Société Caisson Tunisie, nous proposons une gamme complète de coffrets tunnel en polystyrène expansé, adaptés à différents types de constructions et d'exigences. N'hésitez pas à consulter nos experts pour vous guider dans votre choix et vous assurer d'une installation optimale.</p>
+        <p>Le choix d'un Coffret volet roulant doit être fait avec soin, en tenant compte de nombreux facteurs techniques et esthétiques. Chez Société Caisson Tunisie, nous proposons une gamme complète de coffrets tunnel en polystyrène expansé, adaptés à différents types de constructions et d'exigences. N'hésitez pas à consulter nos experts pour vous guider dans votre choix et vous assurer d'une installation optimale.</p>
       `,
       image: "/placeholder.svg?height=600&width=1200",
       author: "Sami Meddeb",

@@ -14,7 +14,6 @@ import { useToast } from "@/hooks/use-toast"
 type CartItem = {
   id: number
   name: string
-  price: number
   quantity: number
   image: string
 }
@@ -41,7 +40,6 @@ export default function CartPage() {
   }, [cartItems, loading])
 
   // Calculer le total du panier
-  const cartTotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0)
 
   // Mettre à jour la quantité d'un produit
   const updateQuantity = (id: number, quantity: number) => {
@@ -137,7 +135,6 @@ export default function CartPage() {
                       <TableCell>
                         <div className="font-medium">{item.name}</div>
                       </TableCell>
-                      <TableCell className="text-right">{item.price.toFixed(2)} DT</TableCell>
                       <TableCell>
                         <div className="flex items-center justify-center">
                           <Button
@@ -167,7 +164,6 @@ export default function CartPage() {
                         </div>
                       </TableCell>
                       <TableCell className="text-right font-medium">
-                        {(item.price * item.quantity).toFixed(2)} DT
                       </TableCell>
                       <TableCell>
                         <Button

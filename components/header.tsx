@@ -17,9 +17,9 @@ const navigation = [
 ]
 
 const socialLinks = [
-  { name: "Facebook", href: "https://facebook.com/caissontunisie", icon: Facebook },
+  { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61566954398857", icon: Facebook },
   { name: "Instagram", href: "https://instagram.com/caissontunisie", icon: Instagram },
-  { name: "LinkedIn", href: "https://linkedin.com/company/caissontunisie", icon: Linkedin },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/ste-caisson-tunisie-b89763201/", icon: Linkedin },
 ]
 
 export function Header() {
@@ -43,14 +43,23 @@ export function Header() {
       )}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Société Caisson Tunisie</span>
-            <div className="h-10 w-auto font-bold text-xl flex items-center">
-              <span className="text-primary">Caisson Tunisie</span>
-            </div>
-          </Link>
-        </div>
+      <div className="flex lg:flex-1 items-center">
+  <Link href="/" className="-m-1.5 p-1.5 flex items-center">
+    <span className="sr-only">Société Caisson Tunisie</span>
+    {/* Logo */}
+    <div className="h-10 w-auto flex items-center">
+      <img 
+        src="/stc/logo.png" 
+        alt="Logo Société Caisson Tunisie" 
+        className="h-full w-auto" 
+      />
+    </div>
+    {/* Texte avec police fine */}
+    <div className="ml-3 hidden sm:block">
+      <span className="text-primary font-light text-lg">Société Caisson Tunisie</span>
+    </div>
+  </Link>
+</div>
         <div className="flex lg:hidden">
           <Button
             variant="ghost"
@@ -61,7 +70,7 @@ export function Header() {
             <Menu className="h-6 w-6" aria-hidden="true" />
           </Button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-8">
+        <div className="hidden lg:flex lg:gap-x-8 mr-8">
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -99,9 +108,13 @@ export function Header() {
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Société Caisson Tunisie</span>
-              <div className="h-8 w-auto font-bold text-lg">
-                <span className="text-primary">Caisson Tunisie</span>
-              </div>
+              <div className="h-10 w-auto flex items-center">
+          <img 
+            src="/stc/logo.png" 
+            alt="Logo Société Caisson Tunisie" 
+            className="h-full w-auto" 
+          />
+        </div>
             </Link>
             <Button variant="ghost" className="-m-2.5 rounded-md p-2.5" onClick={() => setMobileMenuOpen(false)}>
               <span className="sr-only">Fermer le menu</span>

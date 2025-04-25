@@ -89,15 +89,15 @@ export function HeroParallax({
                 <Link href={ctaLink}>{ctaText}</Link>
               </Button>
               {secondaryCtaText && secondaryCtaLink && (
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/20 transition-all duration-300 hover:scale-105"
-                  asChild
-                >
-                  <Link href={secondaryCtaLink}>{secondaryCtaText}</Link>
-                </Button>
-              )}
+    <Button
+      size="lg"
+      variant="outline"
+      className="border-primary text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
+      asChild
+    >
+      <Link href={secondaryCtaLink}>{secondaryCtaText}</Link>  
+    </Button>
+  )}
             </motion.div>
           </div>
         </motion.div>

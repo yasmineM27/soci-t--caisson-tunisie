@@ -192,7 +192,7 @@ export default function ContactPage() {
                     <SelectValue placeholder="Sélectionnez un produit" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="coffret-tunnel-volet-roulant">Coffret Tunnel pour Volet Roulant</SelectItem>
+                    <SelectItem value="coffret-tunnel-volet-roulant">Coffret volet roulant</SelectItem>
                     <SelectItem value="panneau-isolant-polystyrene">Panneau Isolant en Polystyrène</SelectItem>
                     <SelectItem value="fish-box-caisson-emballage">Fish Box / Caisson d'Emballage</SelectItem>
                     <SelectItem value="autre">Autre / Sur mesure</SelectItem>
@@ -263,9 +263,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold">Adresse</h3>
                     <p className="text-muted-foreground">
-                      Zone Industrielle
+                    zone industrielle-Technopole 5036
                       <br />
-                      Tunis, Tunisie
+                      Monastir, Tunisie
                     </p>
                   </div>
                 </div>
@@ -274,7 +274,7 @@ export default function ContactPage() {
                   <Phone className="h-5 w-5 text-primary mr-3 mt-0.5" />
                   <div>
                     <h3 className="font-semibold">Téléphone</h3>
-                    <p className="text-muted-foreground">+216 XX XXX XXX</p>
+                    <p className="text-muted-foreground">+216 93 642 505</p>
                   </div>
                 </div>
 
@@ -282,7 +282,7 @@ export default function ContactPage() {
                   <Mail className="h-5 w-5 text-primary mr-3 mt-0.5" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-muted-foreground">contact@caissontunisie.tn</p>
+                    <p className="text-muted-foreground">Caissontunisie20@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -305,8 +305,8 @@ export default function ContactPage() {
             {/* Google Maps would go here in a real implementation */}
             <div className="w-full h-full bg-muted flex items-center justify-center">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102239.58355570477!2d10.0936253!3d36.7976585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd337f5e7ef543%3A0xd671924e714a0275!2sTunis%2C%20Tunisia!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus" 
-                width="100%" 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.123456789012!2d10.7560129!3d35.7245437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13020d523c895777%3A0x46638e037bd253ea!2sSCT!5e0!3m2!1sen!2stn!4v1650000000000!5m2!1sen!2stn"
+      width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
                 allowFullScreen 

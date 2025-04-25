@@ -133,7 +133,7 @@ export default function DashboardPage() {
           <CardContent>
             <div className="space-y-4">
               {[
-                "Coffret Tunnel pour Volet Roulant",
+                "Coffret volet roulant",
                 "Panneau Isolant 3cm",
                 "Fish Box Standard",
                 "Panneau Isolant Sur Mesure",

@@ -12,11 +12,10 @@ import { useToast } from "@/components/ui/use-toast"
 const productsData = [
   {
     id: 1,
-    name: "Coffret Tunnel pour Volet Roulant",
+    name: "Coffret volet roulant",
     description: "Solution légère et isolante pour l'installation de volets roulants.",
-    image: "/placeholder.svg?height=200&width=200",
-    price: 120,
-    currency: "DT",
+    image: "/stc/coff.jpeg",
+    
     slug: "coffret-tunnel-volet-roulant",
     specifications: [
       { name: "Matériau", value: "Polystyrène expansé (EPS)" },
@@ -32,9 +31,7 @@ const productsData = [
     id: 2,
     name: "Panneau Isolant en Polystyrène",
     description: "Isolation thermique optimale pour murs, toitures et sols.",
-    image: "/placeholder.svg?height=200&width=200",
-    price: 85,
-    currency: "DT",
+    image: "/stc/plaaaaa.png",
     slug: "panneau-isolant-polystyrene",
     specifications: [
       { name: "Matériau", value: "Polystyrène expansé (EPS)" },
@@ -51,8 +48,8 @@ const productsData = [
     name: "Fish Box / Caisson d'Emballage",
     description: "Solution d'emballage isotherme pour le secteur agroalimentaire et la pêche.",
     image: "/placeholder.svg?height=200&width=200",
-    price: 95,
-    currency: "DT",
+   
+    
     slug: "fish-box-caisson-emballage",
     specifications: [
       { name: "Matériau", value: "Polystyrène expansé (EPS)" },
@@ -191,9 +188,7 @@ export default function CompareProductsPage() {
                     </div>
                     <h3 className="font-bold text-lg mb-2">{product.name}</h3>
                     <p className="text-sm text-muted-foreground mb-4">{product.description}</p>
-                    <p className="font-bold text-xl mb-4">
-                      {product.price.toFixed(2)} {product.currency}
-                    </p>
+              
                     <div className="flex flex-col gap-2">
                       <Button asChild size="sm">
                         <Link href={`/produits/${product.slug}`}>Voir détails</Link>
@@ -201,7 +196,6 @@ export default function CompareProductsPage() {
                       <AddToCartButton
                         productId={product.id}
                         productName={product.name}
-                        productPrice={product.price}
                         productImage={product.image}
                         size="sm"
                       />

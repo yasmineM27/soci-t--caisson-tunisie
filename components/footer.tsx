@@ -45,27 +45,27 @@ export function Footer() {
                 <MapPin className="h-5 w-5" />
               </div>
               <span className="text-sm group-hover:text-white/90 transition-colors">
-                Zone Industrielle, Tunis, Tunisie
+              zone industrielle-Technopole 5036 ,Monastir, Tunisie
               </span>
             </div>
             <div className="flex items-center gap-3 group">
               <div className="bg-primary-foreground/10 p-2 rounded-full">
                 <Phone className="h-5 w-5" />
               </div>
-              <span className="text-sm group-hover:text-white/90 transition-colors">+216 XX XXX XXX</span>
+              <span className="text-sm group-hover:text-white/90 transition-colors">+216 93 642 505</span>
             </div>
             <div className="flex items-center gap-3 group">
               <div className="bg-primary-foreground/10 p-2 rounded-full">
                 <Mail className="h-5 w-5" />
               </div>
-              <span className="text-sm group-hover:text-white/90 transition-colors">contact@caissontunisie.tn</span>
+              <span className="text-sm group-hover:text-white/90 transition-colors">Caissontunisie20@gmail.com</span>
             </div>
           </div>
           <div className="flex space-x-4">
             {[
-              { icon: Facebook, href: "https://facebook.com/caissontunisie" },
+              { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61566954398857" },
               { icon: Instagram, href: "https://instagram.com/caissontunisie" },
-              { icon: Linkedin, href: "https://linkedin.com/company/caissontunisie" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/ste-caisson-tunisie-b89763201/" },
             ].map((social, index) => (
               <Link
                 key={index}
@@ -108,7 +108,7 @@ export function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold mb-4">Société</h3>
+              <h3 className="text-sm font-semibold mb-6">Société</h3>
               <ul role="list" className="space-y-3">
                 {[
                   { name: "À propos", href: "/a-propos" },
@@ -127,12 +127,12 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
-            <h3 className="text-sm font-semibold mb-4">Newsletter</h3>
-            <p className="text-sm mb-4">Restez informé de nos dernières actualités et offres</p>
+          <div className="space-y-2">
+            <h3 className="text-xs font-semibold mb-2">Newsletter</h3>
+            <p className="text-xs mb-3 text-primary-foreground/80">Restez informé de nos dernières actualités et offres</p>
             {subscribed ? (
-              <div className="bg-primary-foreground/10 p-4 rounded-lg text-center">
-                <p className="text-sm">Merci pour votre inscription!</p>
+              <div className="bg-primary-foreground/10 p-2 rounded-md text-center">
+                <p className="text-xs">Merci pour votre inscription!</p>
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="flex gap-2">
@@ -142,9 +142,14 @@ export function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60"
+                  className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60 text-xs h-8"
                 />
-                <Button type="submit" variant="secondary">
+                <Button 
+                  type="submit" 
+                  variant="secondary"
+                  size="sm"
+                  className="h-8 px-3 text-xs"
+                >
                   S'inscrire
                 </Button>
               </form>
@@ -153,27 +158,27 @@ export function Footer() {
         </motion.div>
 
         <motion.div
-          className="mt-8 md:mt-0 md:w-full lg:w-1/3"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <h3 className="text-sm font-semibold mb-4">Notre emplacement</h3>
-          <div className="mt-2 h-64 rounded-lg overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.5107566261096!2d10.1897873!3d36.8384867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd34c6d1e93bef%3A0x4153c116184ecbef!2sCaisson%20Tunisie!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Google Maps"
-              className="rounded-lg"
-            ></iframe>
-          </div>
-        </motion.div>
+  className="mt-8 md:mt-0 md:w-full lg:w-1/3"
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5, delay: 0.4 }}
+>
+  <h3 className="text-sm font-semibold mb-4">Notre emplacement</h3>
+  <div className="mt-2 h-64 rounded-lg overflow-hidden">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.123456789012!2d10.7560129!3d35.7245437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13020d523c895777%3A0x46638e037bd253ea!2sSCT!5e0!3m2!1sen!2stn!4v1650000000000!5m2!1sen!2stn"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Emplacement SCT"
+      className="rounded-lg"
+    ></iframe>
+  </div>
+</motion.div>
       </div>
       <div className="mx-auto max-w-7xl border-t border-primary-foreground/10 px-6 py-6 text-center">
         <p className="text-xs">&copy; {new Date().getFullYear()} Société Caisson Tunisie. Tous droits réservés.</p>

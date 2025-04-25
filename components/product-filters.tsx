@@ -21,10 +21,6 @@ interface FilterGroup {
   options: FilterOption[]
 }
 
-interface PriceRange {
-  min: number
-  max: number
-}
 
 interface ProductFiltersProps {
   onFilterChange: (filters: any) => void
@@ -63,8 +59,6 @@ export function ProductFilters({ onFilterChange }: ProductFiltersProps) {
     },
   ])
 
-  const [priceRange, setPriceRange] = useState<PriceRange>({ min: 0, max: 500 })
-  const [selectedPriceRange, setSelectedPriceRange] = useState<PriceRange>({ min: 0, max: 500 })
   const [sortOption, setSortOption] = useState("featured")
 
   const handleCheckboxChange = (groupId: string, optionId: string) => {
@@ -82,20 +76,16 @@ export function ProductFilters({ onFilterChange }: ProductFiltersProps) {
     })
 
     setFilterGroups(updatedGroups)
-    applyFilters(updatedGroups, selectedPriceRange, sortOption)
+    applyFilters(updatedGroups, sortOption)
   }
 
-  const handlePriceChange = (value: number[]) => {
-    const newRange = { min: value[0], max: value[1] }
-    setSelectedPriceRange(newRange)
-  }
 
   const handleSortChange = (value: string) => {
     setSortOption(value)
-    applyFilters(filterGroups, selectedPriceRange, value)
+    applyFilters(filterGroups, value)
   }
 
-  const applyFilters = (groups: FilterGroup[], price: PriceRange, sort: string) => {
+  const applyFilters = (groups: FilterGroup[], sort: string) => {
     const activeFilters = {
       categories: groups
         .find((g) => g.id === "categories")
@@ -109,7 +99,6 @@ export function ProductFilters({ onFilterChange }: ProductFiltersProps) {
         .find((g) => g.id === "thickness")
         ?.options.filter((o) => o.checked)
         .map((o) => o.id),
-      price: price,
       sort: sort,
     }
 
@@ -122,40 +111,18 @@ export function ProductFilters({ onFilterChange }: ProductFiltersProps) {
       options: group.options.map((option) => ({ ...option, checked: false })),
     }))
     setFilterGroups(clearedGroups)
-    setSelectedPriceRange({ min: 0, max: 500 })
     setSortOption("featured")
     applyFilters(clearedGroups, { min: 0, max: 500 }, "featured")
   }
 
-  const getActiveFiltersCount = () => {
-    let count = 0
-    filterGroups.forEach((group) => {
-      group.options.forEach((option) => {
-        if (option.checked) count++
-      })
-    })
-    if (selectedPriceRange.min > 0 || selectedPriceRange.max < 500) count++
-    return count
-  }
 
-  const activeFiltersCount = getActiveFiltersCount()
 
   return (
     <div className="flex flex-col md:flex-row gap-4 mb-8">
       {/* Mobile Filters */}
       <div className="md:hidden">
         <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="outline" className="w-full">
-              <Filter className="h-4 w-4 mr-2" />
-              Filtres
-              {activeFiltersCount > 0 && (
-                <span className="ml-2 rounded-full bg-primary text-primary-foreground w-5 h-5 text-xs flex items-center justify-center">
-                  {activeFiltersCount}
-                </span>
-              )}
-            </Button>
-          </SheetTrigger>
+        
           <SheetContent side="left" className="w-[300px] sm:w-[400px]">
             <SheetHeader>
               <SheetTitle>Filtres</SheetTitle>
@@ -186,30 +153,14 @@ export function ProductFilters({ onFilterChange }: ProductFiltersProps) {
                     </AccordionContent>
                   </AccordionItem>
                 ))}
-                <AccordionItem value="price">
-                  <AccordionTrigger>Prix</AccordionTrigger>
-                  <AccordionContent>
-                    <div className="space-y-4">
-                      <Slider
-                        defaultValue={[priceRange.min, priceRange.max]}
-                        max={500}
-                        step={10}
-                        onValueChange={handlePriceChange}
-                      />
-                      <div className="flex items-center justify-between">
-                        <span>{selectedPriceRange.min} DT</span>
-                        <span>{selectedPriceRange.max} DT</span>
-                      </div>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
+               
               </Accordion>
             </div>
             <SheetFooter>
               <Button variant="outline" onClick={clearAllFilters} className="w-full">
                 Effacer les filtres
               </Button>
-              <Button onClick={() => applyFilters(filterGroups, selectedPriceRange, sortOption)} className="w-full">
+              <Button onClick={() => applyFilters(filterGroups, sortOption)} className="w-full">
                 Appliquer
               </Button>
             </SheetFooter>
@@ -259,29 +210,11 @@ export function ProductFilters({ onFilterChange }: ProductFiltersProps) {
             <Button variant="outline">
               Prix
               <ChevronDown className="ml-2 h-4 w-4" />
-              {(selectedPriceRange.min > 0 || selectedPriceRange.max < 500) && (
-                <span className="ml-1 rounded-full bg-primary text-primary-foreground w-5 h-5 text-xs flex items-center justify-center">
-                  1
-                </span>
-              )}
+              
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="start" className="w-56 p-4">
-            <div className="space-y-4">
-              <Slider
-                defaultValue={[priceRange.min, priceRange.max]}
-                max={500}
-                step={10}
-                onValueChange={handlePriceChange}
-              />
-              <div className="flex items-center justify-between">
-                <span>{selectedPriceRange.min} DT</span>
-                <span>{selectedPriceRange.max} DT</span>
-              </div>
-              <Button onClick={() => applyFilters(filterGroups, selectedPriceRange, sortOption)} className="w-full">
-                Appliquer
-              </Button>
-            </div>
+          
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
@@ -299,14 +232,7 @@ export function ProductFilters({ onFilterChange }: ProductFiltersProps) {
             <Check className={`mr-2 h-4 w-4 ${sortOption === "featured" ? "opacity-100" : "opacity-0"}`} />
             Recommandés
           </DropdownMenuItem>
-          <DropdownMenuItem onSelect={() => handleSortChange("price-asc")}>
-            <Check className={`mr-2 h-4 w-4 ${sortOption === "price-asc" ? "opacity-100" : "opacity-0"}`} />
-            Prix croissant
-          </DropdownMenuItem>
-          <DropdownMenuItem onSelect={() => handleSortChange("price-desc")}>
-            <Check className={`mr-2 h-4 w-4 ${sortOption === "price-desc" ? "opacity-100" : "opacity-0"}`} />
-            Prix décroissant
-          </DropdownMenuItem>
+   
           <DropdownMenuItem onSelect={() => handleSortChange("newest")}>
             <Check className={`mr-2 h-4 w-4 ${sortOption === "newest" ? "opacity-100" : "opacity-0"}`} />
             Nouveautés

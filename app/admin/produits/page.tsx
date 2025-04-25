@@ -15,65 +15,57 @@ import { useToast } from "@/hooks/use-toast"
 const initialProducts = [
   {
     id: 1,
-    name: "Coffret Tunnel pour Volet Roulant",
+    name: "Coffret volet roulant",
     category: "coffrets",
-    price: "Sur devis",
+    
     status: "active",
   },
   {
     id: 2,
     name: "Coffret Tunnel Standard",
     category: "coffrets",
-    price: "Sur devis",
     status: "active",
   },
   {
     id: 3,
     name: "Coffret Tunnel Grande Largeur",
     category: "coffrets",
-    price: "Sur devis",
     status: "active",
   },
   {
     id: 4,
     name: "Panneau Isolant 2cm",
     category: "panneaux",
-    price: "Sur devis",
     status: "active",
   },
   {
     id: 5,
     name: "Panneau Isolant 3cm",
     category: "panneaux",
-    price: "Sur devis",
     status: "active",
   },
   {
     id: 6,
     name: "Panneau Isolant Sur Mesure",
     category: "panneaux",
-    price: "Sur devis",
     status: "inactive",
   },
   {
     id: 7,
     name: "Fish Box Standard",
     category: "fishbox",
-    price: "Sur devis",
     status: "active",
   },
   {
     id: 8,
     name: "Fish Box Grande Capacité",
     category: "fishbox",
-    price: "Sur devis",
     status: "active",
   },
   {
     id: 9,
     name: "Caisson d'Emballage Personnalisé",
     category: "fishbox",
-    price: "Sur devis",
     status: "inactive",
   },
 ]
@@ -193,7 +185,6 @@ export default function ProductsPage() {
                     {product.category === "panneaux" && "Panneaux Isolants"}
                     {product.category === "fishbox" && "Fish Box"}
                   </TableCell>
-                  <TableCell>{product.price}</TableCell>
                   <TableCell>
                     <span
                       className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${

@@ -17,14 +17,14 @@ import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 const products = [
   {
     id: 1,
-    name: "Coffret Tunnel pour Volet Roulant",
+    name: "Coffret volet roulant", 
     description: "Solution légère et isolante pour l'installation de volets roulants.",
     longDescription: `
-      <p>Le coffret tunnel pour volet roulant en polystyrène expansé (EPS) est une solution innovante qui combine légèreté et performance d'isolation thermique. Conçu pour faciliter l'installation des volets roulants, ce coffret tunnel offre une excellente isolation thermique et acoustique, contribuant ainsi à l'efficacité énergétique globale du bâtiment.</p>
+      <p>Le Coffret volet roulant en polystyrène expansé (EPS) est une solution innovante qui combine légèreté et performance d'isolation thermique. Conçu pour faciliter l'installation des volets roulants, ce coffret tunnel offre une excellente isolation thermique et acoustique, contribuant ainsi à l'efficacité énergétique globale du bâtiment.</p>
       
       <p>Sa structure en polystyrène expansé garantit une durabilité exceptionnelle tout en étant facile à manipuler et à installer. Nos coffrets tunnel sont fabriqués avec des matériaux de haute qualité pour assurer une longévité maximale et une résistance optimale aux conditions climatiques.</p>
       
-      <p>Disponible en différentes dimensions pour s'adapter à tous types d'ouvertures, notre coffret tunnel pour volet roulant est la solution idéale pour les constructions neuves comme pour les projets de rénovation.</p>
+      <p>Disponible en différentes dimensions pour s'adapter à tous types d'ouvertures, notre Coffret volet roulant est la solution idéale pour les constructions neuves comme pour les projets de rénovation.</p>
     `,
     features: [
       "Légèreté et facilité d'installation",
@@ -87,15 +87,12 @@ const products = [
       videoUrl: "#",
     },
     images: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
+      "/stc/coff.jpeg",
+      "/stc/01.png",
+      "/stc/coff.jpeg",
+      "/stc/coff.jpeg",
+      "/stc/coff.jpeg",
     ],
-    price: 120,
-    comparePrice: 150,
-    currency: "DT",
     inStock: true,
     leadTime: "2-3 semaines",
     minOrder: 1,
@@ -156,10 +153,161 @@ const products = [
       },
     ],
   },
+  {
+    id: "2",
+      name: "Panneaux Isolants",
+      slug: "panneau-isolant-polystyrene",
+      description: "Panneaux isolants en polystyrène expansé pour l'isolation thermique",
+    longDescription: `
+      <p>Nos panneaux isolants en polystyrène expansé (EPS) offrent une solution d'isolation thermique exceptionnelle pour tous types de constructions. Fabriqués à partir de mousse EPS haute densité, ces panneaux présentent une structure à cellules fermées qui emprisonne l'air, garantissant ainsi une isolation optimale.</p>
+      
+      <p>Le polystyrène expansé utilisé dans nos panneaux est produit à partir de billes de polystyrène expansible contenant du pentane comme agent gonflant. Ce procédé de fabrication confère au matériau ses propriétés uniques de légèreté, de résistance thermique et d'intégrité structurelle.</p>
+      
+      <p>Idéal pour les nouvelles constructions comme pour les rénovations, nos panneaux EPS contribuent significativement à l'efficacité énergétique des bâtiments tout en étant faciles à manipuler et à installer.</p>
+    `,
+    features: [
+      "Excellente isolation thermique (valeur R élevée)",
+      "Légèreté facilitant la manipulation et l'installation",
+      "Résistance à l'humidité et inertie chimique",
+      "Structure à cellules fermées emprisonnant l'air",
+      "Intégrité structurelle même à faible densité",
+      "Absorption exceptionnelle des chocs",
+      "Résistance à la compression adaptée aux applications de construction",
+      "Disponible en différentes densités et épaisseurs",
+    ],
+    specifications: [
+      { name: "Matériau", value: "Polystyrène expansé (EPS)" },
+      { name: "Densité", value: "15-40 kg/m³ (selon application)" },
+      { name: "Conductivité thermique (λ)", value: "0,030-0,038 W/mK" },
+      { name: "Résistance à la compression", value: "100-400 kPa" },
+      { name: "Absorption d'eau (par immersion)", value: "< 3% du volume" },
+      { name: "Classement au feu", value: "Euroclasse E (standard) ou B (ignifugé)" },
+      { name: "Dimensions standards", value: "1200 x 600 mm, 1250 x 600 mm" },
+      { name: "Épaisseurs disponibles", value: "20 mm à 200 mm" },
+    ],
+    benefits: [
+      {
+        title: "Efficacité énergétique",
+        description: "Réduit significativement les déperditions thermiques, diminuant les coûts de chauffage et climatisation.",
+        icon: "energy",
+      },
+      {
+        title: "Polyvalence",
+        description: "Adapté aux murs, toitures, sols et sous-sols grâce à sa résistance à l'humidité.",
+        icon: "versatility",
+      },
+      {
+        title: "Durabilité",
+        description: "Conserve ses propriétés isolantes dans le temps, résiste à la pourriture et aux moisissures.",
+        icon: "durability",
+      },
+      {
+        title: "Économique",
+        description: "Solution d'isolation performante à un coût compétitif, réduisant les coûts de transport grâce à sa légèreté.",
+        icon: "savings",
+      },
+    ],
+    applications: [
+      "Isolation des murs extérieurs (ITE)",
+      "Isolation des toitures terrasses et inclinées",
+      "Isolation des planchers et sous-sols",
+      "Panneaux isolants structuraux (SIP)",
+      "Coffrages isolants pour béton (ICF)",
+      "Isolation phonique supplémentaire",
+    ],
+    installation: {
+      steps: [
+        "Préparer la surface (nettoyage, séchage)",
+        "Découper les panneaux aux dimensions nécessaires",
+        "Appliquer selon la technique choisie (collage, fixation mécanique)",
+        "Jointoyer les panneaux avec du ruban adhésif spécial",
+        "Réaliser les finitions (enduit, parement, etc.)",
+      ],
+      videoUrl: "#",
+    },
+    images: [
+      "/stc/plaaaaa.png",
+      "/stc/pp.JPG",
+      "/stc/OIP.JPG",
+      "/stc/OIP (1).JPG",
+      "/stc/2.png"
+    ],
+    inStock: true,
+    leadTime: "1-2 semaines",
+    minOrder: 10, // en m²
+    certification: ["ISO 9001", "Marquage CE", "Certification ACERMI"],
+    warranty: "10 ans",
+    slug: "panneau-isolant-polystyrene",
+    category: "isolation",
+    tags: ["isolation", "construction", "murs", "toiture", "energie"],
+    relatedProducts: [1, 3, 5],
+    reviews: {
+      average: 4.8,
+      count: 35,
+    },
+    faq: [
+      {
+        question: "Quelle est la différence entre les panneaux EPS standard et haute densité ?",
+        answer: "Les panneaux haute densité offrent une meilleure résistance mécanique et une légère amélioration des performances thermiques, idéale pour les applications structurelles ou soumises à des charges. Les panneaux standard conviennent parfaitement aux applications d'isolation courantes.",
+      },
+      {
+        question: "Les panneaux EPS sont-ils résistants à l'humidité ?",
+        answer: "Oui, la structure à cellules fermées du polystyrène expansé limite fortement l'absorption d'eau (<3% du volume), ce qui en fait un excellent choix pour les applications en sous-sol ou en milieu humide.",
+      },
+      {
+        question: "Peut-on utiliser ces panneaux pour l'isolation par l'extérieur ?",
+        answer: "Absolument. Nos panneaux EPS sont particulièrement adaptés à l'isolation thermique par l'extérieur (ITE) grâce à leur légèreté, leur facilité de mise en œuvre et leurs excellentes performances thermiques.",
+      },
+      {
+        question: "Quelle épaisseur choisir pour une isolation optimale ?",
+        answer: "L'épaisseur dépend de la zone climatique et des performances recherchées. En Tunisie, nous recommandons généralement des épaisseurs entre 60mm et 100mm pour une isolation efficace des murs.",
+      },
+      {
+        question: "Les panneaux EPS sont-ils recyclables ?",
+        answer: "Oui, le polystyrène expansé est 100% recyclable. Société Caisson Tunisie participe activement à des programmes de collecte et recyclage des déchets EPS.",
+      },
+    ],
+    downloads: [
+      { name: "Fiche technique EPS", url: "#", type: "pdf" },
+      { name: "Guide d'installation ITE", url: "#", type: "pdf" },
+      { name: "Certificat ACERMI", url: "#", type: "pdf" },
+    ],
+    projects: [
+      {
+        name: "Résidence Les Palmiers",
+        description: "Isolation thermique par l'extérieur avec panneaux EPS 80mm",
+        image: "/projects/palmiers.jpg",
+        slug: "residence-les-palmiers",
+      },
+      {
+        name: "Complexe commercial Carthage",
+        description: "Isolation toiture terrasse avec panneaux EPS haute densité",
+        image: "/projects/carthage.jpg",
+        slug: "complexe-carthage",
+      },
+    ],
+    variants: [
+      {
+        name: "EPS Standard",
+        description: "Pour isolation courante",
+        density: "15-20 kg/m³"
+      },
+      {
+        name: "EPS Haute Densité",
+        description: "Pour applications structurelles",
+        density: "30-40 kg/m³"
+      },
+      {
+        name: "EPS Ignifuge",
+        description: "Pour zones à réglementation incendie stricte",
+        density: "20-25 kg/m³"
+      }
+    ]
+  },
   // Autres produits...
 ]
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }: { params: { slug: string } }) {
   const product = products.find((p) => p.slug === params.slug)
 
   if (!product) {
@@ -187,7 +335,7 @@ export async function generateMetadata({ params }) {
   }
 }
 
-export default function ProductPage({ params }) {
+export default function ProductPage({ params }: { params: { slug: string } }) {
   const product = products.find((p) => p.slug === params.slug)
 
   if (!product) {
@@ -215,52 +363,60 @@ export default function ProductPage({ params }) {
 
   return (
     <div className="container mx-auto px-6 py-8 lg:px-8">
-      <Breadcrumbs items={breadcrumbItems} />
-
-      <div className="grid lg:grid-cols-2 gap-12 mb-16">
-        {/* Product Images */}
-        <div>
-          <div className="relative">
-            <Tabs defaultValue="image-0" className="w-full">
-              <div className="relative aspect-square mb-4 overflow-hidden rounded-lg border">
-                {product.images.map((image, index) => (
-                  <TabsContent key={`content-${index}`} value={`image-${index}`} className="h-full">
+    <Breadcrumbs items={breadcrumbItems} />
+  
+    <div className="grid lg:grid-cols-2 gap-12 mb-16">
+      {/* Product Images */}
+      <div>
+        <div className="relative">
+          <Tabs defaultValue="image-0" className="w-full">
+            {/* Image principale */}
+            <div className="relative aspect-square mb-6 overflow-hidden rounded-lg border bg-gray-60 max-w-[400px] mx-auto">
+              {product.images.map((image, index) => (
+                <TabsContent 
+                  key={`content-${index}`} 
+                  value={`image-${index}`} 
+                  className="h-full w-full relative"
+                >
+                  <Image
+                    src={image || "/placeholder.svg"}
+                    alt={`${product.name} - Image ${index + 1}`}
+                    fill
+                    className="object-contain p-4" // Ajout de padding pour les images avec fond
+                    priority={index === 0}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px" 
+                  />
+                </TabsContent>
+              ))}
+              <div className="absolute top-4 right-4 z-10">
+                <View3DButton productId={product.id} />
+              </div>
+            </div>
+  
+            {/* Miniatures */}
+            <TabsList className="grid grid-cols-5 gap-2 md:gap-3 w-full max-w-[500px] mx-auto">
+              {product.images.map((image, index) => (
+                <TabsTrigger 
+                  key={`trigger-${index}`} 
+                  value={`image-${index}`} 
+                  className="p-0 h-full relative group"
+                >
+                  <div className="relative aspect-square w-full overflow-hidden rounded-md border-2 border-transparent group-data-[state=active]:border-primary transition-all">
                     <Image
                       src={image || "/placeholder.svg"}
-                      alt={`${product.name} - Image ${index + 1}`}
+                      alt={`${product.name} - Miniature ${index + 1}`}
                       fill
-                      className="object-cover"
-                      priority={index === 0}
+                      className="object-cover group-data-[state=active]:opacity-100 opacity-70 hover:opacity-100 transition-opacity"
+                      sizes="100px"
                     />
-                  </TabsContent>
-                ))}
-                <div className="absolute top-4 right-4 z-10">
-                  <View3DButton productId={product.id} />
-                </div>
-                {product.comparePrice && (
-                  <Badge className="absolute top-4 left-4 bg-red-500 hover:bg-red-600">
-                    -{Math.round(((product.comparePrice - product.price) / product.comparePrice) * 100)}%
-                  </Badge>
-                )}
-              </div>
-              <TabsList className="grid grid-cols-5 gap-4">
-                {product.images.map((image, index) => (
-                  <TabsTrigger key={`trigger-${index}`} value={`image-${index}`} className="p-0">
-                    <div className="relative aspect-square w-full overflow-hidden rounded-md">
-                      <Image
-                        src={image || "/placeholder.svg"}
-                        alt={`${product.name} - Miniature ${index + 1}`}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </Tabs>
-          </div>
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
+                  </div>
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </Tabs>
         </div>
-
+      </div>
         {/* Product Info */}
         <div>
           <div className="flex flex-col h-full">
@@ -301,16 +457,7 @@ export default function ProductPage({ params }) {
 
               <p className="text-lg mb-6">{product.description}</p>
 
-              <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-3xl font-bold">
-                  {product.price.toFixed(2)} {product.currency}
-                </span>
-                {product.comparePrice && (
-                  <span className="text-lg text-muted-foreground line-through">
-                    {product.comparePrice.toFixed(2)} {product.currency}
-                  </span>
-                )}
-              </div>
+              
 
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="flex items-center">
@@ -337,9 +484,7 @@ export default function ProductPage({ params }) {
                 <AddToCartButton
                   productId={product.id}
                   productName={product.name}
-                  productPrice={product.price}
                   productImage={product.images[0]}
-                  className="flex-1"
                 />
                 <Button variant="outline" asChild className="flex-1">
                   <Link href={`/contact?product=${product.slug}`}>Demander un devis</Link>
@@ -391,14 +536,14 @@ export default function ProductPage({ params }) {
       {/* Product Details Tabs */}
       <div className="mb-16">
         <Tabs defaultValue="description" className="w-full">
-          <TabsList className="grid w-full grid-cols-5">
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-5 gap-2 mb-6">
             <TabsTrigger value="description">Description</TabsTrigger>
             <TabsTrigger value="specifications">Spécifications</TabsTrigger>
             <TabsTrigger value="benefits">Avantages</TabsTrigger>
             <TabsTrigger value="installation">Installation</TabsTrigger>
             <TabsTrigger value="faq">FAQ</TabsTrigger>
           </TabsList>
-          <TabsContent value="description" className="p-6 bg-muted/30 rounded-md mt-6">
+          <TabsContent value="description" className="space-y-8">
             <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: product.longDescription }} />
             <div className="mt-8">
               <h3 className="text-xl font-bold mb-4">Caractéristiques</h3>
@@ -571,7 +716,6 @@ export default function ProductPage({ params }) {
           name: product.name,
           image: product.images[0],
           description: product.description,
-          price: product.price,
         }}
       />
     </div>

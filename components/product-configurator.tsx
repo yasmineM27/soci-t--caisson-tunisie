@@ -29,7 +29,6 @@ export function ProductConfigurator({ productId, productName }: ProductConfigura
   })
 
   const [activeTab, setActiveTab] = useState("dimensions")
-  const [price, setPrice] = useState(120)
   const { toast } = useToast()
 
   const updateConfig = (key: string, value: any) => {
@@ -50,36 +49,6 @@ export function ProductConfigurator({ productId, productName }: ProductConfigura
       }
     })
 
-    // Recalculate price based on configuration
-    calculatePrice()
-  }
-
-  const calculatePrice = () => {
-    // Base price
-    let newPrice = 100
-
-    // Add price based on dimensions
-    const volume = config.dimensions.width * config.dimensions.height * config.dimensions.depth
-    newPrice += volume / 1000
-
-    // Add price based on material
-    if (config.material === "premium") {
-      newPrice *= 1.2
-    } else if (config.material === "eco") {
-      newPrice *= 0.9
-    }
-
-    // Add price based on density
-    if (config.density === "40") {
-      newPrice *= 1.3
-    } else if (config.density === "20") {
-      newPrice *= 0.8
-    }
-
-    // Multiply by quantity
-    newPrice *= config.quantity
-
-    setPrice(Math.round(newPrice))
   }
 
   const handleAddToCart = () => {
@@ -271,10 +240,7 @@ export function ProductConfigurator({ productId, productName }: ProductConfigura
           </Tabs>
 
           <div className="mt-8 p-4 bg-muted rounded-lg">
-            <div className="flex justify-between items-center mb-4">
-              <span className="font-medium">Prix estimé:</span>
-              <span className="text-2xl font-bold">{price.toFixed(2)} DT</span>
-            </div>
+          
             <div className="flex gap-2">
               <Button onClick={handleAddToCart} className="flex-1">
                 Ajouter au panier

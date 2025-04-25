@@ -26,13 +26,12 @@ import { TestimonialsCarousel } from "@/components/testimonials-carousel"
 import { Building, Wrench, Users, Award, Package } from "lucide-react"
 import { testimonials, brochures } from "@/lib/mock-data"
 
-// Images pour le carrousel du hero
 const heroBackgroundImages = [
-  "/placeholder.svg?height=1080&width=1920",
-  "/placeholder.svg?height=1080&width=1920&text=Image+2",
-  "/placeholder.svg?height=1080&width=1920&text=Image+3",
-  "/placeholder.svg?height=1080&width=1920&text=Image+4",
-]
+  "/stc/interface.jpeg",    // Première image
+  "/stc/2.png",            // Deuxième image
+  "/stc/4.jpg",            // Troisième image
+  "/stc/5.jpeg"             // Quatrième image
+];
 
 // Données pour les statistiques
 const stats = [
@@ -66,9 +65,9 @@ const stats = [
 const featuredProducts = [
   {
     id: 1,
-    name: "Coffret Tunnel pour Volet Roulant",
+    name: "Coffret volet roulant",
     description: "Solution légère et isolante pour l'installation de volets roulants.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/stc/coff.jpeg",
     slug: "coffret-tunnel-volet-roulant",
     features: ["Isolation thermique", "Légèreté", "Installation facile", "Durabilité"],
   },
@@ -76,7 +75,7 @@ const featuredProducts = [
     id: 2,
     name: "Panneau Isolant en Polystyrène",
     description: "Isolation thermique optimale pour murs, toitures et sols.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/stc/plaaaaa.png",
     slug: "panneau-isolant-polystyrene",
     features: ["Haute performance thermique", "Résistance à l'humidité", "Économie d'énergie", "Écologique"],
   },
@@ -145,8 +144,8 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section with Parallax Effect */}
       <HeroParallax
-        title="Solutions innovantes en polystyrène expansé"
-        subtitle="Spécialiste tunisien en fabrication de produits isolants et d'emballage de haute qualité"
+        title=" Société Caisson Tunisie "
+        subtitle="Construire mieux, isoler plus, dépenser moins."
         ctaText="Découvrir nos produits"
         ctaLink="/produits"
         secondaryCtaText="Demander un devis"
@@ -161,19 +160,7 @@ export default function Home() {
         <BookAppointmentButton />
       </div>
 
-      {/* Stats Section */}
-      <section className="py-12 bg-primary/5">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {stats.map((stat, index) => (
-              <div key={index} className="p-4">
-                <p className="text-4xl font-bold text-primary mb-2">{stat.value}</p>
-                <p className="text-muted-foreground">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
   {/* Stats Section */}
   <StatsSection stats={stats} />
@@ -230,8 +217,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section with Animation */}
-      <section className="py-16 bg-muted">
+      {/* Features Section with Animation <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge variant="outline" className="mb-2">
@@ -254,7 +240,8 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
+      
 
       {/* About Section with Parallax */}
       <section className="py-16 bg-background relative overflow-hidden">
@@ -434,29 +421,6 @@ export default function Home() {
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
-          </div>
-        </div>
-      </section>
-
-
-
-      {/* Testimonials Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl font-bold mb-4">Ce que disent nos clients</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Découvrez les témoignages de nos clients satisfaits.
-            </p>
-          </motion.div>
-          <div className="max-w-3xl mx-auto">
-            <TestimonialsCarousel testimonials={testimonials} />
           </div>
         </div>
       </section>

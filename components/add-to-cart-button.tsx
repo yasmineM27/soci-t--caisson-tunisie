@@ -8,11 +8,10 @@ import { useToast } from "@/hooks/use-toast"
 type AddToCartButtonProps = {
   productId: number
   productName: string
-  productPrice: number
   productImage: string
 }
 
-export function AddToCartButton({ productId, productName, productPrice, productImage }: AddToCartButtonProps) {
+export function AddToCartButton({ productId, productName, productImage }: AddToCartButtonProps) {
   const { toast } = useToast()
   const [isAdding, setIsAdding] = useState(false)
 
@@ -34,7 +33,6 @@ export function AddToCartButton({ productId, productName, productPrice, productI
       cart.push({
         id: productId,
         name: productName,
-        price: productPrice,
         quantity: 1,
         image: productImage,
       })
