@@ -17,6 +17,7 @@ import { CalculatorButton } from "@/components/calculator-button"
 import { BookAppointmentButton } from "@/components/book-appointment-button"
 import { BrochuresSection } from "@/components/brochures-section"
 import { motion, useScroll, useTransform } from "framer-motion"
+import Head from 'next/head'
 
 
 
@@ -141,7 +142,12 @@ export default function Home() {
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1])
 
   return (
+  
+    
     <div className="flex flex-col min-h-screen">
+      <Head>
+        <meta name="google-site-verification" content="google2b9195924cad711b.html" />
+      </Head>
       {/* Hero Section with Parallax Effect */}
       <HeroParallax
         title=" Société Caisson Tunisie "
@@ -168,7 +174,26 @@ export default function Home() {
       {/* Brochures Section */}
       <BrochuresSection brochures={brochures} />
 
-
+ {/* Testimonials Section <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl font-bold mb-4">Ce que disent nos clients</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Découvrez les témoignages de nos clients satisfaits.
+            </p>
+          </motion.div>
+          <div className="max-w-3xl mx-auto">
+            <TestimonialsCarousel testimonials={testimonials} />
+          </div>
+        </div>
+      </section>*/}
+ 
 {/* Products Section */}
 <section className="py-16" ref={targetRef}>
         <div className="container mx-auto px-4">
