@@ -18,7 +18,7 @@ import { BookAppointmentButton } from "@/components/book-appointment-button"
 import { BrochuresSection } from "@/components/brochures-section"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Head from 'next/head'
-
+import CarouselSlogan from '@/components/CarouselSlogan';
 
 
 import { GoogleReviews } from "@/components/google-reviews"
@@ -33,7 +33,11 @@ const heroBackgroundImages = [
   "/stc/4.jpg",            // Troisième image
   "/stc/5.jpeg"             // Quatrième image
 ];
-
+const slogans: string[] = [
+  "Your solution for innovative construction",
+  "Construire mieux, isoler plus, dépenser moins.",
+  "Caisson Tunisie — L'isolation qui construit l'avenir.",
+];
 // Données pour les statistiques
 const stats = [
   {
@@ -66,11 +70,16 @@ const stats = [
 const featuredProducts = [
   {
     id: 1,
-    name: "Coffret volet roulant",
-    description: "Solution légère et isolante pour l'installation de volets roulants.",
+    name: "Coffret Tunnel Volet Roulant",
+    description: "Coffret léger et isolant avec renforts métalliques pour volets roulants traditionnels et bloc-baie.",
     image: "/stc/coff.jpeg",
     slug: "coffret-tunnel-volet-roulant",
-    features: ["Isolation thermique", "Légèreté", "Installation facile", "Durabilité"],
+    features: [
+      "Isolation thermique renforcée",
+      "Légèreté et robustesse",
+      "Renforts acier galvanisé",
+      "Installation facile",
+      "Compatible volets traditionnels et bloc-baie",],
   },
   {
     id: 2,
@@ -118,12 +127,6 @@ const features = [
 // Sample videos
 const videos = [
   {
-    id: 1,
-    title: "Installation d'un coffret tunnel",
-    thumbnail: "/placeholder.svg?height=200&width=350",
-    url: "#",
-  },
-  {
     id: 2,
     title: "Pose de panneaux isolants",
     thumbnail: "/placeholder.svg?height=200&width=350",
@@ -170,31 +173,7 @@ export default function Home() {
 
   {/* Stats Section */}
   <StatsSection stats={stats} />
-     
-      {/* Brochures Section */}
-      <BrochuresSection brochures={brochures} />
-
- {/* Testimonials Section <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl font-bold mb-4">Ce que disent nos clients</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Découvrez les témoignages de nos clients satisfaits.
-            </p>
-          </motion.div>
-          <div className="max-w-3xl mx-auto">
-            <TestimonialsCarousel testimonials={testimonials} />
-          </div>
-        </div>
-      </section>*/}
- 
-{/* Products Section */}
+  {/* Products Section */}
 <section className="py-16" ref={targetRef}>
         <div className="container mx-auto px-4">
           <motion.div className="text-center mb-12" style={{ scale, opacity }}>
@@ -216,7 +195,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Products with 3D View Option */}
+   <CarouselSlogan />
+      {/* Brochures Section */}
+      <BrochuresSection brochures={brochures} />
+{/* Testimonials Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl font-bold mb-4">Ce que disent nos clients</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Découvrez les témoignages de nos clients satisfaits.
+            </p>
+          </motion.div>
+          <div className="max-w-3xl mx-auto">
+            <TestimonialsCarousel testimonials={testimonials} />
+          </div>
+        </div>
+      </section> {/* Testimonials Section <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl font-bold mb-4">Ce que disent nos clients</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Découvrez les témoignages de nos clients satisfaits.
+            </p>
+          </motion.div>
+          <div className="max-w-3xl mx-auto">
+            <TestimonialsCarousel testimonials={testimonials} />
+          </div>
+        </div>
+      </section>*/}
+ 
+
+      {/* Featured Products with 3D View Option 
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -240,7 +262,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* Features Section with Animation <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
@@ -329,7 +351,7 @@ export default function Home() {
           >
             <h2 className="text-3xl font-bold mb-4">Vidéos Explicatives</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Découvrez nos vidéos pour mieux comprendre nos produits et leur installation.
+              Découvrez nos vidéos pour mieux comprendre nos produits 
             </p>
           </motion.div>
 
@@ -344,8 +366,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-    {/* Google Reviews Section */}
-    <GoogleReviews />
+    {/* Google Reviews Section 
+    <GoogleReviews />*/}
 
     {/* Services Section */}
     <section className="py-16">

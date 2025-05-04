@@ -13,61 +13,45 @@ import { ProductFaq } from "@/components/product-faq"
 import { StructuredData } from "@/components/seo/structured-data"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 
-// Sample product data - in a real app, this would come from a database
 const products = [
   {
     id: 1,
-    name: "Coffret volet roulant", 
+    name: "Coffret Tunnel Volet Roulant",
     description: "Solution légère et isolante pour l'installation de volets roulants.",
     longDescription: `
-      <p>Le Coffret volet roulant en polystyrène expansé (EPS) est une solution innovante qui combine légèreté et performance d'isolation thermique. Conçu pour faciliter l'installation des volets roulants, ce coffret tunnel offre une excellente isolation thermique et acoustique, contribuant ainsi à l'efficacité énergétique globale du bâtiment.</p>
-      
-      <p>Sa structure en polystyrène expansé garantit une durabilité exceptionnelle tout en étant facile à manipuler et à installer. Nos coffrets tunnel sont fabriqués avec des matériaux de haute qualité pour assurer une longévité maximale et une résistance optimale aux conditions climatiques.</p>
-      
-      <p>Disponible en différentes dimensions pour s'adapter à tous types d'ouvertures, notre Coffret volet roulant est la solution idéale pour les constructions neuves comme pour les projets de rénovation.</p>
+      <p>Le Coffret Tunnel Volet Roulant en polystyrène expansé (EPS) haute densité, renforcé par des armatures métalliques galvanisées, offre une solution idéale combinant légèreté, robustesse et isolation thermique performante.</p>
+
+      <p>Conçu pour une installation facile, il s'adapte aussi bien aux constructions neuves qu'aux rénovations. Ce coffret assure une excellente isolation thermique et acoustique tout en garantissant une longévité remarquable grâce à ses matériaux de haute qualité.</p>
+
+      <p>Il est compatible avec la plupart des systèmes de volets roulants, traditionnels ou bloc-baie, et est fourni avec des accessoires tels que joues de fermeture et trappe de visite PVC pour une pose facilitée.</p>
     `,
     features: [
       "Légèreté et facilité d'installation",
       "Excellente isolation thermique et acoustique",
-      "Résistance à l'humidité",
-      "Compatible avec la plupart des systèmes de volets roulants",
-      "Disponible en différentes dimensions",
-      "Résistant aux UV et aux intempéries",
-      "Traitement anti-moisissure",
-      "Conforme aux normes de construction",
+      "Résistance à l'humidité et aux intempéries",
+      "Renforts acier galvanisé intégrés",
+      "Compatible volets roulants traditionnels et bloc-baie",
+      "Disponible en dimensions standards et sur mesure",
+      "Résistant aux UV et moisissures",
+      "Conforme aux normes CE et ISO 9001",
     ],
     specifications: [
-      { name: "Matériau", value: "Polystyrène expansé (EPS)" },
-      { name: "Densité", value: "30 kg/m³" },
-      { name: "Conductivité thermique", value: "0,035 W/mK" },
+      { name: "Matériau", value: "Polystyrène expansé (EPS) haute densité + renforts acier galvanisé" },
+      { name: "Densité", value: "25-27 kg/m³" },
+      { name: "Conductivité thermique", value: "0,035 W/m.K" },
       { name: "Résistance à la compression", value: "200 kPa" },
       { name: "Classement au feu", value: "Euroclasse E" },
       { name: "Absorption d'eau", value: "< 3%" },
-      { name: "Dimensions disponibles", value: "Sur mesure selon vos besoins" },
-      { name: "Épaisseur des parois", value: "20 mm à 50 mm" },
+      { name: "Dimensions standards", value: "6000 x 300 x 300 mm (L x H x P)" },
+      { name: "Épaisseur des parois", value: "30 mm" },
+      { name: "Isolation Thermique", value: "Coefficient R=3.5 W/(m²·K)" },
+      { name: "Isolation Acoustique", value: "Atténuation =3.5 dB" },
     ],
     benefits: [
-      {
-        title: "Économies d'énergie",
-        description:
-          "Réduit les déperditions thermiques et contribue à diminuer la consommation énergétique du bâtiment.",
-        icon: "savings",
-      },
-      {
-        title: "Installation rapide",
-        description: "Sa légèreté et sa facilité de découpe permettent une installation rapide et précise.",
-        icon: "installation",
-      },
-      {
-        title: "Durabilité",
-        description: "Matériau résistant qui conserve ses propriétés isolantes dans le temps.",
-        icon: "durability",
-      },
-      {
-        title: "Confort acoustique",
-        description: "Contribue à l'isolation phonique de l'habitation en réduisant les bruits extérieurs.",
-        icon: "acoustic",
-      },
+      { title: "Économies d'énergie", description: "Réduit les déperditions thermiques et diminue la consommation énergétique.", icon: "savings" },
+      { title: "Installation rapide", description: "Léger et découpable facilement pour une pose rapide.", icon: "installation" },
+      { title: "Durabilité", description: "Matériau résistant qui conserve ses propriétés isolantes dans le temps.", icon: "durability" },
+      { title: "Confort acoustique", description: "Contribue à l'isolation phonique en réduisant les bruits extérieurs.", icon: "acoustic" },
     ],
     applications: [
       "Maisons individuelles",
@@ -80,19 +64,13 @@ const products = [
       steps: [
         "Préparer l'ouverture en vérifiant les dimensions",
         "Positionner le coffret tunnel au-dessus de l'ouverture",
-        "Fixer le coffret selon les recommandations du fabricant",
+        "Fixer le coffret avec les renforts selon les recommandations",
         "Installer le mécanisme du volet roulant",
         "Réaliser les finitions (enduit, peinture, etc.)",
       ],
       videoUrl: "#",
     },
-    images: [
-      "/stc/coff.jpeg",
-      "/stc/01.png",
-      "/stc/coff.jpeg",
-      "/stc/coff.jpeg",
-      "/stc/coff.jpeg",
-    ],
+    images: ["/stc/coff.jpeg", "/stc/01.png", "/stc/coff.jpeg"],
     inStock: true,
     leadTime: "2-3 semaines",
     minOrder: 1,
@@ -102,35 +80,15 @@ const products = [
     category: "coffrets",
     tags: ["isolation", "volet roulant", "construction", "rénovation"],
     relatedProducts: [2, 3, 4],
-    reviews: {
-      average: 4.7,
-      count: 23,
-    },
+    reviews: { average: 4.7, count: 23 },
     faq: [
       {
-        question: "Quelle est la différence entre un coffret tunnel standard et sur mesure ?",
-        answer:
-          "Un coffret tunnel standard est disponible en dimensions prédéfinies, tandis qu'un coffret sur mesure est fabriqué selon les dimensions spécifiques de votre projet. Pour des ouvertures non standard, nous recommandons les coffrets sur mesure pour une isolation optimale.",
-      },
-      {
         question: "Le coffret tunnel est-il compatible avec tous les types de volets roulants ?",
-        answer:
-          "Nos coffrets tunnel sont conçus pour être compatibles avec la plupart des systèmes de volets roulants disponibles sur le marché. Il est toutefois recommandé de vérifier les spécifications techniques de votre volet roulant avant l'achat.",
+        answer: "Oui, il est compatible avec la plupart des volets roulants traditionnels et bloc-baie. Vérifiez toutefois les dimensions de votre volet.",
       },
       {
-        question: "Quelle est la durée de vie d'un coffret tunnel en polystyrène expansé ?",
-        answer:
-          "Dans des conditions normales d'utilisation, nos coffrets tunnel en polystyrène expansé ont une durée de vie de plusieurs décennies. Ils conservent leurs propriétés isolantes dans le temps et résistent bien au vieillissement.",
-      },
-      {
-        question: "Comment entretenir un coffret tunnel ?",
-        answer:
-          "Les coffrets tunnel en polystyrène expansé ne nécessitent pas d'entretien particulier. Il est simplement recommandé de vérifier périodiquement l'absence de fissures ou de dommages, notamment après des événements climatiques exceptionnels.",
-      },
-      {
-        question: "Est-il possible d'installer un coffret tunnel sur une construction existante ?",
-        answer:
-          "Oui, nos coffrets tunnel peuvent être installés dans le cadre de projets de rénovation. L'installation nécessite toutefois une adaptation de l'ouverture existante, ce qui peut impliquer des travaux supplémentaires.",
+        question: "Quels accessoires sont fournis avec le coffret tunnel ?",
+        answer: "Le coffret est livré avec renforts métalliques, joues de fermeture et trappe de visite en PVC.",
       },
     ],
     downloads: [
@@ -139,173 +97,788 @@ const products = [
       { name: "Certificat de conformité", url: "#", type: "pdf" },
     ],
     projects: [
-      {
-        name: "Résidence Les Oliviers",
-        description: "Installation de 50 coffrets tunnel pour un complexe résidentiel à Tunis",
-        image: "/placeholder.svg?height=300&width=400",
-        slug: "residence-les-oliviers",
-      },
-      {
-        name: "Villa Jasmin",
-        description: "Rénovation complète avec coffrets tunnel sur mesure",
-        image: "/placeholder.svg?height=300&width=400",
-        slug: "villa-jasmin",
-      },
+      { name: "Résidence Les Oliviers", description: "Installation de 50 coffrets tunnel à Tunis", image: "/placeholder.svg?height=300&width=400", slug: "residence-les-oliviers" },
+      { name: "Villa Jasmin", description: "Rénovation complète avec coffrets tunnel sur mesure", image: "/placeholder.svg?height=300&width=400", slug: "villa-jasmin" },
     ],
   },
   {
-    id: "2",
-      name: "Panneaux Isolants",
-      slug: "panneau-isolant-polystyrene",
-      description: "Panneaux isolants en polystyrène expansé pour l'isolation thermique",
+    id: 4,
+    name: "Panneau Isolant 2cm",
+    description: "Panneau isolant en polystyrène expansé d'épaisseur 2cm.",
     longDescription: `
-      <p>Nos panneaux isolants en polystyrène expansé (EPS) offrent une solution d'isolation thermique exceptionnelle pour tous types de constructions. Fabriqués à partir de mousse EPS haute densité, ces panneaux présentent une structure à cellules fermées qui emprisonne l'air, garantissant ainsi une isolation optimale.</p>
-      
-      <p>Le polystyrène expansé utilisé dans nos panneaux est produit à partir de billes de polystyrène expansible contenant du pentane comme agent gonflant. Ce procédé de fabrication confère au matériau ses propriétés uniques de légèreté, de résistance thermique et d'intégrité structurelle.</p>
-      
-      <p>Idéal pour les nouvelles constructions comme pour les rénovations, nos panneaux EPS contribuent significativement à l'efficacité énergétique des bâtiments tout en étant faciles à manipuler et à installer.</p>
+      <p>Panneau isolant en polystyrène expansé d'épaisseur 2cm, idéal pour l'isolation thermique des murs, toitures et sols. Ce panneau offre une excellente résistance thermique et une grande légèreté, facilitant son installation.</p>
+      <p>Il est adapté aux applications résidentielles et commerciales, garantissant une isolation durable et efficace.</p>
     `,
     features: [
-      "Excellente isolation thermique (valeur R élevée)",
-      "Légèreté facilitant la manipulation et l'installation",
-      "Résistance à l'humidité et inertie chimique",
-      "Structure à cellules fermées emprisonnant l'air",
-      "Intégrité structurelle même à faible densité",
-      "Absorption exceptionnelle des chocs",
-      "Résistance à la compression adaptée aux applications de construction",
-      "Disponible en différentes densités et épaisseurs",
+      "Isolation thermique performante",
+      "Léger et facile à manipuler",
+      "Résistant à l'humidité",
+      "Adapté aux applications résidentielles et commerciales",
     ],
     specifications: [
+      { name: "Épaisseur", value: "2 cm" },
       { name: "Matériau", value: "Polystyrène expansé (EPS)" },
-      { name: "Densité", value: "15-40 kg/m³ (selon application)" },
-      { name: "Conductivité thermique (λ)", value: "0,030-0,038 W/mK" },
-      { name: "Résistance à la compression", value: "100-400 kPa" },
-      { name: "Absorption d'eau (par immersion)", value: "< 3% du volume" },
-      { name: "Classement au feu", value: "Euroclasse E (standard) ou B (ignifugé)" },
-      { name: "Dimensions standards", value: "1200 x 600 mm, 1250 x 600 mm" },
-      { name: "Épaisseurs disponibles", value: "20 mm à 200 mm" },
+      { name: "Densité", value: "15 kg/m³" },
+      { name: "Conductivité thermique", value: "0,037 W/m.K" },
+      { name: "Résistance à la compression", value: "100 kPa" },
+      { name: "Classement au feu", value: "Euroclasse E" },
+      { name: "Absorption d'eau", value: "< 5%" },
+      { name: "Dimensions standards", value: "1200 x 600 mm" },
     ],
     benefits: [
-      {
-        title: "Efficacité énergétique",
-        description: "Réduit significativement les déperditions thermiques, diminuant les coûts de chauffage et climatisation.",
-        icon: "energy",
-      },
-      {
-        title: "Polyvalence",
-        description: "Adapté aux murs, toitures, sols et sous-sols grâce à sa résistance à l'humidité.",
-        icon: "versatility",
-      },
-      {
-        title: "Durabilité",
-        description: "Conserve ses propriétés isolantes dans le temps, résiste à la pourriture et aux moisissures.",
-        icon: "durability",
-      },
-      {
-        title: "Économique",
-        description: "Solution d'isolation performante à un coût compétitif, réduisant les coûts de transport grâce à sa légèreté.",
-        icon: "savings",
-      },
+      { title: "Économies d'énergie", description: "Améliore l'efficacité énergétique des bâtiments.", icon: "savings" },
+      { title: "Pose simple", description: "Facile à découper et à poser.", icon: "installation" },
+      { title: "Durabilité", description: "Conserve ses performances dans le temps.", icon: "durability" },
     ],
     applications: [
-      "Isolation des murs extérieurs (ITE)",
-      "Isolation des toitures terrasses et inclinées",
-      "Isolation des planchers et sous-sols",
-      "Panneaux isolants structuraux (SIP)",
-      "Coffrages isolants pour béton (ICF)",
-      "Isolation phonique supplémentaire",
+      "Isolation de murs intérieurs et extérieurs",
+      "Isolation de toitures",
+      "Isolation de sols et planchers",
     ],
     installation: {
       steps: [
-        "Préparer la surface (nettoyage, séchage)",
-        "Découper les panneaux aux dimensions nécessaires",
-        "Appliquer selon la technique choisie (collage, fixation mécanique)",
-        "Jointoyer les panneaux avec du ruban adhésif spécial",
-        "Réaliser les finitions (enduit, parement, etc.)",
+        "Préparer la surface (propre et sèche)",
+        "Découper les panneaux aux dimensions souhaitées",
+        "Coller ou fixer mécaniquement les panneaux",
+        "Réaliser les finitions (enduit, bardage, etc.)",
       ],
       videoUrl: "#",
     },
-    images: [
-      "/stc/plaaaaa.png",
-      "/stc/pp.JPG",
-      "/stc/OIP.JPG",
-      "/stc/OIP (1).JPG",
-      "/stc/2.png"
-    ],
+    images: ["/stc/panneau2cm.png", "/stc/02.png"],
     inStock: true,
     leadTime: "1-2 semaines",
-    minOrder: 10, // en m²
-    certification: ["ISO 9001", "Marquage CE", "Certification ACERMI"],
+    minOrder: 10,
+    certification: ["ISO 9001", "Marquage CE"],
     warranty: "10 ans",
-    slug: "panneau-isolant-polystyrene",
-    category: "isolation",
-    tags: ["isolation", "construction", "murs", "toiture", "energie"],
+    slug: "panneau-isolant-2cm",
+    category: "isolants",
+    tags: ["isolation", "mur", "toiture", "sol"],
     relatedProducts: [1, 3, 5],
-    reviews: {
-      average: 4.8,
-      count: 35,
-    },
+    reviews: { average: 4.6, count: 15 },
     faq: [
       {
-        question: "Quelle est la différence entre les panneaux EPS standard et haute densité ?",
-        answer: "Les panneaux haute densité offrent une meilleure résistance mécanique et une légère amélioration des performances thermiques, idéale pour les applications structurelles ou soumises à des charges. Les panneaux standard conviennent parfaitement aux applications d'isolation courantes.",
+        question: "Le panneau est-il adapté à l'isolation extérieure ?",
+        answer: "Oui, il est utilisable en isolation thermique par l'extérieur (ITE) avec finition adaptée.",
       },
       {
-        question: "Les panneaux EPS sont-ils résistants à l'humidité ?",
-        answer: "Oui, la structure à cellules fermées du polystyrène expansé limite fortement l'absorption d'eau (<3% du volume), ce qui en fait un excellent choix pour les applications en sous-sol ou en milieu humide.",
-      },
-      {
-        question: "Peut-on utiliser ces panneaux pour l'isolation par l'extérieur ?",
-        answer: "Absolument. Nos panneaux EPS sont particulièrement adaptés à l'isolation thermique par l'extérieur (ITE) grâce à leur légèreté, leur facilité de mise en œuvre et leurs excellentes performances thermiques.",
-      },
-      {
-        question: "Quelle épaisseur choisir pour une isolation optimale ?",
-        answer: "L'épaisseur dépend de la zone climatique et des performances recherchées. En Tunisie, nous recommandons généralement des épaisseurs entre 60mm et 100mm pour une isolation efficace des murs.",
-      },
-      {
-        question: "Les panneaux EPS sont-ils recyclables ?",
-        answer: "Oui, le polystyrène expansé est 100% recyclable. Société Caisson Tunisie participe activement à des programmes de collecte et recyclage des déchets EPS.",
+        question: "Comment découper les panneaux ?",
+        answer: "Utilisez un cutter ou une scie fine pour une coupe précise.",
       },
     ],
     downloads: [
-      { name: "Fiche technique EPS", url: "#", type: "pdf" },
-      { name: "Guide d'installation ITE", url: "#", type: "pdf" },
-      { name: "Certificat ACERMI", url: "#", type: "pdf" },
+      { name: "Fiche technique", url: "#", type: "pdf" },
+      { name: "Guide d'installation", url: "#", type: "pdf" },
     ],
     projects: [
+      { name: "Résidence Les Jasmins", description: "Isolation thermique extérieure des murs", image: "/placeholder.svg?height=300&width=400", slug: "residence-les-jasmins" },
+      { name: "École Ibn Khaldoun", description: "Isolation des toitures plates", image: "/placeholder.svg?height=300&width=400", slug: "ecole-ibn-khaldoun" },
+    ],
+  },
+  {
+    id: 5,
+    name: "Panneau Isolant 3cm",
+    description: "Panneau isolant en polystyrène expansé d'épaisseur 3cm pour une isolation renforcée.",
+    longDescription: `
+      <p>Panneau isolant en polystyrène expansé d'épaisseur 3cm, offrant une isolation thermique supérieure pour les murs, toitures et sols. Ce panneau plus épais assure une meilleure performance thermique tout en conservant la légèreté caractéristique du polystyrène expansé.</p>
+      <p>Idéal pour les projets nécessitant une isolation renforcée, il contribue significativement à l'efficacité énergétique des bâtiments résidentiels et commerciaux.</p>
+    `,
+    features: [
+      "Isolation thermique renforcée",
+      "Léger malgré son épaisseur accrue",
+      "Excellente résistance à l'humidité",
+      "Performance thermique supérieure",
+      "Facile à découper et installer",
+    ],
+    specifications: [
+      { name: "Épaisseur", value: "3 cm" },
+      { name: "Matériau", value: "Polystyrène expansé (EPS)" },
+      { name: "Densité", value: "15 kg/m³" },
+      { name: "Conductivité thermique", value: "0,037 W/m.K" },
+      { name: "Résistance à la compression", value: "100 kPa" },
+      { name: "Classement au feu", value: "Euroclasse E" },
+      { name: "Absorption d'eau", value: "< 5%" },
+      { name: "Dimensions standards", value: "1200 x 600 mm" },
+    ],
+    benefits: [
+      { title: "Économies d'énergie accrues", description: "Performance thermique supérieure pour une meilleure efficacité énergétique.", icon: "savings" },
+      { title: "Installation simple", description: "Conserve la facilité de manipulation malgré l'épaisseur accrue.", icon: "installation" },
+      { title: "Durabilité optimale", description: "Résistance et performance maintenues sur le long terme.", icon: "durability" },
+      { title: "Confort thermique", description: "Améliore significativement le confort intérieur en toutes saisons.", icon: "comfort" },
+    ],
+    applications: [
+      "Isolation renforcée de murs intérieurs et extérieurs",
+      "Isolation performante de toitures",
+      "Isolation thermique de sols et planchers",
+      "Bâtiments à haute performance énergétique",
+    ],
+    installation: {
+      steps: [
+        "Préparer la surface (propre et sèche)",
+        "Découper les panneaux aux dimensions souhaitées",
+        "Coller ou fixer mécaniquement les panneaux",
+        "Réaliser les finitions (enduit, bardage, etc.)",
+      ],
+      videoUrl: "#",
+    },
+    images: ["/stc/plaaaaa.PNG", "/placeholder.svg?height=300&width=400"],
+    inStock: true,
+    leadTime: "1-2 semaines",
+    minOrder: 10,
+    certification: ["ISO 9001", "Marquage CE"],
+    warranty: "10 ans",
+    slug: "panneau-isolant-3cm",
+    category: "panneaux",
+    tags: ["isolation", "mur", "toiture", "sol", "performance énergétique"],
+    relatedProducts: [1, 4, 6],
+    reviews: { average: 4.8, count: 12 },
+    faq: [
       {
-        name: "Résidence Les Palmiers",
-        description: "Isolation thermique par l'extérieur avec panneaux EPS 80mm",
-        image: "/projects/palmiers.jpg",
-        slug: "residence-les-palmiers",
+        question: "Quelle est la différence de performance avec le panneau de 2cm ?",
+        answer: "Le panneau de 3cm offre environ 50% de résistance thermique supplémentaire par rapport au modèle de 2cm, améliorant significativement l'isolation.",
       },
       {
-        name: "Complexe commercial Carthage",
-        description: "Isolation toiture terrasse avec panneaux EPS haute densité",
-        image: "/projects/carthage.jpg",
-        slug: "complexe-carthage",
+        question: "Est-il compatible avec les systèmes d'isolation par l'extérieur ?",
+        answer: "Oui, ce panneau est parfaitement adapté aux systèmes d'isolation thermique par l'extérieur (ITE) avec les finitions appropriées.",
       },
     ],
-    variants: [
-      {
-        name: "EPS Standard",
-        description: "Pour isolation courante",
-        density: "15-20 kg/m³"
-      },
-      {
-        name: "EPS Haute Densité",
-        description: "Pour applications structurelles",
-        density: "30-40 kg/m³"
-      },
-      {
-        name: "EPS Ignifuge",
-        description: "Pour zones à réglementation incendie stricte",
-        density: "20-25 kg/m³"
-      }
-    ]
+    downloads: [
+      { name: "Fiche technique", url: "#", type: "pdf" },
+      { name: "Guide d'installation", url: "#", type: "pdf" },
+    ],
+    projects: [
+      { name: "Résidence Carthage", description: "Isolation thermique complète en rénovation", image: "/placeholder.svg?height=300&width=400", slug: "residence-carthage" },
+      { name: "Centre commercial Azur", description: "Isolation des façades extérieures", image: "/placeholder.svg?height=300&width=400", slug: "centre-commercial-azur" },
+    ],
   },
-  // Autres produits...
-]
+  {
+    id: 6,
+    name: "Panneau Isolant Sur Mesure",
+    description: "Panneau isolant en polystyrène expansé fabriqué selon vos spécifications.",
+    longDescription: `
+      <p>Les panneaux isolants sur mesure en polystyrène expansé représentent la solution idéale pour les projets nécessitant des dimensions ou des caractéristiques spécifiques. Fabriqués selon vos exigences précises, ces panneaux s'adaptent parfaitement à toutes les configurations, même les plus complexes.</p>
+      <p>Disponibles dans différentes épaisseurs (de 1cm à 20cm) et densités, ils peuvent être découpés avec précision pour s'ajuster à vos besoins particuliers. Cette flexibilité permet d'optimiser l'isolation thermique tout en minimisant les chutes et les pertes de matériaux.</p>
+    `,
+    features: [
+      "Fabrication sur mesure selon vos spécifications",
+      "Choix d'épaisseur de 1cm à 20cm",
+      "Différentes densités disponibles",
+      "Découpe précise aux dimensions requises",
+      "Possibilité de formes complexes",
+      "Optimisation des performances thermiques",
+    ],
+    specifications: [
+      { name: "Épaisseur", value: "1cm à 20cm (selon spécifications)" },
+      { name: "Matériau", value: "Polystyrène expansé (EPS)" },
+      { name: "Densité", value: "15 à 30 kg/m³ (selon besoins)" },
+      { name: "Conductivité thermique", value: "0,035 à 0,040 W/m.K (selon densité)" },
+      { name: "Résistance à la compression", value: "70 à 250 kPa (selon densité)" },
+      { name: "Classement au feu", value: "Euroclasse E (standard) ou B (ignifuge)" },
+      { name: "Absorption d'eau", value: "< 5%" },
+      { name: "Dimensions", value: "Sur mesure selon spécifications" },
+    ],
+    benefits: [
+      { title: "Solution adaptée", description: "Parfaitement dimensionné pour votre projet spécifique.", icon: "custom" },
+      { title: "Réduction des déchets", description: "Minimise les chutes et optimise l'utilisation des matériaux.", icon: "eco" },
+      { title: "Performance optimisée", description: "Caractéristiques techniques adaptées à vos besoins précis.", icon: "performance" },
+      { title: "Facilité d'installation", description: "S'intègre parfaitement aux configurations complexes.", icon: "installation" },
+    ],
+    applications: [
+      "Projets d'isolation avec contraintes dimensionnelles",
+      "Rénovations de bâtiments anciens",
+      "Isolation de structures non standard",
+      "Applications industrielles spécifiques",
+      "Isolation de canalisations et équipements",
+    ],
+    installation: {
+      steps: [
+        "Fournir les spécifications précises (dimensions, épaisseur, densité)",
+        "Validation du plan de découpe",
+        "Fabrication sur mesure",
+        "Installation selon les recommandations adaptées au projet",
+      ],
+      videoUrl: "#",
+    },
+    images: ["/stc/plaaaaa.PNG", "/placeholder.svg?height=300&width=400"],
+    inStock: false,
+    leadTime: "2-4 semaines",
+    minOrder: 1,
+    certification: ["ISO 9001", "Marquage CE"],
+    warranty: "10 ans",
+    slug: "panneau-isolant-sur-mesure",
+    category: "panneaux",
+    tags: ["isolation", "sur-mesure", "personnalisation", "projet spécifique"],
+    relatedProducts: [4, 5, 11],
+    reviews: { average: 4.9, count: 8 },
+    faq: [
+      {
+        question: "Comment spécifier les dimensions dont j'ai besoin ?",
+        answer: "Vous pouvez nous fournir un plan détaillé ou des mesures précises. Notre équipe technique peut également vous aider à déterminer les dimensions optimales pour votre projet.",
+      },
+      {
+        question: "Quel est le délai de fabrication pour les panneaux sur mesure ?",
+        answer: "Le délai standard est de 2 à 4 semaines selon la complexité et le volume de la commande. Des délais express peuvent être proposés pour les projets urgents.",
+      },
+    ],
+    downloads: [
+      { name: "Guide de spécifications", url: "#", type: "pdf" },
+      { name: "Formulaire de commande sur mesure", url: "#", type: "pdf" },
+    ],
+    projects: [
+      { name: "Hôtel Médina", description: "Isolation acoustique et thermique sur mesure", image: "/placeholder.svg?height=300&width=400", slug: "hotel-medina" },
+      { name: "Usine agroalimentaire Sfax", description: "Panneaux isolants pour chambres froides", image: "/placeholder.svg?height=300&width=400", slug: "usine-sfax" },
+    ],
+  },
+  {
+    id: 7,
+    name: "Fish Box 5kg",
+    description: "Fish Box 5kg - Caisson d'emballage isotherme pour produits de la pêche.",
+    longDescription: `
+      <p>La Fish Box 5kg est un caisson isotherme en polystyrène expansé spécialement conçu pour le transport et la conservation des produits de la pêche. Avec une capacité de 5kg, elle offre une solution idéale pour les petites quantités de produits frais.</p>
+      <p>Sa conception assure une excellente isolation thermique, maintenant les produits à basse température pendant plusieurs heures. Légère mais robuste, elle protège efficacement le contenu pendant le transport tout en facilitant la manutention.</p>
+    `,
+    features: [
+      "Capacité de 5kg de produits frais",
+      "Excellente isolation thermique",
+      "Légèreté pour une manipulation facile",
+      "Résistance à l'humidité",
+      "Empilable pour un stockage optimisé",
+      "100% recyclable",
+    ],
+    specifications: [
+      { name: "Capacité", value: "5 kg" },
+      { name: "Matériau", value: "Polystyrène expansé (EPS) alimentaire" },
+      { name: "Densité", value: "22 kg/m³" },
+      { name: "Dimensions extérieures", value: "400 x 300 x 150 mm (L x l x H)" },
+      { name: "Dimensions intérieures", value: "360 x 260 x 120 mm (L x l x H)" },
+      { name: "Épaisseur des parois", value: "20 mm" },
+      { name: "Poids à vide", value: "250 g" },
+      { name: "Couleur", value: "Blanc" },
+    ],
+    benefits: [
+      { title: "Conservation optimale", description: "Maintient la fraîcheur des produits pendant plusieurs heures.", icon: "fresh" },
+      { title: "Facilité de transport", description: "Légère et ergonomique pour une manipulation sans effort.", icon: "transport" },
+      { title: "Hygiène garantie", value: "Matériau alimentaire conforme aux normes sanitaires.", icon: "hygiene" },
+      { title: "Écologique", description: "Entièrement recyclable pour un impact environnemental réduit.", icon: "eco" },
+    ],
+    applications: [
+      "Transport de poissons et fruits de mer frais",
+      "Vente directe de produits de la pêche",
+      "Marchés et poissonneries",
+      "Usage domestique pour pêcheurs amateurs",
+    ],
+    installation: {
+      steps: [
+        "Refroidir préalablement la caisse (recommandé)",
+        "Placer éventuellement des pains de glace au fond",
+        "Disposer les produits de la pêche",
+        "Ajouter de la glace si nécessaire",
+        "Fermer hermétiquement",
+      ],
+      videoUrl: "#",
+    },
+    images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
+    inStock: true,
+    leadTime: "Immédiat (stock) ou 1 semaine",
+    minOrder: 20,
+    certification: ["Contact alimentaire", "Norme ISO 9001"],
+    warranty: "Non applicable",
+    slug: "fish-box-5kg",
+    category: "fishbox",
+    tags: ["pêche", "poisson", "transport", "isotherme", "frais"],
+    relatedProducts: [8, 9, 10],
+    reviews: { average: 4.5, count: 18 },
+    faq: [
+      {
+        question: "Combien de temps les produits restent-ils frais dans la Fish Box ?",
+        answer: "Avec des pains de glace appropriés, les produits peuvent rester à température optimale pendant 12 à 24 heures selon les conditions extérieures.",
+      },
+      {
+        question: "Les Fish Box sont-elles réutilisables ?",
+        answer: "Oui, elles peuvent être nettoyées et réutilisées plusieurs fois si elles sont manipulées avec soin.",
+      },
+    ],
+    downloads: [
+      { name: "Fiche technique", url: "#", type: "pdf" },
+      { name: "Guide d'utilisation", url: "#", type: "pdf" },
+    ],
+    projects: [
+      { name: "Coopérative de pêcheurs de Bizerte", description: "Fourniture de Fish Box pour la vente directe", image: "/placeholder.svg?height=300&width=400", slug: "cooperative-bizerte" },
+    ],
+  },
+  {
+    id: 8,
+    name: "Fish Box 6kg",
+    description: "Fish Box 6kg - Caisson d'emballage isotherme pour produits de la pêche.",
+    longDescription: `
+      <p>La Fish Box 6kg est un caisson isotherme en polystyrène expansé conçu pour le transport et la conservation des produits de la pêche. Avec une capacité légèrement supérieure à la version 5kg, elle offre un excellent compromis entre volume et maniabilité.</p>
+      <p>Sa conception optimisée assure une isolation thermique performante, maintenant les produits frais pendant une durée prolongée. Robuste et légère, elle protège efficacement le contenu tout en facilitant la logistique et le transport.</p>
+    `,
+    features: [
+      "Capacité de 6kg de produits frais",
+      "Isolation thermique performante",
+      "Conception légère et robuste",
+      "Résistance à l'humidité et aux chocs",
+      "Empilable pour un stockage et transport optimisés",
+      "100% recyclable",
+    ],
+    specifications: [
+      { name: "Capacité", value: "6 kg" },
+      { name: "Matériau", value: "Polystyrène expansé (EPS) alimentaire" },
+      { name: "Densité", value: "22 kg/m³" },
+      { name: "Dimensions extérieures", value: "430 x 330 x 160 mm (L x l x H)" },
+      { name: "Dimensions intérieures", value: "390 x 290 x 130 mm (L x l x H)" },
+      { name: "Épaisseur des parois", value: "20 mm" },
+      { name: "Poids à vide", value: "280 g" },
+      { name: "Couleur", value: "Blanc" },
+    ],
+    benefits: [
+      { title: "Fraîcheur prolongée", description: "Maintient la chaîne du froid pour une fraîcheur optimale.", icon: "fresh" },
+      { title: "Logistique simplifiée", description: "Format standard adapté aux véhicules de livraison.", icon: "logistics" },
+      { title: "Sécurité alimentaire", description: "Matériau conforme aux normes de contact alimentaire.", icon: "safety" },
+      { title: "Solution économique", description: "Excellent rapport qualité-prix pour le transport de produits frais.", icon: "economy" },
+    ],
+    applications: [
+      "Transport professionnel de produits de la pêche",
+      "Distribution aux restaurants et détaillants",
+      "Marchés de gros et de détail",
+      "Expéditions de produits frais",
+    ],
+    installation: {
+      steps: [
+        "Pré-refroidir la caisse si possible",
+        "Placer une couche de glace ou des pains de glace",
+        "Disposer les produits de la pêche",
+        "Compléter avec de la glace si nécessaire",
+        "Fermer et sceller si besoin",
+      ],
+      videoUrl: "#",
+    },
+    images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
+    inStock: true,
+    leadTime: "Immédiat (stock) ou 1 semaine",
+    minOrder: 20,
+    certification: ["Contact alimentaire", "Norme ISO 9001"],
+    warranty: "Non applicable",
+    slug: "fish-box-6kg",
+    category: "fishbox",
+    tags: ["pêche", "poisson", "transport", "isotherme", "frais"],
+    relatedProducts: [7, 9, 10],
+    reviews: { average: 4.6, count: 15 },
+    faq: [
+      {
+        question: "Quelle est la différence principale avec la Fish Box 5kg ?",
+        answer: "La Fish Box 6kg offre environ 20% de capacité supplémentaire tout en conservant un format compact, idéal pour les livraisons commerciales de taille moyenne.",
+      },
+      {
+        question: "Peut-on personnaliser ces caisses avec un logo ?",
+        answer: "Oui, pour les commandes en volume, nous proposons un service d'impression de logo sur les Fish Box.",
+      },
+    ],
+    downloads: [
+      { name: "Fiche technique", url: "#", type: "pdf" },
+      { name: "Guide de la chaîne du froid", url: "#", type: "pdf" },
+    ],
+    projects: [
+      { name: "Réseau de poissonneries Méditerranée", description: "Fourniture de Fish Box pour la distribution quotidienne", image: "/placeholder.svg?height=300&width=400", slug: "reseau-poissonneries" },
+    ],
+  },
+  {
+    id: 9,
+    name: "Fish Box 10kg",
+    description: "Fish Box 10kg - Caisson d'emballage isotherme pour produits de la pêche.",
+    longDescription: `
+      <p>La Fish Box 10kg est un caisson isotherme en polystyrène expansé de capacité moyenne, idéal pour le transport et la conservation des produits de la pêche en quantité significative. Cette taille est particulièrement adaptée aux besoins professionnels et commerciaux.</p>
+      <p>Offrant une excellente isolation thermique, elle maintient efficacement la chaîne du froid pendant le transport et le stockage. Sa conception robuste assure une protection optimale des produits tout en restant suffisamment légère pour une manipulation aisée.</p>
+    `,
+    features: [
+      "Capacité de 10kg de produits frais",
+      "Isolation thermique supérieure",
+      "Structure renforcée pour une meilleure protection",
+      "Excellente résistance à l'humidité",
+      "Design empilable pour optimiser le stockage",
+      "100% recyclable",
+    ],
+    specifications: [
+      { name: "Capacité", value: "10 kg" },
+      { name: "Matériau", value: "Polystyrène expansé (EPS) alimentaire" },
+      { name: "Densité", value: "25 kg/m³" },
+      { name: "Dimensions extérieures", value: "600 x 400 x 180 mm (L x l x H)" },
+      { name: "Dimensions intérieures", value: "560 x 360 x 150 mm (L x l x H)" },
+      { name: "Épaisseur des parois", value: "20 mm" },
+      { name: "Poids à vide", value: "450 g" },
+      { name: "Couleur", value: "Blanc" },
+    ],
+    benefits: [
+      { title: "Conservation optimale", description: "Maintient la fraîcheur des produits pendant 24-36 heures avec glace appropriée.", icon: "fresh" },
+      { title: "Usage professionnel", description: "Format adapté aux besoins des pêcheurs et distributeurs.", icon: "professional" },
+      { title: "Polyvalence", description: "Convient à divers types de produits de la mer.", icon: "versatility" },
+      { title: "Durabilité", description: "Construction robuste permettant plusieurs utilisations.", icon: "durability" },
+    ],
+    applications: [
+      "Distribution commerciale de produits de la pêche",
+      "Approvisionnement des restaurants et hôtels",
+      "Transport entre sites de pêche et points de vente",
+      "Stockage temporaire en chambre froide",
+    ],
+    installation: {
+      steps: [
+        "Pré-refroidir la caisse avant utilisation",
+        "Disposer une couche de glace pilée au fond",
+        "Arranger les produits de la pêche de façon optimale",
+        "Ajouter de la glace entre et sur les produits",
+        "Fermer et sécuriser pour le transport",
+      ],
+      videoUrl: "#",
+    },
+    images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
+    inStock: true,
+    leadTime: "1 semaine",
+    minOrder: 10,
+    certification: ["Contact alimentaire", "Norme ISO 9001"],
+    warranty: "Non applicable",
+    slug: "fish-box-10kg",
+    category: "fishbox",
+    tags: ["pêche", "poisson", "transport", "isotherme", "frais", "commercial"],
+    relatedProducts: [7, 8, 10],
+    reviews: { average: 4.8, count: 22 },
+    faq: [
+      {
+        question: "Cette taille est-elle adaptée pour l'expédition par transporteur ?",
+        answer: "Oui, la Fish Box 10kg est dimensionnée pour s'intégrer parfaitement dans les circuits logistiques standards et peut être expédiée par la plupart des transporteurs.",
+      },
+      {
+        question: "Quelle quantité de glace est recommandée pour cette taille de caisse ?",
+        answer: "Pour une conservation optimale, nous recommandons environ 3-4kg de glace pilée ou 2-3 pains de glace de grande taille.",
+      },
+    ],
+    downloads: [
+      { name: "Fiche technique", url: "#", type: "pdf" },
+      { name: "Guide logistique", url: "#", type: "pdf" },
+    ],
+    projects: [
+      { name: "Criée du Port de Sfax", description: "Fourniture de Fish Box pour les ventes aux enchères", image: "/placeholder.svg?height=300&width=400", slug: "criee-sfax" },
+      { name: "Exportateur de produits marins", description: "Utilisation pour expéditions nationales", image: "/placeholder.svg?height=300&width=400", slug: "exportateur-produits-marins" },
+    ],
+  },
+  {
+    id: 10,
+    name: "Fish Box 20kg (Grand Capacité)",
+    description: "Fish Box 20kg - Caisson d'emballage isotherme grande capacité pour le transport de produits frais.",
+    longDescription: `
+      <p>La Fish Box 20kg est notre solution isotherme de grande capacité, spécialement conçue pour le transport et la conservation de volumes importants de produits de la pêche. Ce format professionnel répond aux besoins des pêcheurs commerciaux, grossistes et exportateurs.</p>
+      <p>Fabriquée en polystyrène expansé haute densité, elle offre une isolation thermique exceptionnelle et une résistance mécanique renforcée. Sa conception optimisée permet de maintenir la chaîne du froid pendant une durée prolongée, garantissant la qualité et la fraîcheur des produits même lors de transports longue distance.</p>
+    `,
+    features: [
+      "Grande capacité de 20kg de produits frais",
+      "Isolation thermique professionnelle",
+      "Structure ultra-renforcée pour résister aux manipulations intensives",
+      "Parois épaisses pour une meilleure conservation du froid",
+      "Design optimisé pour le transport logistique",
+      "100% recyclable",
+    ],
+    specifications: [
+      { name: "Capacité", value: "20 kg" },
+      { name: "Matériau", value: "Polystyrène expansé (EPS) haute densité alimentaire" },
+      { name: "Densité", value: "28 kg/m³" },
+      { name: "Dimensions extérieures", value: "800 x 500 x 230 mm (L x l x H)" },
+      { name: "Dimensions intérieures", value: "750 x 450 x 190 mm (L x l x H)" },
+      { name: "Épaisseur des parois", value: "25 mm" },
+      { name: "Poids à vide", value: "750 g" },
+      { name: "Couleur", value: "Blanc" },
+    ],
+    benefits: [
+      { title: "Logistique professionnelle", description: "Format adapté aux chaînes logistiques commerciales.", icon: "logistics" },
+      { title: "Conservation longue durée", description: "Maintient la température jusqu'à 48h avec glace appropriée.", icon: "duration" },
+      { title: "Économies d'échelle", description: "Réduit les coûts de transport par kg de produit.", icon: "savings" },
+      { title: "Protection maximale", description: "Sécurise les produits de valeur pendant le transport.", icon: "protection" },
+    ],
+    applications: [
+      "Transport maritime et terrestre de produits de la pêche",
+      "Exportation de produits frais",
+      "Approvisionnement de grandes surfaces et chaînes hôtelières",
+      "Stockage temporaire en entrepôt frigorifique",
+    ],
+    installation: {
+      steps: [
+        "Pré-refroidir la caisse plusieurs heures avant utilisation",
+        "Disposer une couche de glace conséquente au fond",
+        "Arranger les produits en couches séparées par de la glace",
+        "Compléter avec une couche supérieure de glace",
+        "Fermer hermétiquement et sécuriser pour le transport",
+      ],
+      videoUrl: "#",
+    },
+    images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
+    inStock: true,
+    leadTime: "1-2 semaines",
+    minOrder: 5,
+    certification: ["Contact alimentaire", "Norme ISO 9001", "Certification export"],
+    warranty: "Non applicable",
+    slug: "fish-box-20kg",
+    category: "fishbox",
+    tags: ["pêche", "poisson", "transport", "isotherme", "frais", "export", "grande capacité"],
+    relatedProducts: [7, 8, 9],
+    reviews: { average: 4.9, count: 17 },
+    faq: [
+      {
+        question: "Cette caisse est-elle adaptée à l'exportation internationale ?",
+        answer: "Oui, la Fish Box 20kg est spécifiquement conçue pour répondre aux exigences des transports internationaux et maintenir la chaîne du froid sur de longues distances.",
+      },
+      {
+        question: "Peut-on transporter d'autres produits que les produits de la mer ?",
+        answer: "Absolument, cette caisse convient également au transport de viandes, produits laitiers et autres denrées périssables nécessitant une chaîne du froid.",
+      },
+    ],
+    downloads: [
+      { name: "Fiche technique", url: "#", type: "pdf" },
+      { name: "Guide d'exportation", url: "#", type: "pdf" },
+      { name: "Certificat de conformité", url: "#", type: "pdf" },
+    ],
+    projects: [
+      { name: "Groupement d'exportateurs tunisiens", description: "Fourniture de Fish Box pour l'export vers l'Europe", image: "/placeholder.svg?height=300&width=400", slug: "exportateurs-tunisiens" },
+      { name: "Chaîne de restaurants de fruits de mer", description: "Approvisionnement quotidien en produits frais", image: "/placeholder.svg?height=300&width=400", slug: "restaurants-fruits-mer" },
+    ],
+  },
+  {
+    id: 11,
+    name: "Polystyrène expansé Standard",
+    description: "Polystyrène expansé standard pour isolation thermique et emballage.",
+    longDescription: `
+      <p>Le polystyrène expansé (PSE) standard est notre solution polyvalente pour diverses applications d'isolation et d'emballage. Ce matériau léger et économique offre un excellent rapport qualité-prix pour les usages courants.</p>
+      <p>Composé à 98% d'air emprisonné dans une structure cellulaire fermée, il présente d'excellentes propriétés isolantes thermiques tout en étant facile à manipuler et à découper. Sa densité standard de 15-20 kg/m³ en fait un choix idéal pour les applications ne nécessitant pas de résistance mécanique exceptionnelle.</p>
+    `,
+    features: [
+      "Excellente isolation thermique",
+      "Légèreté et facilité de manipulation",
+      "Résistance à l'humidité",
+      "Facilement découpable et façonnable",
+      "Économique et rentable",
+      "100% recyclable",
+    ],
+    specifications: [
+      { name: "Matériau", value: "Polystyrène expansé (EPS)" },
+      { name: "Densité", value: "15-20 kg/m³" },
+      { name: "Conductivité thermique", value: "0,038-0,040 W/m.K" },
+      { name: "Résistance à la compression", value: "70-100 kPa" },
+      { name: "Classement au feu", value: "Euroclasse E" },
+      { name: "Absorption d'eau", value: "< 5%" },
+      { name: "Formats disponibles", value: "Plaques, blocs, formes moulées" },
+      { name: "Couleur", value: "Blanc" },
+    ],
+    benefits: [
+      { title: "Polyvalence", description: "Adapté à de nombreuses applications courantes.", icon: "versatility" },
+      { title: "Facilité d'utilisation", description: "Simple à découper et à installer sans équipement spécialisé.", icon: "ease" },
+      { title: "Économique", description: "Excellent rapport performance/prix pour les applications standard.", icon: "economy" },
+      { title: "Écologique", description: "Entièrement recyclable et nécessitant peu d'énergie pour sa production.", icon: "eco" },
+    ],
+    applications: [
+      "Isolation thermique de base pour bâtiments",
+      "Emballage de protection pour produits fragiles",
+      "Calage et remplissage dans les colis",
+      "Supports pour l'artisanat et les loisirs créatifs",
+      "Base pour maquettes et modélisme",
+    ],
+    installation: {
+      steps: [
+        "Mesurer précisément les dimensions requises",
+        "Découper à l'aide d'un cutter, fil chaud ou scie fine",
+        "Installer selon les besoins spécifiques de l'application",
+        "Fixer avec des adhésifs compatibles si nécessaire",
+      ],
+      videoUrl: "#",
+    },
+    images: ["/stc/plaaaaa.PNG", "/placeholder.svg?height=300&width=400"],
+    inStock: true,
+    leadTime: "Immédiat (stock) ou 1 semaine",
+    minOrder: 10,
+    certification: ["ISO 9001", "Marquage CE"],
+    warranty: "5 ans",
+    slug: "polystyrene-expanse-standard",
+    category: "polystyrene",
+    tags: ["isolation", "emballage", "protection", "légèreté"],
+    relatedProducts: [4, 5, 12, 13],
+    reviews: { average: 4.5, count: 25 },
+    faq: [
+      {
+        question: "Quelle est la différence avec le polystyrène haute densité ?",
+        answer: "Le polystyrène standard a une densité plus faible (15-20 kg/m³) que la version haute densité, ce qui le rend plus léger et plus économique, mais moins résistant mécaniquement.",
+      },
+      {
+        question: "Comment découper proprement le polystyrène expansé ?",
+        answer: "Pour une découpe nette, utilisez un cutter bien aiguisé, un fil chaud ou une scie à fine denture. Évitez les mouvements brusques pour ne pas fragmenter le matériau.",
+      },
+    ],
+    downloads: [
+      { name: "Fiche technique", url: "#", type: "pdf" },
+      { name: "Guide d'utilisation", url: "#", type: "pdf" },
+    ],
+    projects: [
+      { name: "Chantiers résidentiels Tunis", description: "Isolation thermique de base pour logements", image: "/placeholder.svg?height=300&width=400", slug: "chantiers-tunis" },
+      { name: "Entreprise d'emballage Sousse", description: "Protection de produits électroniques", image: "/placeholder.svg?height=300&width=400", slug: "emballage-sousse" },
+    ],
+  },
+  {
+    id: 12,
+    name: "Polystyrène expansé Haute Densité",
+    description: "Polystyrène expansé haute densité pour applications structurelles.",
+    longDescription: `
+      <p>Le polystyrène expansé (PSE) haute densité est notre solution premium pour les applications exigeantes nécessitant une résistance mécanique supérieure et des performances thermiques optimales. Avec une densité de 25-30 kg/m³, ce matériau offre une excellente résistance à la compression tout en conservant les propriétés isolantes caractéristiques du PSE.</p>
+      <p>Particulièrement adapté aux applications structurelles dans la construction et aux emballages de protection pour produits lourds ou fragiles, le PSE haute densité représente le choix idéal lorsque la durabilité et la performance sont essentielles.</p>
+    `,
+    features: [
+      "Résistance mécanique supérieure",
+      "Excellente isolation thermique",
+      "Résistance accrue à la compression",
+      "Durabilité exceptionnelle",
+      "Stabilité dimensionnelle à long terme",
+      "Absorption d'eau minimale",
+      "100% recyclable",
+    ],
+    specifications: [
+      { name: "Matériau", value: "Polystyrène expansé (EPS) haute densité" },
+      { name: "Densité", value: "25-30 kg/m³" },
+      { name: "Conductivité thermique", value: "0,033-0,036 W/m.K" },
+      { name: "Résistance à la compression", value: "150-250 kPa" },
+      { name: "Classement au feu", value: "Euroclasse E" },
+      { name: "Absorption d'eau", value: "< 3%" },
+      { name: "Formats disponibles", value: "Plaques, blocs, formes moulées renforcées" },
+      { name: "Couleur", value: "Blanc" },
+    ],
+    benefits: [
+      { title: "Performance structurelle", description: "Supporte des charges importantes sans déformation.", icon: "strength" },
+      { title: "Isolation supérieure", description: "Meilleure conductivité thermique que les versions standard.", icon: "insulation" },
+      { title: "Longévité", description: "Conserve ses propriétés mécaniques et thermiques dans le temps.", icon: "longevity" },
+      { title: "Protection renforcée", description: "Offre une sécurité accrue pour les produits de valeur.", icon: "protection" },
+    ],
+    applications: [
+      "Isolation sous chape et dalle béton",
+      "Panneaux isolants structuraux (SIP)",
+      "Coffrages isolants pour béton (ICF)",
+      "Emballage de protection pour équipements lourds",
+      "Isolation de toitures terrasses accessibles",
+      "Applications marines et flottaison",
+    ],
+    installation: {
+      steps: [
+        "Mesurer précisément les dimensions requises",
+        "Découper avec des outils adaptés (scie à fine denture recommandée)",
+        "Installer selon les spécifications techniques du projet",
+        "Fixer avec des fixations mécaniques ou adhésifs spécifiques si nécessaire",
+      ],
+      videoUrl: "#",
+    },
+    images: ["/stc/plaaaaa.PNG", "/placeholder.svg?height=300&width=400"],
+    inStock: true,
+    leadTime: "1-2 semaines",
+    minOrder: 5,
+    certification: ["ISO 9001", "Marquage CE", "Certification construction"],
+    warranty: "10 ans",
+    slug: "polystyrene-expanse-haute-densite",
+    category: "polystyrene",
+    tags: ["isolation", "structure", "résistance", "construction", "haute performance"],
+    relatedProducts: [1, 11, 13],
+    reviews: { average: 4.8, count: 19 },
+    faq: [
+      {
+        question: "Ce matériau peut-il supporter le poids d'une dalle béton ?",
+        answer: "Oui, le PSE haute densité est spécifiquement conçu pour supporter des charges importantes comme les dalles béton, avec une résistance à la compression pouvant atteindre 250 kPa.",
+      },
+      {
+        question: "Quelle est sa durée de vie dans des applications structurelles ?",
+        answer: "Dans des conditions normales d'utilisation, le PSE haute densité conserve ses propriétés mécaniques et thermiques pendant plus de 50 ans.",
+      },
+    ],
+    downloads: [
+      { name: "Fiche technique", url: "#", type: "pdf" },
+      { name: "Guide d'application structurelle", url: "#", type: "pdf" },
+      { name: "Certificat de performance", url: "#", type: "pdf" },
+    ],
+    projects: [
+      { name: "Centre commercial Carthage", description: "Isolation sous dalle de grande surface", image: "/placeholder.svg?height=300&width=400", slug: "centre-carthage" },
+      { name: "Villas de luxe Hammamet", description: "Système d'isolation thermique complet", image: "/placeholder.svg?height=300&width=400", slug: "villas-hammamet" },
+    ],
+  },
+  {
+    id: 13,
+    name: "Polystyrène expansé Ignifuge",
+    description: "Polystyrène expansé ignifuge pour zones à réglementation incendie stricte.",
+    longDescription: `
+      <p>Le polystyrène expansé (PSE) ignifuge est notre solution spécialisée pour les applications nécessitant une sécurité incendie renforcée. Traité avec des additifs retardateurs de flamme, ce matériau offre une résistance significativement améliorée à la propagation du feu tout en conservant les excellentes propriétés isolantes du PSE.</p>
+      <p>Particulièrement adapté aux bâtiments publics, établissements recevant du public (ERP) et constructions soumises à des réglementations incendie strictes, le PSE ignifuge combine sécurité et performance thermique. Il répond aux normes européennes les plus exigeantes en matière de réaction au feu.</p>
+    `,
+    features: [
+      "Propriétés ignifuges avancées",
+      "Classement au feu amélioré (Euroclasse B-s1,d0)",
+      "Excellente isolation thermique",
+      "Auto-extinguible",
+      "Faible émission de fumée",
+      "Disponible en différentes densités",
+      "100% recyclable",
+    ],
+    specifications: [
+      { name: "Matériau", value: "Polystyrène expansé (EPS) avec additifs ignifuges" },
+      { name: "Densité", value: "15-30 kg/m³ (selon application)" },
+      { name: "Conductivité thermique", value: "0,035-0,038 W/m.K" },
+      { name: "Résistance à la compression", value: "70-250 kPa (selon densité)" },
+      { name: "Classement au feu", value: "Euroclasse B-s1,d0" },
+      { name: "Absorption d'eau", value: "< 5%" },
+      { name: "Formats disponibles", value: "Plaques, blocs, formes moulées" },
+      { name: "Couleur", value: "Blanc avec légère teinte (due aux additifs)" },
+    ],
+    benefits: [
+      { title: "Sécurité renforcée", description: "Réduit significativement les risques de propagation d'incendie.", icon: "safety" },
+      { title: "Conformité réglementaire", description: "Répond aux exigences des normes de sécurité incendie.", icon: "compliance" },
+      { title: "Double performance", description: "Combine isolation thermique et sécurité incendie.", icon: "performance" },
+      { title: "Polyvalence", description: "Disponible en différentes densités pour diverses applications.", icon: "versatility" },
+    ],
+    applications: [
+      "Isolation des bâtiments publics et ERP",
+      "Isolation par l'extérieur (ITE) en zones urbaines",
+      "Isolation des établissements scolaires et hospitaliers",
+      "Emballage de produits électroniques et sensibles",
+      "Isolation des locaux techniques et industriels",
+    ],
+    installation: {
+      steps: [
+        "Vérifier la conformité avec les réglementations locales",
+        "Mesurer et découper selon les dimensions requises",
+        "Installer selon les recommandations spécifiques aux applications ignifuges",
+        "Utiliser des fixations et adhésifs compatibles avec les propriétés ignifuges",
+      ],
+      videoUrl: "#",
+    },
+    images: ["/stc/plaaaaa.PNG", "/placeholder.svg?height=300&width=400"],
+    inStock: true,
+    leadTime: "2-3 semaines",
+    minOrder: 10,
+    certification: ["ISO 9001", "Marquage CE", "Certification feu Euroclasse B"],
+    warranty: "10 ans",
+    slug: "polystyrene-expanse-ignifuge",
+    category: "polystyrene",
+    tags: ["isolation", "ignifuge", "sécurité incendie", "ERP", "bâtiment public"],
+    relatedProducts: [11, 12],
+    reviews: { average: 4.7, count: 14 },
+    faq: [
+      {
+        question: "Les additifs ignifuges affectent-ils les performances d'isolation ?",
+        answer: "Les additifs ignifuges ont un impact minimal sur les performances thermiques, avec une légère augmentation de la conductivité thermique (environ 5-8%) par rapport au PSE standard.",
+      },
+      {
+        question: "Ce matériau est-il adapté à l'isolation thermique par l'extérieur en ville ?",
+        answer: "Oui, le PSE ignifuge est particulièrement recommandé pour l'ITE en milieu urbain où les réglementations incendie sont plus strictes, notamment pour les bâtiments de moyenne et grande hauteur.",
+      },
+    ],
+    downloads: [
+      { name: "Fiche technique", url: "#", type: "pdf" },
+      { name: "Certificat de classement au feu", url: "#", type: "pdf" },
+      { name: "Guide de conformité réglementaire", url: "#", type: "pdf" },
+    ],
+    projects: [
+      { name: "Hôpital Universitaire de Tunis", description: "Isolation complète aux normes strictes", image: "/placeholder.svg?height=300&width=400", slug: "hopital-tunis" },
+      { name: "Complexe scolaire Sousse", description: "Rénovation énergétique sécurisée", image: "/placeholder.svg?height=300&width=400", slug: "complexe-scolaire" },
+    ],
+  },
+];
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const product = products.find((p) => p.slug === params.slug)

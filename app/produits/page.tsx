@@ -8,33 +8,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 const products = [
   {
     id: 1,
-    name: "Coffret volet roulant",
-    description: "Solution légère et isolante pour l'installation de volets roulants.",
+    name: "Coffret Tunnel Volet Roulant",
+    description: "Coffret léger et isolant avec renforts acier galvanisé pour volets roulants traditionnels et bloc-baie.",
     image: "/stc/coff.jpeg",
     slug: "coffret-tunnel-volet-roulant",
-    category: "coffrets",
-  },
-  {
-    id: 2,
-    name: "Coffret Tunnel Standard",
-    description: "Coffret tunnel standard pour volets roulants de dimensions classiques.",
-    image: "/placeholder.svg?height=300&width=400",
-    slug: "coffret-tunnel-standard",
-    category: "coffrets",
-  },
-  {
-    id: 3,
-    name: "Coffret Tunnel Grande Largeur",
-    description: "Coffret tunnel adapté aux grandes ouvertures et baies vitrées.",
-    image: "/placeholder.svg?height=300&width=400",
-    slug: "coffret-tunnel-grande-largeur",
     category: "coffrets",
   },
   {
     id: 4,
     name: "Panneau Isolant 2cm",
     description: "Panneau isolant en polystyrène expansé d'épaisseur 2cm.",
-    image: "/stc/plaaaaa.png",
+    image: "/stc/plaaaaa.PNG",
     slug: "panneau-isolant-2cm",
     category: "panneaux",
   },
@@ -42,7 +26,7 @@ const products = [
     id: 5,
     name: "Panneau Isolant 3cm",
     description: "Panneau isolant en polystyrène expansé d'épaisseur 3cm.",
-    image: "/stc/plaaaaa.png",
+    image: "/stc/plaaaaa.PNG",
     slug: "panneau-isolant-3cm",
     category: "panneaux",
   },
@@ -50,33 +34,65 @@ const products = [
     id: 6,
     name: "Panneau Isolant Sur Mesure",
     description: "Panneau isolant en polystyrène expansé fabriqué selon vos spécifications.",
-    image: "/stc/plaaaaa.png",
+    image: "/stc/plaaaaa.PNG",
     slug: "panneau-isolant-sur-mesure",
     category: "panneaux",
   },
   {
     id: 7,
-    name: "Fish Box Standard",
-    description: "Caisson d'emballage isotherme pour produits de la pêche.",
+    name: "Fish Box 5kg",
+    description: "Fish Box 5kg - Caisson d'emballage isotherme pour produits de la pêche.",
     image: "/placeholder.svg?height=300&width=400",
-    slug: "fish-box-standard",
+    slug: "fish-box-5kg",
     category: "fishbox",
   },
   {
     id: 8,
-    name: "Fish Box Grande Capacité",
-    description: "Caisson d'emballage isotherme grande capacité pour le transport de produits frais.",
+    name: "Fish Box 6kg",
+    description: "Fish Box 6kg - Caisson d'emballage isotherme pour produits de la pêche.",
     image: "/placeholder.svg?height=300&width=400",
-    slug: "fish-box-grande-capacite",
+    slug: "fish-box-6kg",
     category: "fishbox",
   },
   {
     id: 9,
-    name: "Caisson d'Emballage Personnalisé",
-    description: "Caisson d'emballage en polystyrène expansé personnalisé selon vos besoins.",
+    name: "Fish Box 10kg",
+    description: "Fish Box 10kg - Caisson d'emballage isotherme pour produits de la pêche.",
     image: "/placeholder.svg?height=300&width=400",
-    slug: "caisson-emballage-personnalise",
+    slug: "fish-box-10kg",
     category: "fishbox",
+  },
+  {
+    id: 10,
+    name: "Fish Box 20kg (Grand Capacité)",
+    description: "Fish Box 20kg - Caisson d'emballage isotherme grande capacité pour le transport de produits frais.",
+    image: "/placeholder.svg?height=300&width=400",
+    slug: "fish-box-20kg",
+    category: "fishbox",
+  },
+  {
+    id: 11,
+    name: "Polystyrène expansé Standard",
+    description: "Polystyrène expansé standard pour isolation thermique et emballage.",
+    image: "/stc/plaaaaa.PNG",
+    slug: "polystyrene-expanse-standard",
+    category: "polystyrene",
+  },
+  {
+    id: 12,
+    name: "Polystyrène expansé Haute Densité",
+    description: "Polystyrène expansé haute densité pour applications structurelles.",
+    image: "/stc/plaaaaa.PNG",
+    slug: "polystyrene-expanse-haute-densite",
+    category: "polystyrene",
+  },
+  {
+    id: 13,
+    name: "Polystyrène expansé Ignifuge",
+    description: "Polystyrène expansé ignifuge pour zones à réglementation incendie stricte.",
+    image: "/stc/plaaaaa.PNG",
+    slug: "polystyrene-expanse-ignifuge",
+    category: "polystyrene",
   },
 ]
 
@@ -98,11 +114,12 @@ export default function ProductsPage() {
       </div>
 
       <Tabs defaultValue="all" className="mb-12">
-        <TabsList className="grid w-full grid-cols-4 mb-8">
+        <TabsList className="grid w-full grid-cols-5 mb-8">
           <TabsTrigger value="all">Tous</TabsTrigger>
           <TabsTrigger value="coffrets">Coffrets Tunnel</TabsTrigger>
           <TabsTrigger value="panneaux">Panneaux Isolants</TabsTrigger>
           <TabsTrigger value="fishbox">Fish Box</TabsTrigger>
+          <TabsTrigger value="polystyrene">Polystyrène</TabsTrigger>
         </TabsList>
         <TabsContent value="all">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -133,6 +150,15 @@ export default function ProductsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products
               .filter((product) => product.category === "fishbox")
+              .map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+          </div>
+        </TabsContent>
+        <TabsContent value="polystyrene">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products
+              .filter((product) => product.category === "polystyrene")
               .map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}

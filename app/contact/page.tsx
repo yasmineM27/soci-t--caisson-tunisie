@@ -192,7 +192,7 @@ export default function ContactPage() {
                     <SelectValue placeholder="Sélectionnez un produit" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="coffret-tunnel-volet-roulant">Coffret volet roulant</SelectItem>
+                    <SelectItem value="coffret-tunnel-volet-roulant">Coffret Tunnel Volet Roulant</SelectItem>
                     <SelectItem value="panneau-isolant-polystyrene">Panneau Isolant en Polystyrène</SelectItem>
                     <SelectItem value="fish-box-caisson-emballage">Fish Box / Caisson d'Emballage</SelectItem>
                     <SelectItem value="autre">Autre / Sur mesure</SelectItem>

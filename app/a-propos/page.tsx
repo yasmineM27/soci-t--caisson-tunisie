@@ -136,7 +136,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* Facilities */}
+      {/* Facilities 
       <div>
         <h2 className="text-3xl font-bold text-center mb-8">Nos Installations</h2>
         <p className="text-center max-w-3xl mx-auto mb-12">
@@ -155,7 +155,7 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-      </div>
+      </div>*/}
     </div>
   )
 }

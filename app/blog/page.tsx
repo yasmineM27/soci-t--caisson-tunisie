@@ -23,9 +23,9 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: "Comment choisir le bon Coffret volet roulant",
+    title: "Comment choisir le bon Coffret Tunnel Volet Roulant",
     excerpt: "Guide complet pour sélectionner le coffret tunnel adapté à vos besoins et à votre type de construction.",
-    content: "Le choix d'un Coffret volet roulant dépend de plusieurs facteurs importants...",
+    content: "Le choix d'un Coffret Tunnel Volet Roulant dépend de plusieurs facteurs importants...",
     image: "/stc/coff.jpeg",
     author: "Sami Meddeb",
     date: "2023-06-02",

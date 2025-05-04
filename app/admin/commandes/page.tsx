@@ -17,7 +17,7 @@ const initialOrders = [
     phone: "+216 12 345 678",
     date: "2023-05-15",
     products: [
-      { name: "Coffret volet roulant", quantity: 10 },
+      { name: "Coffret Tunnel Volet Roulant", quantity: 10 },
       { name: "Panneau Isolant 3cm", quantity: 20 },
     ],
     status: "completed",

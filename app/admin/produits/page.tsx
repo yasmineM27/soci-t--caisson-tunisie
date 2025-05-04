@@ -15,23 +15,12 @@ import { useToast } from "@/hooks/use-toast"
 const initialProducts = [
   {
     id: 1,
-    name: "Coffret volet roulant",
+    name: "Coffret Tunnel Volet Roulant",
     category: "coffrets",
     
     status: "active",
   },
-  {
-    id: 2,
-    name: "Coffret Tunnel Standard",
-    category: "coffrets",
-    status: "active",
-  },
-  {
-    id: 3,
-    name: "Coffret Tunnel Grande Largeur",
-    category: "coffrets",
-    status: "active",
-  },
+
   {
     id: 4,
     name: "Panneau Isolant 2cm",
@@ -184,6 +173,8 @@ export default function ProductsPage() {
                     {product.category === "coffrets" && "Coffrets Tunnel"}
                     {product.category === "panneaux" && "Panneaux Isolants"}
                     {product.category === "fishbox" && "Fish Box"}
+                    {product.category === "Polystyrène" && "polystyrène"}
+
                   </TableCell>
                   <TableCell>
                     <span

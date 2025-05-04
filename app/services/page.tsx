@@ -53,21 +53,7 @@ const services = [
     ],
     image: "/placeholder.svg?height=400&width=600",
   },
-  {
-    id: 4,
-    title: "Installation",
-    description:
-      "Nous proposons des services d'installation professionnelle pour garantir les performances optimales de nos produits.",
-    icon: Wrench,
-    details: [
-      "Équipe d'installateurs qualifiés",
-      "Respect des normes et réglementations",
-      "Installation rapide et soignée",
-      "Minimisation des perturbations",
-      "Vérification post-installation",
-    ],
-    image: "/placeholder.svg?height=400&width=600",
-  },
+  
 ]
 
 export default function ServicesPage() {

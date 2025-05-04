@@ -14,36 +14,6 @@ export const metadata: Metadata = {
 const videos = [
   {
     id: 1,
-    title: "Installation d'un coffret tunnel",
-    thumbnail: "/placeholder.svg?height=200&width=350",
-    url: "#",
-  },
-  {
-    id: 2,
-    title: "Pose de panneaux isolants",
-    thumbnail: "/placeholder.svg?height=200&width=350",
-    url: "#",
-  },
-  {
-    id: 3,
-    title: "Utilisation des Fish Box",
-    thumbnail: "/placeholder.svg?height=200&width=350",
-    url: "#",
-  },
-  {
-    id: 4,
-    title: "Avantages de l'isolation en polystyrène",
-    thumbnail: "/placeholder.svg?height=200&width=350",
-    url: "#",
-  },
-  {
-    id: 5,
-    title: "Comment choisir son isolation",
-    thumbnail: "/placeholder.svg?height=200&width=350",
-    url: "#",
-  },
-  {
-    id: 6,
     title: "Présentation de notre usine",
     thumbnail: "/placeholder.svg?height=200&width=350",
     url: "#",
@@ -52,14 +22,6 @@ const videos = [
 
 // Group videos by category
 const videoCategories = [
-  {
-    title: "Installation",
-    videos: videos.slice(0, 2),
-  },
-  {
-    title: "Utilisation",
-    videos: videos.slice(2, 4),
-  },
   {
     title: "Informations générales",
     videos: videos.slice(4, 6),

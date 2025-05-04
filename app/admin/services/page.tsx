@@ -43,14 +43,7 @@ const initialServices = [
     icon: "Truck",
     status: "active",
   },
-  {
-    id: 4,
-    title: "Installation",
-    description:
-      "Nous proposons des services d'installation professionnelle pour garantir les performances optimales de nos produits.",
-    icon: "Wrench",
-    status: "inactive",
-  },
+  
 ]
 
 // Available icons

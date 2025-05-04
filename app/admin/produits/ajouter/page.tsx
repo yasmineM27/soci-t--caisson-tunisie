@@ -176,6 +176,9 @@ export default function AddProductPage() {
                       <SelectItem value="coffrets">Coffrets Tunnel</SelectItem>
                       <SelectItem value="panneaux">Panneaux Isolants</SelectItem>
                       <SelectItem value="fishbox">Fish Box</SelectItem>
+                      <SelectItem value="fishbox">Polystyrène</SelectItem>
+
+                      
                     </SelectContent>
                   </Select>
                 </div>

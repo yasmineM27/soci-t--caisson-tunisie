@@ -48,10 +48,10 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: "Comment choisir le bon Coffret volet roulant",
+    title: "Comment choisir le bon Coffret Tunnel Volet Roulant",
     excerpt: "Guide complet pour sélectionner le coffret tunnel adapté à vos besoins et à votre type de construction.",
     content: `
-      <p>Le choix d'un Coffret volet roulant dépend de plusieurs facteurs importants. Dans cet article, nous vous guidons à travers les critères essentiels à prendre en compte pour sélectionner le modèle le plus adapté à votre projet.</p>
+      <p>Le choix d'un Coffret Tunnel Volet Roulant dépend de plusieurs facteurs importants. Dans cet article, nous vous guidons à travers les critères essentiels à prendre en compte pour sélectionner le modèle le plus adapté à votre projet.</p>
       
       <h2>Comprendre le rôle du coffret tunnel</h2>
       <p>Avant de faire votre choix, il est important de comprendre la fonction du coffret tunnel. Ce composant, généralement fabriqué en polystyrène expansé (EPS), est installé au-dessus de la fenêtre ou de la porte-fenêtre et sert à loger le mécanisme du volet roulant. Il joue également un rôle crucial dans l'isolation thermique et acoustique de l'ouverture.</p>
@@ -87,7 +87,7 @@ const blogPosts = [
       <p>Enfin, le coût est un facteur déterminant dans le choix d'un coffret tunnel. Les prix varient en fonction des dimensions, des performances thermiques et acoustiques, et des options supplémentaires. Il est recommandé de comparer plusieurs offres et de considérer le rapport qualité-prix plutôt que de se focaliser uniquement sur le coût initial.</p>
       
       <h2>Conclusion</h2>
-      <p>Le choix d'un Coffret volet roulant doit être fait avec soin, en tenant compte de nombreux facteurs techniques et esthétiques. Chez Société Caisson Tunisie, nous proposons une gamme complète de coffrets tunnel en polystyrène expansé, adaptés à différents types de constructions et d'exigences. N'hésitez pas à consulter nos experts pour vous guider dans votre choix et vous assurer d'une installation optimale.</p>
+      <p>Le choix d'un Coffret Tunnel Volet Roulant doit être fait avec soin, en tenant compte de nombreux facteurs techniques et esthétiques. Chez Société Caisson Tunisie, nous proposons une gamme complète de coffrets tunnel en polystyrène expansé, adaptés à différents types de constructions et d'exigences. N'hésitez pas à consulter nos experts pour vous guider dans votre choix et vous assurer d'une installation optimale.</p>
     `,
     image: "/stc/coff.jpeg",
     author: "Sami Meddeb",

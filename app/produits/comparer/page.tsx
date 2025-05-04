@@ -4,15 +4,15 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, X, Check, Minus } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { AddToCartButton } from "@/components/add-to-cart-button"
-import { useToast } from "@/components/ui/use-toast"
+import { Button } from "../../../components/ui/button"
+import { AddToCartButton } from "../../../components/add-to-cart-button"
+import { useToast } from "../../../components/ui/use-toast"
 
 // Sample product data for comparison
 const productsData = [
   {
     id: 1,
-    name: "Coffret volet roulant",
+    name: "Coffret Tunnel Volet Roulant",
     description: "Solution légère et isolante pour l'installation de volets roulants.",
     image: "/stc/coff.jpeg",
     
@@ -49,7 +49,6 @@ const productsData = [
     description: "Solution d'emballage isotherme pour le secteur agroalimentaire et la pêche.",
     image: "/placeholder.svg?height=200&width=200",
    
-    
     slug: "fish-box-caisson-emballage",
     specifications: [
       { name: "Matériau", value: "Polystyrène expansé (EPS)" },
@@ -77,7 +76,7 @@ export default function CompareProductsPage() {
 
       // Get full product data for each item in compare list
       const fullProducts = parsedList
-        .map((item) => {
+      .map((item: { id: number }) => {
           const productData = productsData.find((p) => p.id === item.id)
           return productData || null
         })
@@ -114,7 +113,7 @@ export default function CompareProductsPage() {
 
   // Get all unique specification names across all products
   const allSpecifications = Array.from(
-    new Set(products.flatMap((product) => product.specifications.map((spec) => spec.name))),
+    new Set(products.flatMap((product) => product.specifications.map((spec: { name: string }) => spec.name))),
   )
 
   // Get all unique feature names across all products
@@ -197,7 +196,6 @@ export default function CompareProductsPage() {
                         productId={product.id}
                         productName={product.name}
                         productImage={product.image}
-                        size="sm"
                       />
                     </div>
                   </div>
@@ -215,7 +213,7 @@ export default function CompareProductsPage() {
               <tr key={specName} className="border-b">
                 <td className="p-4 font-medium">{specName}</td>
                 {products.map((product) => {
-                  const spec = product.specifications.find((s) => s.name === specName)
+                  const spec = product.specifications.find((s: { name: string }) => s.name === specName)
                   return (
                     <td key={`${product.id}-${specName}`} className="p-4 text-center">
                       {spec ? spec.value : <Minus className="h-4 w-4 mx-auto text-muted-foreground" />}

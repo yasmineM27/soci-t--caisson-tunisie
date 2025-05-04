@@ -124,15 +124,15 @@ export interface Product {
   export const products: Product[] = [
     {
       id: "1",
-      name: "Coffret volet roulant",
+      name: "Coffret Tunnel Volet Roulant",
       slug: "coffret-tunnel-volet-roulant",
       description: "Solution légère et isolante pour l'installation de volets roulants.",
       longDescription: `
-        <p>Le Coffret volet roulant en polystyrène expansé (EPS) est une solution innovante qui combine légèreté et performance d'isolation thermique. Conçu pour faciliter l'installation des volets roulants, ce coffret tunnel offre une excellente isolation thermique et acoustique, contribuant ainsi à l'efficacité énergétique globale du bâtiment.</p>
+        <p>Le Coffret Tunnel Volet Roulant en polystyrène expansé (EPS) est une solution innovante qui combine légèreté et performance d'isolation thermique. Conçu pour faciliter l'installation des volets roulants, ce coffret tunnel offre une excellente isolation thermique et acoustique, contribuant ainsi à l'efficacité énergétique globale du bâtiment.</p>
         
         <p>Sa structure en polystyrène expansé garantit une durabilité exceptionnelle tout en étant facile à manipuler et à installer. Nos coffrets tunnel sont fabriqués avec des matériaux de haute qualité pour assurer une longévité maximale et une résistance optimale aux conditions climatiques.</p>
         
-        <p>Disponible en différentes dimensions pour s'adapter à tous types d'ouvertures, notre Coffret volet roulant est la solution idéale pour les constructions neuves comme pour les projets de rénovation.</p>
+        <p>Disponible en différentes dimensions pour s'adapter à tous types d'ouvertures, notre Coffret Tunnel Volet Roulant est la solution idéale pour les constructions neuves comme pour les projets de rénovation.</p>
       `,
       images: ["/placeholder.svg?height=600&width=800"],
       inStock: true,
@@ -295,7 +295,7 @@ export interface Product {
       location: "Tunis, Tunisie",
       year: "2022",
       client: "Groupe Immobilier Al Madina",
-      products: ["Panneau Isolant EPS 100", "Coffret volet roulant"],
+      products: ["Panneau Isolant EPS 100", "Coffret Tunnel Volet Roulant"],
     },
     {
       id: "2",
