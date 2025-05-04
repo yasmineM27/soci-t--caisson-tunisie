@@ -15,7 +15,8 @@ export const metadata: Metadata = {
   title: "Société Caisson Tunisie - Spécialiste en produits polystyrène expansé",
   description:
     "Fabricant tunisien de coffrets tunnel pour volets roulants, panneaux isolants et caissons d'emballage en polystyrène expansé (EPS).",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  metadataBase: new URL("https://societe-caisson-tunisie.vercel.app/")
 }
 
 export default function RootLayout({

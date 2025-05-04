@@ -29,7 +29,7 @@ import { testimonials, brochures } from "@/lib/mock-data"
 
 const heroBackgroundImages = [
   "/stc/interface.jpeg",    // Première image
-  "/stc/2.png",            // Deuxième image
+  "/stc/2.PNG",            // Deuxième image
   "/stc/4.jpg",            // Troisième image
   "/stc/5.jpeg"             // Quatrième image
 ];
@@ -76,7 +76,7 @@ const featuredProducts = [
     id: 2,
     name: "Panneau Isolant en Polystyrène",
     description: "Isolation thermique optimale pour murs, toitures et sols.",
-    image: "/stc/plaaaaa.png",
+    image: "/stc/plaaaaa.PNG",
     slug: "panneau-isolant-polystyrene",
     features: ["Haute performance thermique", "Résistance à l'humidité", "Économie d'énergie", "Écologique"],
   },
