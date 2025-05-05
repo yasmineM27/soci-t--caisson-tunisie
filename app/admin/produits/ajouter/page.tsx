@@ -173,7 +173,7 @@ export default function AddProductPage() {
                       <SelectValue placeholder="Sélectionner une catégorie" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="coffrets">Coffrets Tunnel</SelectItem>
+                      <SelectItem value="coffrets">Coffrets tunnel pour volets roulants</SelectItem>
                       <SelectItem value="panneaux">Panneaux Isolants</SelectItem>
                       <SelectItem value="fishbox">Fish Box</SelectItem>
                       <SelectItem value="fishbox">Polystyrène</SelectItem>

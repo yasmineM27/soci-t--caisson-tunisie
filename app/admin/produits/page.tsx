@@ -122,7 +122,7 @@ export default function ProductsPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Toutes les catégories</SelectItem>
-                  <SelectItem value="coffrets">Coffrets Tunnel</SelectItem>
+                  <SelectItem value="coffrets">Coffrets tunnel pour volets roulants</SelectItem>
                   <SelectItem value="panneaux">Panneaux Isolants</SelectItem>
                   <SelectItem value="fishbox">Fish Box</SelectItem>
                 </SelectContent>
@@ -170,7 +170,7 @@ export default function ProductsPage() {
                   <TableCell>{product.id}</TableCell>
                   <TableCell className="font-medium">{product.name}</TableCell>
                   <TableCell>
-                    {product.category === "coffrets" && "Coffrets Tunnel"}
+                    {product.category === "coffrets" && "Coffrets tunnel pour volets roulants"}
                     {product.category === "panneaux" && "Panneaux Isolants"}
                     {product.category === "fishbox" && "Fish Box"}
                     {product.category === "Polystyrène" && "polystyrène"}

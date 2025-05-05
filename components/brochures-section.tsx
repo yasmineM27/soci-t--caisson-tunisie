@@ -21,6 +21,7 @@ interface BrochuresSectionProps {
   brochures: Brochure[]
 }
 
+
 export function BrochuresSection({ brochures }: BrochuresSectionProps) {
   const [selectedBrochure, setSelectedBrochure] = useState<Brochure | null>(null)
 
@@ -38,6 +39,7 @@ export function BrochuresSection({ brochures }: BrochuresSectionProps) {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   }
+  
 
   return (
     <section className="py-16 bg-muted/30">
@@ -49,9 +51,9 @@ export function BrochuresSection({ brochures }: BrochuresSectionProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold mb-4">Nos Brochures</h2>
+          <h2 className="text-3xl font-bold mb-4">Tout savoir sur nos produits</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Téléchargez nos brochures pour découvrir en détail notre gamme de produits, leurs spécifications techniques
+            Téléchargez les fiches techniques  pour découvrir en détail notre gamme de produits, leurs spécifications techniques
             et leurs applications.
           </p>
         </motion.div>

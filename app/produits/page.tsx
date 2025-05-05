@@ -72,28 +72,21 @@ const products = [
   },
   {
     id: 11,
-    name: "Polystyrène expansé Standard",
-    description: "Polystyrène expansé standard pour isolation thermique et emballage.",
+    name: "Polystyrène expansé",
+    description: "Polystyrène expansé pour isolation thermique et emballage.",
     image: "/poly1.jpg",
-    slug: "polystyrene-expanse-standard",
+    slug: "polystyrene-expanse",
     category: "polystyrene",
   },
   {
     id: 12,
-    name: "Polystyrène expansé Haute Densité",
+    name: "Polystyrène Brouillé",
     description: "Polystyrène expansé haute densité pour applications structurelles.",
     image: "/poly1.jpg",
     slug: "polystyrene-expanse-haute-densite",
     category: "polystyrene",
   },
-  {
-    id: 13,
-    name: "Polystyrène expansé Ignifuge",
-    description: "Polystyrène expansé ignifuge pour zones à réglementation incendie stricte.",
-    image: "/poly1.jpg",
-    slug: "polystyrene-expanse-ignifuge",
-    category: "polystyrene",
-  },
+  
 ]
 
 export const metadata = {
@@ -116,7 +109,7 @@ export default function ProductsPage() {
       <Tabs defaultValue="all" className="mb-12">
         <TabsList className="grid w-full grid-cols-5 mb-8">
           <TabsTrigger value="all">Tous</TabsTrigger>
-          <TabsTrigger value="coffrets">Coffrets Tunnel</TabsTrigger>
+          <TabsTrigger value="coffrets">Coffrets tunnel  volets roulants</TabsTrigger>
           <TabsTrigger value="panneaux">Panneaux Isolants</TabsTrigger>
           <TabsTrigger value="fishbox">Fish Box</TabsTrigger>
           <TabsTrigger value="polystyrene">Polystyrène</TabsTrigger>

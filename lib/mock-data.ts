@@ -93,7 +93,7 @@ export interface Product {
   export const categories: Category[] = [
     {
       id: "1",
-      name: "Coffrets Tunnel",
+      name: "Coffrets tunnel pour volets roulants",
       slug: "coffrets",
       description: "Coffrets tunnel pour volets roulants et autres applications",
     },
@@ -307,7 +307,7 @@ export interface Product {
         
         <p>Nous avons fourni nos panneaux isolants EPS 150 pour l'isolation des murs extérieurs et des toitures. La haute résistance à la compression de ces panneaux les rendait particulièrement adaptés à ce type de bâtiment commercial à forte fréquentation.</p>
         
-        <p>Le projet a été réalisé en collaboration avec le bureau d'études techniques Concept Engineering et l'entreprise de construction Maghreb Bâtiment. Les travaux ont été achevés avec deux semaines d'avance sur le planning initial, permettant une ouverture anticipée du centre commercial.</p>
+        <p>Le projet a été réalisé en collaboration avec le bureau d'études techniques Concept Engineering et l'entreprise de construction Maghreb Bâtiment. Les travaux ont été achevés avec deux jours d'avance sur le planning initial, permettant une ouverture anticipée du centre commercial.</p>
       `,
       images: ["/placeholder.svg?height=800&width=1200"],
       category: "COMMERCIAL",
@@ -415,7 +415,7 @@ export interface Product {
         
         <p>Nos coffrets tunnel sont fabriqués avec des matériaux de haute qualité, garantissant leur durabilité et leur performance à long terme. Ils sont également résistants à l'humidité et aux moisissures, assurant ainsi une longévité optimale de l'installation.</p>
         
-        <p>En conclusion, les coffrets tunnel représentent une solution innovante et performante pour l'installation des volets roulants, combinant facilité de mise en œuvre, performance d'isolation et durabilité. Une solution à considérer sérieusement pour tous vos projets de construction ou de rénovation.</p>
+        <p>En conclusion, les Coffrets tunnel pour volets roulants représentent une solution innovante et performante pour l'installation des volets roulants, combinant facilité de mise en œuvre, performance d'isolation et durabilité. Une solution à considérer sérieusement pour tous vos projets de construction ou de rénovation.</p>
       `,
       image: "/placeholder.svg?height=600&width=1200",
       author: "Ing. Sami Trabelsi",
@@ -471,7 +471,7 @@ export interface Product {
   export const brochures: Brochure[] = [
     {
       id: 1,
-      title: "Catalogue Coffrets Tunnel",
+      title: "Fiche technique Coffrets tunnel pour volets roulants:",
       description: "Découvrez notre gamme complète de coffrets tunnel pour volets roulants.",
       thumbnail: "/affiche1.jpeg?height=400&width=300",
       fileUrl: "/brochures/catalogue-coffrets-tunnel.pdf",
@@ -480,7 +480,7 @@ export interface Product {
     },
     {
       id: 2,
-      title: "Guide d'installation des panneaux isolants",
+      title: "Fiche technique des panneaux isolants",
       description: "Toutes les étapes pour une installation réussie de nos panneaux isolants.",
       thumbnail: "/affiche2.png?height=400&width=300",
       fileUrl: "/brochures/guide-installation-panneaux-isolants.pdf",
@@ -498,7 +498,7 @@ export interface Product {
     },
     {
       id: 4,
-      title: "Solutions d'isolation pour bâtiments résidentiels",
+      title: "Nos Produits",
       description: "Guide complet des solutions d'isolation pour les projets résidentiels.",
       thumbnail: "/affiche4.jpg?height=400&width=300",
       fileUrl: "/brochures/solutions-isolation-residentiels.pdf",

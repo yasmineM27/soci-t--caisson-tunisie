@@ -12,8 +12,20 @@ import { cn } from "@/lib/utils"
 export function ChatButton({
   variant = "default",
   className,
-}: { variant?: "default" | "outline"; className?: string }) {
-  const [isOpen, setIsOpen] = useState(false)
+  isOpen: controlledIsOpen,
+  onOpenChange,
+}: { variant?: "default" | "outline"; className?: string; isOpen?: boolean; onOpenChange?: (open: boolean) => void }) {
+  const [internalIsOpen, setInternalIsOpen] = useState(false)
+  const isControlled = controlledIsOpen !== undefined
+  const isOpen = isControlled ? controlledIsOpen : internalIsOpen
+
+  const setIsOpen = (open: boolean) => {
+    if (isControlled) {
+      onOpenChange?.(open)
+    } else {
+      setInternalIsOpen(open)
+    }
+  }
 
   return (
     <>

@@ -19,19 +19,38 @@ import { BrochuresSection } from "@/components/brochures-section"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Head from 'next/head'
 import CarouselSlogan from '@/components/CarouselSlogan';
-
+import { useState} from "react"
 
 import { GoogleReviews } from "@/components/google-reviews"
 import { StatsSection } from "@/components/stats-section"
 import { TestimonialsCarousel } from "@/components/testimonials-carousel"
 import { Building, Wrench, Users, Award, Package } from "lucide-react"
-import { testimonials, brochures } from "@/lib/mock-data"
+import { testimonials } from "@/lib/mock-data"
 
 const heroBackgroundImages = [
   "/stc/interface.jpeg",    // Première image
   "/stc/2.PNG",            // Deuxième image
   "/stc/4.jpg",            // Troisième image
   "/stc/5.jpeg"             // Quatrième image
+];
+const brochures: Brochure[] = [
+  {
+    id: 1,
+    title: "Fiche Technique du Coffret Tunnel Volet Roulant",
+    description: "Découvrez les spécifications complètes du Coffret Tunnel Volet Roulant.",
+    thumbnail: "/2.png",
+    fileUrl: "/docs/Fiche_Technique_Volet_Roulant_Coffret_Tunnel.pdf",
+    fileSize: "2.5 MB",
+  },
+  {
+    id: 2,
+    title: "Fiche Technique  du polystyrène expansé.",
+    description: "Caractéristiques détaillées du polystyrène expansé.",
+    thumbnail: "/1.png",
+    fileUrl: "/docs/Propriétés_du_polystyrène_expansé_SCT_SOCIETE_CAISSON_TUNISIE.pdf",
+    fileSize: "3.1 MB",
+    
+  },
 ];
 const slogans: string[] = [
   "Your solution for innovative construction",
@@ -102,19 +121,19 @@ const featuredProducts = [
 const projects = [
   {
     id: 1,
-    title: "Installation de volets roulants",
+    title: "Installation de coffrets volets roulants",
     imageUrl: "projet1.jpg",
     link: "/projets/projet-1",
   },
   {
     id: 2,
-    title: "Isolation d’une façade résidentielle",
+    title: "Installation de coffrets volets roulants",
     imageUrl: "projet3.jpg",
     link: "/projets/projet-2",
   },
   {
     id: 3,
-    title: "Pose de panneaux isolants",
+    title: "Installation des plaques isolants",
     imageUrl: "projet4.jpg",
     link: "/projets/projet-3",
   },
@@ -147,16 +166,18 @@ const features = [
 // Sample videos
 const videos = [
   {
-    id: 2,
+    id: 3,
     title: "Bienvenue chez nous!",
     thumbnail: "/propos.jpg",
-    url: "https://www.facebook.com/reel/540816825587519",
+    url: "/vd.mp4",
   },
 ]
 
 
 
 export default function Home() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
   const targetRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -351,7 +372,7 @@ export default function Home() {
             </div>
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/propos.jpg?height=500&width=600"
+                src="/societe1.jpeg?height=500&width=600"
                 alt="Usine Caisson Tunisie"
                 fill
                 className="object-cover"
@@ -363,7 +384,7 @@ export default function Home() {
 
       {/* Video Showcase Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-7">
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -371,7 +392,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold mb-4">Vidéos Explicatives</h2>
+            <h2 className="text-3xl font-bold mb-4">Bienvenue chez nous!</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Découvrez nos vidéos pour mieux comprendre nos produits 
             </p>
@@ -379,13 +400,7 @@ export default function Home() {
 
           <VideoShowcase videos={videos} />
 
-          <div className="mt-8 text-center">
-            <Button variant="outline" asChild>
-              <Link href="/videos">
-                Voir toutes les vidéos <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
+          
         </div>
       </section>
     {/* Google Reviews Section 
@@ -497,7 +512,7 @@ export default function Home() {
 
     <div className="text-center mt-10">
       <Button asChild>
-        <Link href="/projets" className="group">
+        <Link href="#" className="group">
           Voir tous nos projets
           <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
         </Link>
@@ -544,17 +559,17 @@ export default function Home() {
                 <div className="mb-2 h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Video className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>Vidéos d'installation</CardTitle>
-                <CardDescription>Guides visuels pour l'installation de nos produits</CardDescription>
+                <CardTitle>Chat avec Caisson Tunisie</CardTitle>
+                <CardDescription>Discutez avec notre équipe pour toute question ou assistance</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="mb-4">
-                  Consultez nos vidéos explicatives pour comprendre comment installer et utiliser nos produits.
+                  Utilisez notre service de chat en direct pour obtenir des réponses rapides et personnalisées.
                 </p>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" asChild className="w-full">
-                  <Link href="/videos">Voir les vidéos</Link>
+                <Button variant="outline" className="w-full" onClick={() => setIsChatOpen(true)}>
+                  Accéder au chat
                 </Button>
               </CardFooter>
             </Card>
@@ -574,7 +589,9 @@ export default function Home() {
                 </p>
               </CardContent>
               <CardFooter>
-                <BookAppointmentButton variant="outline" className="w-full" />
+                <div className="w-full">
+                  <BookAppointmentButton variant="outline" className="w-full" />
+                </div>
               </CardFooter>
             </Card>
           </div>

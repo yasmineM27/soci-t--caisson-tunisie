@@ -22,7 +22,7 @@ export function VideoShowcase({ videos }: VideoShowcaseProps) {
   return (
     <>
       <div className="grid md:grid-cols-2 gap-6">
-        {videos.map((video) => (
+        {videos.map((video) => ( 
           <div
             key={video.id}
             className="relative rounded-lg overflow-hidden cursor-pointer group"
@@ -54,10 +54,11 @@ export function VideoShowcase({ videos }: VideoShowcaseProps) {
             <DialogTitle>{selectedVideo?.title}</DialogTitle>
           </DialogHeader>
           <div className="aspect-video w-full">
-            {/* Placeholder for actual video player */}
-            <div className="w-full h-full bg-muted flex items-center justify-center">
-              <p className="text-muted-foreground">Vidéo: {selectedVideo?.title}</p>
-            </div>
+            {selectedVideo && (
+              <video controls className="w-full h-full rounded-lg" src={selectedVideo.url}>
+                Your browser does not support the video tag.
+              </video>
+            )}
           </div>
         </DialogContent>
       </Dialog>
