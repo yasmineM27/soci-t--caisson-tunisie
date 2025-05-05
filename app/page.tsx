@@ -93,12 +93,32 @@ const featuredProducts = [
     id: 3,
     name: "Fish Box / Caisson d'Emballage",
     description: "Solution d'emballage isotherme pour le secteur agroalimentaire et la pêche.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/fish1.jpg",
     slug: "fish-box-caisson-emballage",
     features: ["Conservation optimale", "Légèreté", "Résistance", "Personnalisable"],
   },
 ]
 
+const projects = [
+  {
+    id: 1,
+    title: "Installation de volets roulants",
+    imageUrl: "projet1.jpg",
+    link: "/projets/projet-1",
+  },
+  {
+    id: 2,
+    title: "Isolation d’une façade résidentielle",
+    imageUrl: "projet3.jpg",
+    link: "/projets/projet-2",
+  },
+  {
+    id: 3,
+    title: "Pose de panneaux isolants",
+    imageUrl: "projet4.jpg",
+    link: "/projets/projet-3",
+  },
+];
 
 // Sample features
 const features = [
@@ -128,11 +148,13 @@ const features = [
 const videos = [
   {
     id: 2,
-    title: "Pose de panneaux isolants",
-    thumbnail: "/placeholder.svg?height=200&width=350",
-    url: "#",
+    title: "Bienvenue chez nous!",
+    thumbnail: "/propos.jpg",
+    url: "https://www.facebook.com/reel/540816825587519",
   },
 ]
+
+
 
 export default function Home() {
   const targetRef = useRef(null)
@@ -329,7 +351,7 @@ export default function Home() {
             </div>
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/propos.jpg?height=500&width=600"
                 alt="Usine Caisson Tunisie"
                 fill
                 className="object-cover"
@@ -369,108 +391,121 @@ export default function Home() {
     {/* Google Reviews Section 
     <GoogleReviews />*/}
 
-    {/* Services Section */}
-    <section className="py-16">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl font-bold mb-4">Nos Services</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Nous proposons une gamme complète de services pour vous accompagner dans vos projets d'isolation et
-              d'emballage.
+     {/* Services Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Nos Services</h2>
+            <p className="mt-4 text-lg">
+              Nous offrons une gamme complète de services pour répondre à vos besoins en matière de produits en
+              polystyrène expansé.
             </p>
-          </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <FeatureHighlight
-              icon={<Building className="h-8 w-8 text-primary" />}
-              title="Fabrication sur mesure"
-              description="Nous fabriquons des produits en polystyrène expansé selon vos spécifications précises."
-            />
-            <FeatureHighlight
-              icon={<Wrench className="h-8 w-8 text-primary" />}
-              title="Installation"
-              description="Notre équipe d'experts assure l'installation professionnelle de nos produits."
-            />
-            <FeatureHighlight
-              icon={<Truck className="h-8 w-8 text-primary" />}
-              title="Livraison rapide"
-              description="Nous livrons vos commandes dans les meilleurs délais partout en Tunisie."
-            />
-            <FeatureHighlight
-              icon={<Shield className="h-8 w-8 text-primary" />}
-              title="Garantie qualité"
-              description="Tous nos produits sont garantis et répondent aux normes de qualité les plus strictes."
-            />
           </div>
-          <div className="text-center mt-10">
-            <Button asChild variant="outline">
-              <Link href="/services" className="group">
-                En savoir plus sur nos services
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card>
+              <CardHeader>
+                <div className="mb-2 h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Truck className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle>Fabrication sur mesure</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  Nous concevons et fabriquons des produits en polystyrène expansé selon vos spécifications précises.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <div className="mb-2 h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Shield className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle>Conseil technique</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  Notre équipe d'experts vous accompagne dans le choix des solutions les plus adaptées à vos besoins.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <div className="mb-2 h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <CheckCircle className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle>Livraison rapide</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Nous assurons une livraison rapide et fiable de vos commandes partout en Tunisie.</p>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="mt-12 text-center">
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/services">
+                En savoir plus sur nos services <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>
         </div>
       </section>
+
 
       {/* Projects Showcase */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl font-bold mb-4">Nos Réalisations</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Découvrez quelques-uns de nos projets récents et comment nos produits ont contribué à leur succès.
-            </p>
-          </motion.div>
+      {/* Projects Showcase */}
+<section className="py-16 bg-muted/30">
+  <div className="container mx-auto px-4">
+    <motion.div
+      className="text-center mb-12"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
+      <h2 className="text-3xl font-bold mb-4">Nos Réalisations</h2>
+      <p className="text-muted-foreground max-w-2xl mx-auto">
+        Découvrez quelques-uns de nos projets récents et comment nos produits ont contribué à leur succès.
+      </p>
+    </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group"
-              >
-                <Link href={`/projets/projet-${i}`}>
-                  <div className="relative h-64 rounded-lg overflow-hidden mb-4">
-                    <Image
-                      src={`/placeholder.svg?height=400&width=600&text=Projet+${i}`}
-                      alt={`Projet ${i}`}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                      <h3 className="text-white font-bold text-lg">Projet {i}</h3>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+    <div className="grid md:grid-cols-3 gap-6">
+      {projects.map((project, index) => (
+        <motion.div
+          key={project.id}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          className="group"
+        >
+          <Link href={project.link}>
+            <div className="relative h-64 rounded-lg overflow-hidden mb-4">
+              <Image
+                src={project.imageUrl}
+                alt={project.title}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <h3 className="text-white font-bold text-lg">{project.title}</h3>
+              </div>
+            </div>
+          </Link>
+        </motion.div>
+      ))}
+    </div>
 
-          <div className="text-center mt-10">
-            <Button asChild>
-              <Link href="/projets" className="group">
-                Voir tous nos projets
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+    <div className="text-center mt-10">
+      <Button asChild>
+        <Link href="/projets" className="group">
+          Voir tous nos projets
+          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+        </Link>
+      </Button>
+    </div>
+  </div>
+</section>
+
 
       {/* Tools Section */}
       <section className="py-16 bg-background">

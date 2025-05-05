@@ -68,7 +68,7 @@ export function BrochuresSection({ brochures }: BrochuresSectionProps) {
               <Card className="h-full flex flex-col group hover:shadow-lg transition-all duration-300">
                 <div className="relative h-48 w-full overflow-hidden">
                   <Image
-                    src={brochure.thumbnail || "/placeholder.svg"}
+                    src={brochure.thumbnail || "/affiche2.png"}
                     alt={brochure.title}
                     fill
                     className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
@@ -95,7 +95,7 @@ export function BrochuresSection({ brochures }: BrochuresSectionProps) {
                             {brochure.previewImages?.map((img, index) => (
                               <div key={index} className="relative aspect-[3/4] w-full rounded-lg overflow-hidden">
                                 <Image
-                                  src={img || "/placeholder.svg"}
+                                  src={img || "/affiche1.png"}
                                   alt={`${brochure.title} - page ${index + 1}`}
                                   fill
                                   className="object-cover"

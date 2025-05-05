@@ -19,7 +19,7 @@ export default function AboutPage() {
       <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
         <div className="relative h-[400px] rounded-lg overflow-hidden">
           <Image
-            src="/placeholder.svg?height=400&width=600"
+            src="/propos.jpg?height=400&width=600"
             alt="Société Caisson Tunisie"
             fill
             className="object-cover"

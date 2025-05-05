@@ -47,7 +47,7 @@ const productsData = [
     id: 3,
     name: "Fish Box / Caisson d'Emballage",
     description: "Solution d'emballage isotherme pour le secteur agroalimentaire et la pêche.",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/fish1.jpg",
    
     slug: "fish-box-caisson-emballage",
     specifications: [

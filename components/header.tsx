@@ -18,7 +18,6 @@ const navigation = [
 
 const socialLinks = [
   { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61566954398857", icon: Facebook },
-  { name: "Instagram", href: "https://instagram.com/caissontunisie", icon: Instagram },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/ste-caisson-tunisie-b89763201/", icon: Linkedin },
 ]
 

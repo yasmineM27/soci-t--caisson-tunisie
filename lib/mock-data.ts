@@ -435,7 +435,7 @@ export interface Product {
       text:
         "Nous avons utilisé les panneaux isolants et les coffrets tunnel de Caisson Tunisie pour notre projet de résidence Les Oliviers. La qualité des produits et le professionnalisme de l'équipe ont largement contribué à la réussite de notre projet. Nous recommandons vivement leurs solutions.",
       rating: 5,
-      avatar: "/placeholder.svg?height=200&width=200",
+      avatar: "/test.jpg?height=200&width=200",
     },
     {
       id: 2,
@@ -445,7 +445,7 @@ export interface Product {
       text:
         "En tant qu'architecte, je recherche toujours des solutions innovantes et performantes pour mes projets. Les produits de Caisson Tunisie répondent parfaitement à ces critères, avec un excellent rapport qualité-prix et une facilité de mise en œuvre appréciable.",
       rating: 5,
-      avatar: "/placeholder.svg?height=200&width=200",
+      avatar: "/test.jpg?height=200&width=200",
     },
     {
       id: 3,
@@ -455,7 +455,7 @@ export interface Product {
       text:
         "Les Fish Box isothermes de Caisson Tunisie ont révolutionné notre chaîne logistique. Nous pouvons désormais garantir à nos clients une fraîcheur optimale de nos produits de la mer, même pour les livraisons les plus éloignées.",
       rating: 4,
-      avatar: "/placeholder.svg?height=200&width=200",
+      avatar: "/test.jpg?height=200&width=200",
     },
     {
       id: 4,
@@ -465,7 +465,7 @@ export interface Product {
       text:
         "Nous utilisons régulièrement les produits de Caisson Tunisie sur nos chantiers. La qualité est constante, les délais de livraison sont respectés et le service client est réactif. Une entreprise sur laquelle on peut compter.",
       rating: 5,
-      avatar: "/placeholder.svg?height=200&width=200",
+      avatar: "/test.jpg?height=200&width=200",
     },
   ]
   export const brochures: Brochure[] = [
@@ -473,7 +473,7 @@ export interface Product {
       id: 1,
       title: "Catalogue Coffrets Tunnel",
       description: "Découvrez notre gamme complète de coffrets tunnel pour volets roulants.",
-      thumbnail: "/placeholder.svg?height=400&width=300",
+      thumbnail: "/affiche1.jpeg?height=400&width=300",
       fileUrl: "/brochures/catalogue-coffrets-tunnel.pdf",
       fileSize: "2.1 MB",
       previewImages: [],
@@ -482,7 +482,7 @@ export interface Product {
       id: 2,
       title: "Guide d'installation des panneaux isolants",
       description: "Toutes les étapes pour une installation réussie de nos panneaux isolants.",
-      thumbnail: "/placeholder.svg?height=400&width=300",
+      thumbnail: "/affiche2.png?height=400&width=300",
       fileUrl: "/brochures/guide-installation-panneaux-isolants.pdf",
       fileSize: "1.8 MB",
       previewImages: [],
@@ -491,7 +491,7 @@ export interface Product {
       id: 3,
       title: "Fiche technique Fish Box",
       description: "Caractéristiques techniques détaillées de nos caissons isothermes Fish Box.",
-      thumbnail: "/placeholder.svg?height=400&width=300",
+      thumbnail: "/affiche3.png?height=400&width=300",
       fileUrl: "/brochures/fiche-technique-fish-box.pdf",
       fileSize: "2.5 MB",
       previewImages: [],
@@ -500,7 +500,7 @@ export interface Product {
       id: 4,
       title: "Solutions d'isolation pour bâtiments résidentiels",
       description: "Guide complet des solutions d'isolation pour les projets résidentiels.",
-      thumbnail: "/placeholder.svg?height=400&width=300",
+      thumbnail: "/affiche4.jpg?height=400&width=300",
       fileUrl: "/brochures/solutions-isolation-residentiels.pdf",
       fileSize: "3.0 MB",
       previewImages: [],
