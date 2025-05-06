@@ -118,12 +118,12 @@ const products = [
     specifications: [
       { name: "Épaisseur", value: "2 cm" },
       { name: "Matériau", value: "Polystyrène expansé (EPS)" },
-      { name: "Densité", value: "15 kg/m³" },
+      { name: "Densité", value: "16 kg/m³(option de densité sur mesure)" },
       { name: "Conductivité thermique", value: "0,037 W/m.K" },
       { name: "Résistance à la compression", value: "100 kPa" },
       { name: "Classement au feu", value: "Euroclasse E" },
       { name: "Absorption d'eau", value: "< 5%" },
-      { name: "Dimensions standards", value: "1200 x 600 mm" },
+      { name: "Dimensions standards", value: "1000 x 1000 mm" },
     ],
     benefits: [
       { title: "Économies d'énergie", description: "Améliore l'efficacité énergétique des bâtiments.", icon: "savings" },
@@ -144,7 +144,7 @@ const products = [
       ],
       videoUrl: "#",
     },
-    images: ["/pan1.jpg", "/pan2.webp","/pan3.jpg","/pan4.png","/pan5.png"],
+    images: ["/plaque2cm.jpg"],
     inStock: true,
     leadTime: "1-2 jours",
     minOrder: 10,
@@ -192,12 +192,12 @@ const products = [
     specifications: [
       { name: "Épaisseur", value: "3 cm" },
       { name: "Matériau", value: "Polystyrène expansé (EPS)" },
-      { name: "Densité", value: "15 kg/m³" },
+      { name: "Densité", value: "16 kg/m³(option de densité sur mesure)" },
       { name: "Conductivité thermique", value: "0,037 W/m.K" },
       { name: "Résistance à la compression", value: "100 kPa" },
       { name: "Classement au feu", value: "Euroclasse E" },
       { name: "Absorption d'eau", value: "< 5%" },
-      { name: "Dimensions standards", value: "1200 x 600 mm" },
+      { name: "Dimensions standards", value: "1000 x 1000 mm" },
     ],
     benefits: [
       { title: "Économies d'énergie accrues", description: "Performance thermique supérieure pour une meilleure efficacité énergétique.", icon: "savings" },
@@ -298,7 +298,7 @@ const products = [
       ],
       videoUrl: "#",
     },
-    images: ["/pan1.jpg", "/pan2.webp","/pan3.jpg","/pan4.png","/pan5.png"],
+    images: ["/plaque_isolant_sur_mesure.jpg"],
     inStock: false,
     leadTime: "2-4 jours",
     minOrder: 1,
@@ -376,9 +376,9 @@ const products = [
       ],
       videoUrl: "#",
     },
-    images: ["/fish1.jpg", "/fish1.jpg"],
+    images: ["/fish5kg.jpg"],
     inStock: true,
-    leadTime: "Immédiat (stock) ou 1 semaine",
+    leadTime: "Immédiat (stock) ou 1 jour",
     minOrder: 20,
     certification: ["Contact alimentaire", "Norme ISO 9001"],
     warranty: "Non applicable",
@@ -453,9 +453,9 @@ const products = [
       ],
       videoUrl: "#",
     },
-    images: ["/fish1.jpg", "/fish1.jpg"],
+    images: ["/fish6kg.jpg"],
     inStock: true,
-    leadTime: "Immédiat (stock) ou 1 semaine",
+    leadTime: "Immédiat (stock) ou 1 jour",
     minOrder: 20,
     certification: ["Contact alimentaire", "Norme ISO 9001"],
     warranty: "Non applicable",
@@ -530,9 +530,9 @@ const products = [
       ],
       videoUrl: "#",
     },
-    images: ["/fish1.jpg", "/fish1.jpg"],
+    images: ["/fish10kg.jpg"],
     inStock: true,
-    leadTime: "1 semaine",
+    leadTime: "1 jour",
     minOrder: 10,
     certification: ["Contact alimentaire", "Norme ISO 9001"],
     warranty: "Non applicable",
@@ -608,7 +608,7 @@ const products = [
       ],
       videoUrl: "#",
     },
-    images: ["/fish1.jpg", "/fish1.jpg"],
+    images: ["/fish20kg.jpg","/fish1.jpg",],
     inStock: true,
     leadTime: "1-2 jours",
     minOrder: 5,
@@ -641,10 +641,10 @@ const products = [
   },
   {
     id: 11,
-    name: "Polystyrène expansé Standard",
-    description: "Polystyrène expansé standard pour isolation thermique et emballage.",
+    name: "Polystyrène expansé ",
+    description: "Polystyrène expansé  pour isolation thermique et emballage.",
     longDescription: `
-      <p>Le polystyrène expansé (PSE) standard est notre solution polyvalente pour diverses applications d'isolation et d'emballage. Ce matériau léger et économique offre un excellent rapport qualité-prix pour les usages courants.</p>
+      <p>Le polystyrène expansé (PSE)  est notre solution polyvalente pour diverses applications d'isolation et d'emballage. Ce matériau léger et économique offre un excellent rapport qualité-prix pour les usages courants.</p>
       <p>Composé à 98% d'air emprisonné dans une structure cellulaire fermée, il présente d'excellentes propriétés isolantes thermiques tout en étant facile à manipuler et à découper. Sa densité standard de 15-20 kg/m³ en fait un choix idéal pour les applications ne nécessitant pas de résistance mécanique exceptionnelle.</p>
     `,
     features: [
@@ -689,11 +689,11 @@ const products = [
     },
     images: ["/poly1.jpg","/poly3.webp"],
     inStock: true,
-    leadTime: "Immédiat (stock) ou 1 semaine",
+    leadTime: "Immédiat (stock) ou 1 jour",
     minOrder: 10,
     certification: ["ISO 9001", "Marquage CE"],
     warranty: "2 ans",
-    slug: "polystyrene-expanse-standard",
+    slug: "polystyrene-expanse",
     category: "polystyrene",
     tags: ["isolation", "emballage", "protection", "légèreté"],
     relatedProducts: [4, 5, 12, 13],
@@ -718,166 +718,162 @@ const products = [
     ],
   },
   {
-    id: 12,
-    name: "Polystyrène expansé Haute Densité",
-    description: "Polystyrène expansé haute densité pour applications structurelles.",
+  id: 12,
+  name: "Polystyrène brouillé",
+  description: "Polystyrène brouillé pour applications structurelles.",
+  longDescription: `
+    <p>Le polystyrène brouillé est une solution robuste et polyvalente pour les applications nécessitant une résistance mécanique supérieure. Sa texture brouillée lui confère une meilleure homogénéité et un comportement mécanique optimisé.</p>
+    <p>Composé de billes de polystyrène fusionnées de manière irrégulière, il présente de bonnes propriétés structurelles tout en conservant une légèreté appréciable pour diverses utilisations.</p>
+  `,
+  features: [
+    "Bonne résistance mécanique",
+    "Structure homogène et robuste",
+    "Légèreté relative",
+    "Facilité de découpe et façonnage",
+    "Économique",
+    "100% recyclable",
+  ],
+  specifications: [
+    { name: "Matériau", value: "Polystyrène brouillé (EPS modifié)" },
+    { name: "Densité", value: "20-30 kg/m³" },
+    { name: "Conductivité thermique", value: "0,037-0,039 W/m.K" },
+    { name: "Résistance à la compression", value: "100-150 kPa" },
+    { name: "Classement au feu", value: "Euroclasse E" },
+    { name: "Absorption d'eau", value: "< 4%" },
+    { name: "Formats disponibles", value: "Plaques, blocs, éléments moulés" },
+    { name: "Couleur", value: "Blanc-gris" },
+  ],
+  benefits: [
+    { title: "Solidité", description: "Convient aux applications structurelles légères.", icon: "strength" },
+    { title: "Facilité de pose", description: "Facile à manipuler, découper et fixer.", icon: "ease" },
+    { title: "Économique", description: "Bon rapport qualité/prix pour des applications techniques.", icon: "economy" },
+    { title: "Écologique", description: "Matériau recyclable.", icon: "eco" },
+  ],
+  applications: [
+    "Isolation de murs et toitures avec contraintes mécaniques",
+    "Emballages techniques et industriels",
+    "Calage de pièces lourdes",
+    "Support pour panneaux techniques ou décoratifs",
+  ],
+  installation: {
+    steps: [
+      "Mesurer les dimensions nécessaires",
+      "Découper avec un cutter, fil chaud ou scie",
+      "Installer selon les contraintes de l’application",
+      "Fixer ou caler les éléments au besoin",
+    ],
+    videoUrl: "#",
+  },
+  images: ["/poly1.jpg", "/poly3.webp"],
+  inStock: true,
+  leadTime: "Sous 2 jours",
+  minOrder: 10,
+  certification: ["ISO 9001", "Marquage CE"],
+  warranty: "2 ans",
+    slug: "polystyrene-Brouillé",
+  category: "polystyrene",
+  tags: ["structurel", "isolation", "emballage", "protection"],
+  relatedProducts: [11, 5, 13],
+  reviews: { average: 4.4, count: 18 },
+  faq: [
+    {
+      question: "Quelle différence avec le polystyrène expansé standard ?",
+      answer: "Le polystyrène brouillé a une densité plus élevée et une structure plus homogène, ce qui lui confère une meilleure résistance mécanique pour des applications plus techniques.",
+    },
+    {
+      question: "Comment découper proprement le polystyrène brouillé ?",
+      answer: "Utilisez un cutter aiguisé, un fil chaud ou une scie fine. La structure est légèrement plus dense mais reste facile à découper proprement.",
+    },
+  ],
+  downloads: [
+    { name: "Fiche technique", url: "#", type: "pdf" },
+    { name: "Guide d'utilisation", url: "#", type: "pdf" },
+  ],
+  projects: [
+    { name: "Isolation industrielle Tunis", description: "Isolation de toitures techniques", image: "/placeholder.svg?height=300&width=400", slug: "isolation-tunis" },
+    { name: "Entreprise de calage Sfax", description: "Emballages techniques de pièces lourdes", image: "/placeholder.svg?height=300&width=400", slug: "calage-sfax" },
+  ],
+},
+
+  {
+    id: 13,
+    name: "Polystyrène Brouillé ",
+    description: "Polystyrène Brouillé  pour isolation thermique et emballage.",
     longDescription: `
-      <p>Le polystyrène expansé (PSE) haute densité est notre solution premium pour les applications exigeantes nécessitant une résistance mécanique supérieure et des performances thermiques optimales. Avec une densité de 25-30 kg/m³, ce matériau offre une excellente résistance à la compression tout en conservant les propriétés isolantes caractéristiques du PSE.</p>
-      <p>Particulièrement adapté aux applications structurelles dans la construction et aux emballages de protection pour produits lourds ou fragiles, le PSE haute densité représente le choix idéal lorsque la durabilité et la performance sont essentielles.</p>
+      <p>Le polystyrène Brouillé (PSE)  est notre solution polyvalente pour diverses applications d'isolation et d'emballage. Ce matériau léger et économique offre un excellent rapport qualité-prix pour les usages courants.</p>
+      <p>Composé à 98% d'air emprisonné dans une structure cellulaire fermée, il présente d'excellentes propriétés isolantes thermiques tout en étant facile à manipuler et à découper. Sa densité standard de 15-20 kg/m³ en fait un choix idéal pour les applications ne nécessitant pas de résistance mécanique exceptionnelle.</p>
     `,
     features: [
-      "Résistance mécanique supérieure",
       "Excellente isolation thermique",
-      "Résistance accrue à la compression",
-      "Durabilité exceptionnelle",
-      "Stabilité dimensionnelle à long terme",
-      "Absorption d'eau minimale",
+      "Légèreté et facilité de manipulation",
+      "Résistance à l'humidité",
+      "Facilement découpable et façonnable",
+      "Économique et rentable",
       "100% recyclable",
     ],
     specifications: [
-      { name: "Matériau", value: "Polystyrène expansé (EPS) haute densité" },
-      { name: "Densité", value: "25-30 kg/m³" },
-      { name: "Conductivité thermique", value: "0,033-0,036 W/m.K" },
-      { name: "Résistance à la compression", value: "150-250 kPa" },
+      { name: "Matériau", value: "Polystyrène expansé (EPS)" },
+      { name: "Densité", value: "15-20 kg/m³" },
+      { name: "Conductivité thermique", value: "0,038-0,040 W/m.K" },
+      { name: "Résistance à la compression", value: "70-100 kPa" },
       { name: "Classement au feu", value: "Euroclasse E" },
-      { name: "Absorption d'eau", value: "< 3%" },
-      { name: "Formats disponibles", value: "Plaques, blocs, formes moulées renforcées" },
+      { name: "Absorption d'eau", value: "< 5%" },
+      { name: "Formats disponibles", value: "Plaques, blocs, formes moulées" },
       { name: "Couleur", value: "Blanc" },
     ],
     benefits: [
-      { title: "Performance structurelle", description: "Supporte des charges importantes sans déformation.", icon: "strength" },
-      { title: "Isolation supérieure", description: "Meilleure conductivité thermique que les versions standard.", icon: "insulation" },
-      { title: "Longévité", description: "Conserve ses propriétés mécaniques et thermiques dans le temps.", icon: "longevity" },
-      { title: "Protection renforcée", description: "Offre une sécurité accrue pour les produits de valeur.", icon: "protection" },
+      { title: "Polyvalence", description: "Adapté à de nombreuses applications courantes.", icon: "versatility" },
+      { title: "Facilité d'utilisation", description: "Simple à découper et à installer sans équipement spécialisé.", icon: "ease" },
+      { title: "Économique", description: "Excellent rapport performance/prix pour les applications standard.", icon: "economy" },
+      { title: "Écologique", description: "Entièrement recyclable et nécessitant peu d'énergie pour sa production.", icon: "eco" },
     ],
     applications: [
-      "Isolation sous chape et dalle béton",
-      "Panneaux isolants structuraux (SIP)",
-      "Coffrages isolants pour béton (ICF)",
-      "Emballage de protection pour équipements lourds",
-      "Isolation de toitures terrasses accessibles",
-      "Applications marines et flottaison",
+      "Isolation thermique de base pour bâtiments",
+      "Emballage de protection pour produits fragiles",
+      "Calage et remplissage dans les colis",
+      "Supports pour l'artisanat et les loisirs créatifs",
+      "Base pour maquettes et modélisme",
     ],
     installation: {
       steps: [
         "Mesurer précisément les dimensions requises",
-        "Découper avec des outils adaptés (scie à fine denture recommandée)",
-        "Installer selon les spécifications techniques du projet",
-        "Fixer avec des fixations mécaniques ou adhésifs spécifiques si nécessaire",
+        "Découper à l'aide d'un cutter, fil chaud ou scie fine",
+        "Installer selon les besoins spécifiques de l'application",
+        "Fixer avec des adhésifs compatibles si nécessaire",
       ],
       videoUrl: "#",
     },
-    images: ["/poly1.jpg","/poly3.webp"],
+    images: ["/epsBrouille.jpg"],
     inStock: true,
-    leadTime: "1-2 jours",
-    minOrder: 5,
-    certification: ["ISO 9001", "Marquage CE", "Certification construction"],
-    warranty: "2 ans",
-    slug: "polystyrene-expanse-haute-densite",
-    category: "polystyrene",
-    tags: ["isolation", "structure", "résistance", "construction", "haute performance"],
-    relatedProducts: [1, 11, 13],
-    reviews: { average: 4.8, count: 19 },
-    faq: [
-      {
-        question: "Ce matériau peut-il supporter le poids d'une dalle béton ?",
-        answer: "Oui, le PSE haute densité est spécifiquement conçu pour supporter des charges importantes comme les dalles béton, avec une résistance à la compression pouvant atteindre 250 kPa.",
-      },
-      {
-        question: "Quelle est sa durée de vie dans des applications structurelles ?",
-        answer: "Dans des conditions normales d'utilisation, le PSE haute densité conserve ses propriétés mécaniques et thermiques pendant plus de 50 ans.",
-      },
-    ],
-    downloads: [
-      { name: "Fiche technique", url: "#", type: "pdf" },
-      { name: "Guide d'application structurelle", url: "#", type: "pdf" },
-      { name: "Certificat de performance", url: "#", type: "pdf" },
-    ],
-    projects: [
-      { name: "Centre commercial Carthage", description: "Isolation sous dalle de grande surface", image: "/placeholder.svg?height=300&width=400", slug: "centre-carthage" },
-      { name: "Villas de luxe Hammamet", description: "Système d'isolation thermique complet", image: "/placeholder.svg?height=300&width=400", slug: "villas-hammamet" },
-    ],
-  },
-  {
-    id: 13,
-    name: "Polystyrène expansé Ignifuge",
-    description: "Polystyrène expansé ignifuge pour zones à réglementation incendie stricte.",
-    longDescription: `
-      <p>Le polystyrène expansé (PSE) ignifuge est notre solution spécialisée pour les applications nécessitant une sécurité incendie renforcée. Traité avec des additifs retardateurs de flamme, ce matériau offre une résistance significativement améliorée à la propagation du feu tout en conservant les excellentes propriétés isolantes du PSE.</p>
-      <p>Particulièrement adapté aux bâtiments publics, établissements recevant du public (ERP) et constructions soumises à des réglementations incendie strictes, le PSE ignifuge combine sécurité et performance thermique. Il répond aux normes européennes les plus exigeantes en matière de réaction au feu.</p>
-    `,
-    features: [
-      "Propriétés ignifuges avancées",
-      "Classement au feu amélioré (Euroclasse B-s1,d0)",
-      "Excellente isolation thermique",
-      "Auto-extinguible",
-      "Faible émission de fumée",
-      "Disponible en différentes densités",
-      "100% recyclable",
-    ],
-    specifications: [
-      { name: "Matériau", value: "Polystyrène expansé (EPS) avec additifs ignifuges" },
-      { name: "Densité", value: "15-30 kg/m³ (selon application)" },
-      { name: "Conductivité thermique", value: "0,035-0,038 W/m.K" },
-      { name: "Résistance à la compression", value: "70-250 kPa (selon densité)" },
-      { name: "Classement au feu", value: "Euroclasse B-s1,d0" },
-      { name: "Absorption d'eau", value: "< 5%" },
-      { name: "Formats disponibles", value: "Plaques, blocs, formes moulées" },
-      { name: "Couleur", value: "Blanc avec légère teinte (due aux additifs)" },
-    ],
-    benefits: [
-      { title: "Sécurité renforcée", description: "Réduit significativement les risques de propagation d'incendie.", icon: "safety" },
-      { title: "Conformité réglementaire", description: "Répond aux exigences des normes de sécurité incendie.", icon: "compliance" },
-      { title: "Double performance", description: "Combine isolation thermique et sécurité incendie.", icon: "performance" },
-      { title: "Polyvalence", description: "Disponible en différentes densités pour diverses applications.", icon: "versatility" },
-    ],
-    applications: [
-      "Isolation des bâtiments publics et ERP",
-      "Isolation par l'extérieur (ITE) en zones urbaines",
-      "Isolation des établissements scolaires et hospitaliers",
-      "Emballage de produits électroniques et sensibles",
-      "Isolation des locaux techniques et industriels",
-    ],
-    installation: {
-      steps: [
-        "Vérifier la conformité avec les réglementations locales",
-        "Mesurer et découper selon les dimensions requises",
-        "Installer selon les recommandations spécifiques aux applications ignifuges",
-        "Utiliser des fixations et adhésifs compatibles avec les propriétés ignifuges",
-      ],
-      videoUrl: "#",
-    },
-    images: ["/poly1.jpg","/poly3.webp"],
-    inStock: true,
-    leadTime: "2-3 jours",
+    leadTime: "Immédiat (stock) ou 1 jour",
     minOrder: 10,
-    certification: ["ISO 9001", "Marquage CE", "Certification feu Euroclasse B"],
+    certification: ["ISO 9001", "Marquage CE"],
     warranty: "2 ans",
-    slug: "polystyrene-expanse-ignifuge",
+    slug: "polystyrene-brouille-2",
     category: "polystyrene",
-    tags: ["isolation", "ignifuge", "sécurité incendie", "ERP", "bâtiment public"],
-    relatedProducts: [11, 12],
-    reviews: { average: 4.7, count: 14 },
+    tags: ["isolation", "emballage", "protection", "légèreté"],
+    relatedProducts: [4, 5, 12, 13],
+    reviews: { average: 4.5, count: 25 },
     faq: [
       {
-        question: "Les additifs ignifuges affectent-ils les performances d'isolation ?",
-        answer: "Les additifs ignifuges ont un impact minimal sur les performances thermiques, avec une légère augmentation de la conductivité thermique (environ 5-8%) par rapport au PSE standard.",
+        question: "Quelle est la différence avec le polystyrène haute densité ?",
+        answer: "Le polystyrène standard a une densité plus faible (15-20 kg/m³) que la version haute densité, ce qui le rend plus léger et plus économique, mais moins résistant mécaniquement.",
       },
       {
-        question: "Ce matériau est-il adapté à l'isolation thermique par l'extérieur en ville ?",
-        answer: "Oui, le PSE ignifuge est particulièrement recommandé pour l'ITE en milieu urbain où les réglementations incendie sont plus strictes, notamment pour les bâtiments de moyenne et grande hauteur.",
+        question: "Comment découper proprement le polystyrène expansé ?",
+        answer: "Pour une découpe nette, utilisez un cutter bien aiguisé, un fil chaud ou une scie à fine denture. Évitez les mouvements brusques pour ne pas fragmenter le matériau.",
       },
     ],
     downloads: [
       { name: "Fiche technique", url: "#", type: "pdf" },
-      { name: "Certificat de classement au feu", url: "#", type: "pdf" },
-      { name: "Guide de conformité réglementaire", url: "#", type: "pdf" },
+      { name: "Guide d'utilisation", url: "#", type: "pdf" },
     ],
     projects: [
-      { name: "Hôpital Universitaire de Tunis", description: "Isolation complète aux normes strictes", image: "/placeholder.svg?height=300&width=400", slug: "hopital-tunis" },
-      { name: "Complexe scolaire Sousse", description: "Rénovation énergétique sécurisée", image: "/placeholder.svg?height=300&width=400", slug: "complexe-scolaire" },
+      { name: "Chantiers résidentiels Tunis", description: "Isolation thermique de base pour logements", image: "/placeholder.svg?height=300&width=400", slug: "chantiers-tunis" },
+      { name: "Entreprise d'emballage Sousse", description: "Protection de produits électroniques", image: "/placeholder.svg?height=300&width=400", slug: "emballage-sousse" },
     ],
   },
+  
 ];
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
@@ -1072,35 +1068,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 ))}
               </div>
 
-              <div className="flex items-center gap-4">
-                <Button variant="ghost" size="icon">
-                  <Share className="h-4 w-4" />
-                  <span className="sr-only">Partager</span>
-                </Button>
-                {product.downloads && product.downloads.length > 0 && (
-                  <div className="relative group">
-                    <Button variant="ghost" className="flex items-center gap-2">
-                      <Download className="h-4 w-4" />
-                      <span>Téléchargements</span>
-                    </Button>
-                    <div className="absolute z-10 left-0 mt-2 w-64 rounded-md shadow-lg bg-background border border-border hidden group-hover:block">
-                      <div className="py-1">
-                        {product.downloads.map((download, index) => (
-                          <a
-                            key={index}
-                            href={download.url}
-                            className="block px-4 py-2 text-sm hover:bg-muted"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {download.name} ({download.type.toUpperCase()})
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
+             
             </div>
           </div>
         </div>
@@ -1257,14 +1225,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         <ProductReviews productId={product.id} />
       </div>
 
-      {/* Related Products */}
-      {relatedProductsData.length > 0 && (
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-6">Produits similaires</h2>
-          <RelatedProducts products={relatedProductsData} />
-        </div>
-      )}
-
+      
       {/* CTA Section */}
       <div className="bg-muted rounded-lg p-8 text-center">
         <h2 className="text-2xl font-bold mb-4">Besoin d'aide pour choisir ?</h2>

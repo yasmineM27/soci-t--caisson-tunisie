@@ -85,125 +85,121 @@ function AppointmentWindow({ onClose }: { onClose: () => void }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-      <Card className="w-full max-w-md mx-4">
-        <CardHeader className="bg-primary text-primary-foreground py-3 px-4 flex flex-row justify-between items-center">
-          <h3 className="font-medium">Réserver un rendez-vous</h3>
-          <Button variant="ghost" size="icon" onClick={onClose} className="h-8 w-8 text-primary-foreground">
-            <X className="h-4 w-4" />
-          </Button>
-        </CardHeader>
-        <CardContent className="p-4">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="name">Nom complet</Label>
-              <Input
-                id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Votre nom"
-                required
-              />
-            </div>
+      <Card className="w-full max-w-sm mx-4">
+  <CardHeader className="bg-primary text-primary-foreground py-2 px-3 flex flex-row justify-between items-center">
+    <h3 className="font-medium text-sm">Réserver un rendez-vous</h3>
+    <Button variant="ghost" size="icon" onClick={onClose} className="h-6 w-6 text-primary-foreground">
+      <X className="h-3 w-3" />
+    </Button>
+  </CardHeader>
 
-            <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Votre email"
-                required
-              />
-            </div>
+  <CardContent className="p-2">
+    <form onSubmit={handleSubmit} className="space-y-2 text-sm">
+      <div className="space-y-1">
+        <Label htmlFor="name">Nom complet</Label>
+        <Input
+          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Votre nom"
+          required
+          className="h-8 text-sm"
+        />
+      </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="phone">Téléphone</Label>
-              <Input
-                id="phone"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                placeholder="Votre numéro de téléphone"
-                required
-              />
-            </div>
+      <div className="space-y-1">
+        <Label htmlFor="email">Email</Label>
+        <Input
+          id="email"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Votre email"
+          required
+          className="h-8 text-sm"
+        />
+      </div>
 
-            <div className="space-y-2">
-              <Label>Date du rendez-vous</Label>
-              <Popover>
-                <PopoverTrigger asChild>
-                  <Button
-                    variant="outline"
-                    className={cn("w-full justify-start text-left font-normal", !date && "text-muted-foreground")}
-                  >
-                    <Calendar className="mr-2 h-4 w-4" />
-                    {date ? format(date, "PPP", { locale: fr }) : <span>Sélectionnez une date</span>}
-                  </Button>
-                </PopoverTrigger>
-                <PopoverContent className="w-auto p-0">
-                  <CalendarComponent
-                    mode="single"
-                    selected={date}
-                    onSelect={setDate}
-                    initialFocus
-                    disabled={(date) => {
-                      // Disable weekends and past dates
-                      const day = date.getDay()
-                      const isPastDate = date < new Date(new Date().setHours(0, 0, 0, 0))
-                      return day === 0 || day === 6 || isPastDate
-                    }}
-                  />
-                </PopoverContent>
-              </Popover>
-            </div>
+      <div className="space-y-1">
+        <Label htmlFor="phone">Téléphone</Label>
+        <Input
+          id="phone"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          placeholder="Votre numéro de téléphone"
+          required
+          className="h-8 text-sm"
+        />
+      </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="time">Heure du rendez-vous</Label>
-              <Select value={time} onValueChange={setTime} required>
-                <SelectTrigger id="time" className="w-full">
-                  <SelectValue placeholder="Sélectionnez une heure">
-                    {time ? (
-                      <div className="flex items-center">
-                        <Clock className="mr-2 h-4 w-4" />
-                        {time}
-                      </div>
-                    ) : (
-                      "Sélectionnez une heure"
-                    )}
-                  </SelectValue>
-                </SelectTrigger>
-                <SelectContent>
-                  {timeSlots.map((slot) => (
-                    <SelectItem key={slot} value={slot}>
-                      {slot}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="message">Message (optionnel)</Label>
-              <Textarea
-                id="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Précisez l'objet de votre rendez-vous"
-                rows={3}
-              />
-            </div>
-
-            <Button type="submit" className="w-full" disabled={isLoading}>
-              {isLoading ? "Réservation en cours..." : "Réserver le rendez-vous"}
+      <div className="space-y-1">
+        <Label>Date du rendez-vous</Label>
+        <Popover>
+          <PopoverTrigger asChild>
+            <Button
+              variant="outline"
+              size="sm"
+              className={cn("w-full justify-start text-left font-normal h-8 text-sm", !date && "text-muted-foreground")}
+            >
+              <Calendar className="mr-2 h-3 w-3" />
+              {date ? format(date, "PPP", { locale: fr }) : <span>Sélectionnez une date</span>}
             </Button>
-          </form>
-        </CardContent>
-        <CardFooter className="bg-muted/50 p-4">
-          <p className="text-sm text-muted-foreground">
-            Nos horaires d'ouverture : Lundi au Vendredi, 9h-12h et 14h-17h
-          </p>
-        </CardFooter>
-      </Card>
+          </PopoverTrigger>
+          <PopoverContent className="w-auto p-0">
+            <CalendarComponent
+              mode="single"
+              selected={date}
+              onSelect={setDate}
+              initialFocus
+              disabled={(date) => {
+                const day = date.getDay()
+                const isPastDate = date < new Date(new Date().setHours(0, 0, 0, 0))
+                return day === 0 || day === 6 || isPastDate
+              }}
+            />
+          </PopoverContent>
+        </Popover>
+      </div>
+
+      <div className="space-y-1">
+        <Label htmlFor="time">Heure du rendez-vous</Label>
+        <Select value={time} onValueChange={setTime} required>
+          <SelectTrigger id="time" className="w-full h-8 text-sm">
+            <SelectValue placeholder="Sélectionnez une heure" />
+          </SelectTrigger>
+          <SelectContent>
+            {timeSlots.map((slot) => (
+              <SelectItem key={slot} value={slot} className="text-sm">
+                {slot}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
+
+      <div className="space-y-1">
+        <Label htmlFor="message">Message (optionnel)</Label>
+        <Textarea
+          id="message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Précisez l'objet de votre rendez-vous"
+          rows={2}
+          className="text-sm"
+        />
+      </div>
+
+      <Button type="submit" size="sm" className="w-full" disabled={isLoading}>
+        {isLoading ? "Réservation en cours..." : "Réserver le rendez-vous"}
+      </Button>
+    </form>
+  </CardContent>
+
+  <CardFooter className="bg-muted/50 p-2 text-xs text-muted-foreground">
+    Nos horaires d'ouverture : Lun-Ven, 9h-12h & 14h-17h
+  </CardFooter>
+</Card>
+
     </div>
   )
 }

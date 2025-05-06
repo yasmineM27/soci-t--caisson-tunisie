@@ -372,7 +372,7 @@ export default function Home() {
             </div>
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/societe1.jpeg?height=500&width=600"
+                src="/societe1.jpg?height=800&width=600"
                 alt="Usine Caisson Tunisie"
                 fill
                 className="object-cover"
