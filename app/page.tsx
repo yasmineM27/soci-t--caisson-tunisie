@@ -105,7 +105,7 @@ const featuredProducts = [
     name: "Panneau Isolant en Polystyrène",
     description: "Isolation thermique optimale pour murs, toitures et sols.",
     image: "/stc/plaaaaa.PNG",
-    slug: "panneau-isolant-polystyrene",
+    slug: "panneau-isolant-2cm",
     features: ["Haute performance thermique", "Résistance à l'humidité", "Économie d'énergie", "Écologique"],
   },
   {
@@ -113,7 +113,7 @@ const featuredProducts = [
     name: "Fish Box / Caisson d'Emballage",
     description: "Solution d'emballage isotherme pour le secteur agroalimentaire et la pêche.",
     image: "/fish1.jpg",
-    slug: "fish-box-caisson-emballage",
+    slug: "fish-box-5kg",
     features: ["Conservation optimale", "Légèreté", "Résistance", "Personnalisable"],
   },
 ]

@@ -126,34 +126,36 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="space-y-2">
-            <h3 className="text-xs font-semibold mb-2">Newsletter</h3>
-            <p className="text-xs mb-3 text-primary-foreground/80">Restez informé de nos dernières actualités et offres</p>
-            {subscribed ? (
-              <div className="bg-primary-foreground/10 p-2 rounded-md text-center">
-                <p className="text-xs">Merci pour votre inscription!</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubscribe} className="flex gap-2">
-                <Input
-                  type="email"
-                  placeholder="Votre email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60 text-xs h-8"
-                />
-                <Button 
-                  type="submit" 
-                  variant="secondary"
-                  size="sm"
-                  className="h-8 px-3 text-xs"
-                >
-                  S'inscrire
-                </Button>
-              </form>
-            )}
-          </div>
+          <div className="space-y-2 max-w-xs">
+  <h3 className="text-xs font-semibold mb-2">Newsletter</h3>
+  <p className="text-xs mb-3 text-primary-foreground/80">Restez informé de nos dernières actualités et offres</p>
+
+  {subscribed ? (
+    <div className="bg-primary-foreground/10 p-2 rounded-md text-center">
+      <p className="text-xs">Merci pour votre inscription!</p>
+    </div>
+  ) : (
+    <form onSubmit={handleSubscribe} className="flex gap-2">
+      <Input
+        type="email"
+        placeholder="Votre email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+        className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60 text-xs h-8"
+      />
+      <Button 
+        type="submit" 
+        variant="secondary"
+        size="sm"
+        className="h-8 px-3 text-xs"
+      >
+        S'inscrire
+      </Button>
+    </form>
+  )}
+</div>
+
         </motion.div>
 
         <motion.div

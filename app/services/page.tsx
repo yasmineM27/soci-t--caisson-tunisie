@@ -152,7 +152,8 @@ export default function ServicesPage() {
           </div>
           <div className="relative h-[300px] rounded-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=300&width=500"
+  src="/societe2.jpg?ght=300&width=500"
+
               alt="Service de fabrication sur mesure"
               fill
               className="object-cover"
