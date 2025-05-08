@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
+import { handleOrderForm } from "@/app/actions/email"
 
 // Type pour les produits du panier
 type CartItem = {
@@ -47,8 +48,6 @@ export default function CheckoutPage() {
     setLoading(false)
   }, [])
 
-  // Calculer le total du panier
-
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
@@ -62,21 +61,41 @@ export default function CheckoutPage() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simuler l'envoi de la commande
-    setTimeout(() => {
-      // Vider le panier
-      localStorage.removeItem("cart")
-      setCartItems([])
-
-      // Afficher la confirmation
-      setOrderComplete(true)
-      setIsSubmitting(false)
-
-      toast({
-        title: "Commande envoyée",
-        description: "Votre commande a été envoyée avec succès. Nous vous contacterons bientôt.",
+    try {
+      // Créer un objet FormData
+      const formDataObj = new FormData()
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataObj.append(key, value.toString())
       })
-    }, 2000)
+
+      // Appeler le Server Action
+      const result = await handleOrderForm(formDataObj, cartItems)
+
+      if (result.success) {
+        // Vider le panier
+        localStorage.removeItem("cart")
+        setCartItems([])
+
+        // Afficher la confirmation
+        setOrderComplete(true)
+
+        toast({
+          title: "Commande envoyée",
+          description: "Votre commande a été envoyée avec succès. Nous vous contacterons bientôt.",
+        })
+      } else {
+        throw new Error("Échec de l'envoi de la commande")
+      }
+    } catch (error) {
+      console.error("Erreur lors de l'envoi de la commande:", error)
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue lors de l'envoi de la commande. Veuillez réessayer.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (loading) {
@@ -277,10 +296,8 @@ export default function CheckoutPage() {
                 <div key={item.id} className="flex justify-between pb-2 border-b">
                   <div>
                     <div className="font-medium">{item.name}</div>
-                    <div className="text-sm text-muted-foreground">
-                    </div>
+                    <div className="text-sm text-muted-foreground"></div>
                   </div>
-              
                 </div>
               ))}
 

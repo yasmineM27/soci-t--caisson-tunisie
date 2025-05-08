@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { Mail, MapPin, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -14,6 +14,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { StructuredData } from "@/components/seo/structured-data"
+import { handleContactForm } from "@/app/actions/email"
 
 export default function ContactPage() {
   const searchParams = useSearchParams()
@@ -37,9 +38,9 @@ export default function ContactPage() {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target
-    setFormData((prev) => ({ 
-      ...prev, 
-      [name]: type === "checkbox" ? checked : value 
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
     }))
   }
 
@@ -55,33 +56,51 @@ export default function ContactPage() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simuler l'envoi du formulaire
-    setTimeout(() => {
-      toast({
-        title: "Formulaire envoyé",
-        description: "Nous vous contacterons dans les plus brefs délais.",
+    try {
+      // Créer un objet FormData à partir du formulaire
+      const formDataObj = new FormData()
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataObj.append(key, value.toString())
       })
+
+      // Appeler le Server Action
+      const result = await handleContactForm(formDataObj)
+
+      if (result.success) {
+        toast({
+          title: "Formulaire envoyé",
+          description: "Nous vous contacterons dans les plus brefs délais.",
+        })
+        setIsSubmitted(true)
+      } else {
+        throw new Error("Échec de l'envoi du formulaire")
+      }
+    } catch (error) {
+      console.error("Erreur lors de l'envoi du formulaire:", error)
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue lors de l'envoi du formulaire. Veuillez réessayer.",
+        variant: "destructive",
+      })
+    } finally {
       setIsSubmitting(false)
-      setIsSubmitted(true)
-    }, 1500)
+    }
   }
 
-  const breadcrumbItems = [
-    { label: "Contact", href: "/contact", isCurrent: true },
-  ]
+  const breadcrumbItems = [{ label: "Contact", href: "/contact", isCurrent: true }]
 
   if (isSubmitted) {
     return (
       <div className="container mx-auto px-6 py-12 lg:px-8">
         <Breadcrumbs items={breadcrumbItems} />
-        
+
         <div className="mx-auto max-w-2xl text-center mb-12">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">Contactez-nous</h1>
           <p className="text-lg">
             Nous sommes à votre disposition pour répondre à toutes vos questions et vous accompagner dans vos projets.
           </p>
         </div>
-        
+
         <Card className="max-w-2xl mx-auto text-center p-8">
           <div className="flex flex-col items-center">
             <div className="h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
@@ -95,9 +114,7 @@ export default function ContactPage() {
               <Button variant="outline" asChild>
                 <Link href="/">Retour à l'accueil</Link>
               </Button>
-              <Button onClick={() => setIsSubmitted(false)}>
-                Envoyer un autre message
-              </Button>
+              <Button onClick={() => setIsSubmitted(false)}>Envoyer un autre message</Button>
             </div>
           </div>
         </Card>
@@ -108,7 +125,7 @@ export default function ContactPage() {
   return (
     <div className="container mx-auto px-6 py-12 lg:px-8">
       <Breadcrumbs items={breadcrumbItems} />
-      
+
       <div className="mx-auto max-w-2xl text-center mb-12">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">Contactez-nous</h1>
         <p className="text-lg">
@@ -231,7 +248,7 @@ export default function ContactPage() {
                 </div>
               </RadioGroup>
             </div>
-            
+
             <div className="flex items-center space-x-2">
               <input
                 type="checkbox"
@@ -263,7 +280,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold">Adresse</h3>
                     <p className="text-muted-foreground">
-                    zone industrielle-Technopole 5036
+                      zone industrielle-Technopole 5036
                       <br />
                       Monastir, Tunisie
                     </p>
@@ -302,15 +319,14 @@ export default function ContactPage() {
           </Card>
 
           <div className="mt-6 h-64 rounded-lg overflow-hidden">
-            {/* Google Maps would go here in a real implementation */}
             <div className="w-full h-full bg-muted flex items-center justify-center">
-              <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.123456789012!2d10.7560129!3d35.7245437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13020d523c895777%3A0x46638e037bd253ea!2sSCT!5e0!3m2!1sen!2stn!4v1650000000000!5m2!1sen!2stn"
-      width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy" 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.123456789012!2d10.7560129!3d35.7245437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13020d523c895777%3A0x46638e037bd253ea!2sSCT!5e0!3m2!1sen!2stn!4v1650000000000!5m2!1sen!2stn"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Google Maps"
               ></iframe>
@@ -318,10 +334,9 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-      
-      {/* Données structurées pour la page de contact */}
-      <StructuredData 
-        type="LocalBusiness" 
+
+      <StructuredData
+        type="LocalBusiness"
         data={{
           name: "Société Caisson Tunisie",
           image: "https://caissontunisie.tn/logo.png",
@@ -330,9 +345,9 @@ export default function ContactPage() {
           address: {
             streetAddress: "Zone Industrielle",
             addressLocality: "Tunis",
-            postalCode: "1000"
-          }
-        }} 
+            postalCode: "1000",
+          },
+        }}
       />
     </div>
   )
