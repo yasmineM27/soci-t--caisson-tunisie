@@ -113,7 +113,6 @@ export default function CartPage() {
                   <TableRow>
                     <TableHead className="w-[100px]">Produit</TableHead>
                     <TableHead>Description</TableHead>
-                    <TableHead className="text-right">Prix</TableHead>
                     <TableHead className="text-center">Quantité</TableHead>
                     <TableHead className="text-right">Total</TableHead>
                     <TableHead className="w-[70px]"></TableHead>

@@ -104,7 +104,7 @@ const featuredProducts = [
     id: 2,
     name: "Panneau Isolant en Polystyrène",
     description: "Isolation thermique optimale pour murs, toitures et sols.",
-    image: "/stc/plaaaaa.PNG",
+    image: "/plaque_isolant_sur_mesure.jpg",
     slug: "panneau-isolant-2cm",
     features: ["Haute performance thermique", "Résistance à l'humidité", "Économie d'énergie", "Écologique"],
   },

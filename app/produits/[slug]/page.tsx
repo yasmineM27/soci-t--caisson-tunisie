@@ -91,11 +91,7 @@ const products = [
         answer: "Le coffret est livré avec renforts métalliques, joues de fermeture et trappe de visite en PVC.",
       },
     ],
-    downloads: [
-      { name: "Fiche technique", url: "#", type: "pdf" },
-      { name: "Guide d'installation", url: "#", type: "pdf" },
-      { name: "Certificat de conformité", url: "#", type: "pdf" },
-    ],
+    
     projects: [
       { name: "Résidence Les Oliviers", description: "Installation de 50 coffrets tunnel à Tunis", image: "/placeholder.svg?height=300&width=400", slug: "residence-les-oliviers" },
       { name: "Villa Jasmin", description: "Rénovation complète avec coffrets tunnel sur mesure", image: "/placeholder.svg?height=300&width=400", slug: "villa-jasmin" },
@@ -165,10 +161,7 @@ const products = [
         answer: "Utilisez un cutter ou une scie fine pour une coupe précise.",
       },
     ],
-    downloads: [
-      { name: "Fiche technique", url: "#", type: "pdf" },
-      { name: "Guide d'installation", url: "#", type: "pdf" },
-    ],
+    
     projects: [
       { name: "Résidence Les Jasmins", description: "Isolation thermique extérieure des murs", image: "/placeholder.svg?height=300&width=400", slug: "residence-les-jasmins" },
       { name: "École Ibn Khaldoun", description: "Isolation des toitures plates", image: "/placeholder.svg?height=300&width=400", slug: "ecole-ibn-khaldoun" },
@@ -241,10 +234,7 @@ const products = [
         answer: "Oui, ce panneau est parfaitement adapté aux systèmes d'isolation thermique par l'extérieur (ITE) avec les finitions appropriées.",
       },
     ],
-    downloads: [
-      { name: "Fiche technique", url: "#", type: "pdf" },
-      { name: "Guide d'installation", url: "#", type: "pdf" },
-    ],
+    
     projects: [
       { name: "Résidence Carthage", description: "Isolation thermique complète en rénovation", image: "/placeholder.svg?height=300&width=400", slug: "residence-carthage" },
       { name: "Centre commercial Azur", description: "Isolation des façades extérieures", image: "/placeholder.svg?height=300&width=400", slug: "centre-commercial-azur" },
@@ -319,10 +309,7 @@ const products = [
         answer: "Le délai standard est de 2 à 4 jours selon la complexité et le volume de la commande. Des délais express peuvent être proposés pour les projets urgents.",
       },
     ],
-    downloads: [
-      { name: "Guide de spécifications", url: "#", type: "pdf" },
-      { name: "Formulaire de commande sur mesure", url: "#", type: "pdf" },
-    ],
+    
     projects: [
       { name: "Hôtel Médina", description: "Isolation acoustique et thermique sur mesure", image: "/placeholder.svg?height=300&width=400", slug: "hotel-medina" },
       { name: "Usine agroalimentaire Sfax", description: "Panneaux isolants pour chambres froides", image: "/placeholder.svg?height=300&width=400", slug: "usine-sfax" },
@@ -397,10 +384,7 @@ const products = [
         answer: "Oui, elles peuvent être nettoyées et réutilisées plusieurs fois si elles sont manipulées avec soin.",
       },
     ],
-    downloads: [
-      { name: "Fiche technique", url: "#", type: "pdf" },
-      { name: "Guide d'utilisation", url: "#", type: "pdf" },
-    ],
+    
     projects: [
       { name: "Coopérative de pêcheurs de Bizerte", description: "Fourniture de Fish Box pour la vente directe", image: "/placeholder.svg?height=300&width=400", slug: "cooperative-bizerte" },
     ],
@@ -474,10 +458,7 @@ const products = [
         answer: "Oui, pour les commandes en volume, nous proposons un service d'impression de logo sur les Fish Box.",
       },
     ],
-    downloads: [
-      { name: "Fiche technique", url: "#", type: "pdf" },
-      { name: "Guide de la chaîne du froid", url: "#", type: "pdf" },
-    ],
+    
     projects: [
       { name: "Réseau de poissonneries Méditerranée", description: "Fourniture de Fish Box pour la distribution quotidienne", image: "/placeholder.svg?height=300&width=400", slug: "reseau-poissonneries" },
     ],
@@ -551,10 +532,7 @@ const products = [
         answer: "Pour une conservation optimale, nous recommandons environ 3-4kg de glace pilée ou 2-3 pains de glace de grande taille.",
       },
     ],
-    downloads: [
-      { name: "Fiche technique", url: "#", type: "pdf" },
-      { name: "Guide logistique", url: "#", type: "pdf" },
-    ],
+    
     projects: [
       { name: "Criée du Port de Sfax", description: "Fourniture de Fish Box pour les ventes aux enchères", image: "/placeholder.svg?height=300&width=400", slug: "criee-sfax" },
       { name: "Exportateur de produits marins", description: "Utilisation pour expéditions nationales", image: "/placeholder.svg?height=300&width=400", slug: "exportateur-produits-marins" },
@@ -629,11 +607,7 @@ const products = [
         answer: "Absolument, cette caisse convient également au transport de viandes, produits laitiers et autres denrées périssables nécessitant une chaîne du froid.",
       },
     ],
-    downloads: [
-      { name: "Fiche technique", url: "#", type: "pdf" },
-      { name: "Guide d'exportation", url: "#", type: "pdf" },
-      { name: "Certificat de conformité", url: "#", type: "pdf" },
-    ],
+    
     projects: [
       { name: "Groupement d'exportateurs tunisiens", description: "Fourniture de Fish Box pour l'export vers l'Europe", image: "/placeholder.svg?height=300&width=400", slug: "exportateurs-tunisiens" },
       { name: "Chaîne de restaurants de fruits de mer", description: "Approvisionnement quotidien en produits frais", image: "/placeholder.svg?height=300&width=400", slug: "restaurants-fruits-mer" },
@@ -708,10 +682,7 @@ const products = [
         answer: "Pour une découpe nette, utilisez un cutter bien aiguisé, un fil chaud ou une scie à fine denture. Évitez les mouvements brusques pour ne pas fragmenter le matériau.",
       },
     ],
-    downloads: [
-      { name: "Fiche technique", url: "#", type: "pdf" },
-      { name: "Guide d'utilisation", url: "#", type: "pdf" },
-    ],
+    
     projects: [
       { name: "Chantiers résidentiels Tunis", description: "Isolation thermique de base pour logements", image: "/placeholder.svg?height=300&width=400", slug: "chantiers-tunis" },
       { name: "Entreprise d'emballage Sousse", description: "Protection de produits électroniques", image: "/placeholder.svg?height=300&width=400", slug: "emballage-sousse" },
@@ -785,10 +756,7 @@ const products = [
       answer: "Utilisez un cutter aiguisé, un fil chaud ou une scie fine. La structure est légèrement plus dense mais reste facile à découper proprement.",
     },
   ],
-  downloads: [
-    { name: "Fiche technique", url: "#", type: "pdf" },
-    { name: "Guide d'utilisation", url: "#", type: "pdf" },
-  ],
+ 
   projects: [
     { name: "Isolation industrielle Tunis", description: "Isolation de toitures techniques", image: "/placeholder.svg?height=300&width=400", slug: "isolation-tunis" },
     { name: "Entreprise de calage Sfax", description: "Emballages techniques de pièces lourdes", image: "/placeholder.svg?height=300&width=400", slug: "calage-sfax" },
@@ -864,10 +832,7 @@ const products = [
         answer: "Pour une découpe nette, utilisez un cutter bien aiguisé, un fil chaud ou une scie à fine denture. Évitez les mouvements brusques pour ne pas fragmenter le matériau.",
       },
     ],
-    downloads: [
-      { name: "Fiche technique", url: "#", type: "pdf" },
-      { name: "Guide d'utilisation", url: "#", type: "pdf" },
-    ],
+   
     projects: [
       { name: "Chantiers résidentiels Tunis", description: "Isolation thermique de base pour logements", image: "/placeholder.svg?height=300&width=400", slug: "chantiers-tunis" },
       { name: "Entreprise d'emballage Sousse", description: "Protection de produits électroniques", image: "/placeholder.svg?height=300&width=400", slug: "emballage-sousse" },
@@ -1156,39 +1121,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               ))}
             </div>
           </TabsContent>
-          <TabsContent value="installation" className="p-6 bg-muted/30 rounded-md mt-6">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-bold mb-4">Guide d'installation</h3>
-                <ol className="space-y-4">
-                  {product.installation.steps.map((step, index) => (
-                    <li key={index} className="flex">
-                      <div className="h-6 w-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center mr-3 flex-shrink-0">
-                        {index + 1}
-                      </div>
-                      <p>{step}</p>
-                    </li>
-                  ))}
-                </ol>
-                <div className="mt-6">
-                  <Button variant="outline" asChild>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                      <Download className="h-4 w-4" />
-                      Télécharger le guide complet
-                    </a>
-                  </Button>
-                </div>
-              </div>
-              <div>
-                <div className="aspect-video w-full bg-muted rounded-lg overflow-hidden">
-                  {/* Placeholder for video */}
-                  <div className="w-full h-full flex items-center justify-center">
-                    <p className="text-muted-foreground">Vidéo d'installation</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </TabsContent>
+          
           <TabsContent value="faq" className="p-6 bg-muted/30 rounded-md mt-6">
             <h3 className="text-xl font-bold mb-6">Questions fréquentes</h3>
             <ProductFaq faqItems={product.faq} />
@@ -1196,7 +1129,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         </Tabs>
       </div>
 
-      {/* Projects using this product */}
+      {/* Projects using this product 
       {product.projects && product.projects.length > 0 && (
         <div className="mb-16">
           <h2 className="text-2xl font-bold mb-6">Projets réalisés avec ce produit</h2>
@@ -1217,7 +1150,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             ))}
           </div>
         </div>
-      )}
+      )}*/}
 
       {/* Reviews */}
       <div className="mb-16">
