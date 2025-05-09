@@ -7,7 +7,7 @@ import { Resend } from "resend"
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 // Adresse email de réception (votre email)
-const RECIPIENT_EMAIL = "yasminemassoudi26@gmail.com"
+const RECIPIENT_EMAIL = "caissontunisie20@gmail.com"
 
 // Fonction pour envoyer un email
 export async function sendEmail(subject: string, content: string) {
