@@ -16,20 +16,34 @@ export default function Icon() {
     (
       <div
         style={{
-          fontSize: 18,
-          background: 'linear-gradient(135deg, #ce6801ff 0%, #ae5f19ff 100%)',
           width: '100%',
           height: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: 'white',
+          backgroundColor: 'white',
           borderRadius: '6px',
-          fontWeight: 'bold',
+          padding: '2px',
           boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
         }}
       >
-        SCT
+        {/* Simuler le logo avec du texte stylisé */}
+        <div
+          style={{
+            fontSize: 16,
+            background: 'linear-gradient(135deg, #ce6801ff 0%, #ae5f19ff 100%)',
+            width: '28px',
+            height: '28px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'white',
+            borderRadius: '4px',
+            fontWeight: 'bold',
+          }}
+        >
+          SCT
+        </div>
       </div>
     ),
     {
