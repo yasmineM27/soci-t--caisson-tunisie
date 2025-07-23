@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Check, Download, Share, Star, Truck, Shield, Award } from "lucide-react"
+import { Check, Star, Truck, Shield, Award } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
@@ -8,11 +8,11 @@ import { Card, CardContent } from "@/components/ui/card"
 import { AddToCartButton } from "@/components/add-to-cart-button"
 import { View3DButton } from "@/components/view-3d-button"
 import { ProductReviews } from "@/components/product-reviews"
-import { RelatedProducts } from "@/components/related-products"
+
 import { ProductFaq } from "@/components/product-faq"
 import { ProductStructuredData, FAQStructuredData, BreadcrumbStructuredData } from "@/components/seo/structured-data"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
-import { getProductSEOData, generateKeywordsString } from "@/lib/seo-keywords"
+import { generateKeywordsString } from "@/lib/seo-keywords"
 
 const products = [
   {
@@ -854,7 +854,6 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   // Utiliser la stratégie de mots-clés SEO optimisée
-  const seoData = getProductSEOData(product.slug)
   const keywords = generateKeywordsString(product.slug)
 
   // Description SEO optimisée
@@ -917,10 +916,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
     { label: product.name, href: `/produits/${product.slug}`, isCurrent: true },
   ]
 
-  // Related products
-  const relatedProductsData = product.relatedProducts
-    ? product.relatedProducts.map((id) => products.find((p) => p.id === id)).filter(Boolean)
-    : []
+
 
   return (
     <div className="container mx-auto px-6 py-8 lg:px-8">
@@ -1181,47 +1177,47 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
       {/* SEO Content Section */}
       <div className="mb-16">
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8">
-          <h2 className="text-2xl font-bold mb-6 text-center">
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-lg p-8 border border-blue-100 dark:border-blue-800/30">
+          <h2 className="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-gray-100">
             Pourquoi choisir {product.name} de Société Caisson Tunisie ?
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-blue-800">
+              <h3 className="text-xl font-semibold mb-4 text-blue-800 dark:text-blue-300">
                 🏆 Expertise Tunisienne en Polystyrène Expansé
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
                 Société Caisson Tunisie est le leader tunisien dans la fabrication de produits en polystyrène expansé (EPS).
                 Notre {product.name.toLowerCase()} combine innovation, qualité et performance pour répondre aux exigences
                 les plus strictes du marché tunisien et international.
               </p>
               <ul className="space-y-2">
-                <li className="flex items-center text-sm">
-                  <Check className="h-4 w-4 text-green-600 mr-2" />
+                <li className="flex items-center text-sm text-gray-700 dark:text-gray-300">
+                  <Check className="h-4 w-4 text-green-600 dark:text-green-400 mr-2" />
                   <span>Fabrication 100% tunisienne</span>
                 </li>
-                <li className="flex items-center text-sm">
-                  <Check className="h-4 w-4 text-green-600 mr-2" />
+                <li className="flex items-center text-sm text-gray-700 dark:text-gray-300">
+                  <Check className="h-4 w-4 text-green-600 dark:text-green-400 mr-2" />
                   <span>Conformité aux normes européennes</span>
                 </li>
-                <li className="flex items-center text-sm">
-                  <Check className="h-4 w-4 text-green-600 mr-2" />
+                <li className="flex items-center text-sm text-gray-700 dark:text-gray-300">
+                  <Check className="h-4 w-4 text-green-600 dark:text-green-400 mr-2" />
                   <span>Livraison rapide en Tunisie</span>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-blue-800">
+              <h3 className="text-xl font-semibold mb-4 text-blue-800 dark:text-blue-300">
                 💡 Applications et Secteurs d'Activité
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
                 Notre {product.name.toLowerCase()} est idéal pour les professionnels du bâtiment, architectes,
                 et particuliers en Tunisie recherchant des solutions d'isolation thermique performantes et durables.
               </p>
               <div className="grid grid-cols-2 gap-2 text-sm">
                 {product.applications?.slice(0, 4).map((app, index) => (
-                  <div key={index} className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                  <div key={index} className="flex items-center text-gray-700 dark:text-gray-300">
+                    <div className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full mr-2"></div>
                     <span>{app}</span>
                   </div>
                 ))}
@@ -1229,19 +1225,19 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             </div>
           </div>
 
-          <div className="mt-8 p-6 bg-white rounded-lg shadow-sm">
-            <h3 className="text-lg font-semibold mb-3 text-center">
+          <div className="mt-8 p-6 bg-white dark:bg-gray-800/50 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">
+            <h3 className="text-lg font-semibold mb-3 text-center text-gray-900 dark:text-gray-100">
               🎯 Mots-clés associés à ce produit
             </h3>
             <div className="flex flex-wrap gap-2 justify-center">
               {product.tags.map((tag, index) => (
-                <span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                <span key={index} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm border border-blue-200 dark:border-blue-700">
                   {tag}
                 </span>
               ))}
-              <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">polystyrène expansé tunisie</span>
-              <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">isolation thermique</span>
-              <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">EPS Tunisie</span>
+              <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm border border-blue-200 dark:border-blue-700">polystyrène expansé tunisie</span>
+              <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm border border-blue-200 dark:border-blue-700">isolation thermique</span>
+              <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm border border-blue-200 dark:border-blue-700">EPS Tunisie</span>
             </div>
           </div>
         </div>
