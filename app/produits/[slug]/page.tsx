@@ -10,7 +10,7 @@ import { View3DButton } from "@/components/view-3d-button"
 import { ProductReviews } from "@/components/product-reviews"
 import { RelatedProducts } from "@/components/related-products"
 import { ProductFaq } from "@/components/product-faq"
-import { StructuredData } from "@/components/seo/structured-data"
+import { ProductStructuredData } from "@/components/seo/structured-data"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 
 const products = [
@@ -1177,13 +1177,23 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* Structured Data for SEO */}
-      <StructuredData
-        type="Product"
-        data={{
+      <ProductStructuredData
+        product={{
+          id: product.id,
           name: product.name,
-          image: product.images[0],
           description: product.description,
+          price: 0, // Prix sur demande - sera géré dans le composant
+          currency: "TND",
+          images: product.images,
+          inStock: product.inStock,
+          reviews: product.reviews,
+          category: product.category,
+          brand: "Société Caisson Tunisie",
+          sku: `SCT-${product.id}`,
+          warranty: product.warranty,
+          leadTime: product.leadTime
         }}
+        baseUrl="https://societe-caisson-tunisie.tn"
       />
     </div>
   )

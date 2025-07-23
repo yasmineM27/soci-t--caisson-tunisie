@@ -1,0 +1,59 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Coffret Tunnel Volet Roulant",
+  "description": "Solution légère et isolante pour l'installation de volets roulants.",
+  "image": [
+    "https://societe-caisson-tunisie.tn/stc/coff.jpeg",
+    "https://societe-caisson-tunisie.tn/coffret3.png"
+  ],
+  "brand": {
+    "@type": "Brand",
+    "name": "Société Caisson Tunisie"
+  },
+  "category": "coffrets",
+  "sku": "SCT-1",
+  "mpn": "SCT-1",
+  "url": "https://societe-caisson-tunisie.tn/produits/coffret-tunnel-volet-roulant",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://societe-caisson-tunisie.tn/produits/coffret-tunnel-volet-roulant",
+    "priceCurrency": "TND",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": "0",
+      "priceCurrency": "TND",
+      "valueAddedTaxIncluded": false,
+      "description": "Prix sur demande - Contactez-nous pour un devis personnalisé"
+    },
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Société Caisson Tunisie",
+      "url": "https://societe-caisson-tunisie.tn"
+    },
+    "deliveryLeadTime": {
+      "@type": "QuantitativeValue",
+      "value": "2-3 jours"
+    },
+    "warranty": {
+      "@type": "WarrantyPromise",
+      "durationOfWarranty": {
+        "@type": "QuantitativeValue",
+        "value": "2 ans"
+      }
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "23",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "Société Caisson Tunisie",
+    "url": "https://societe-caisson-tunisie.tn"
+  }
+}
