@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Pages principales
   const routes = [
     {
+      
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
