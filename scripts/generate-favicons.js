@@ -12,20 +12,24 @@ const faviconPath = path.join(__dirname, '../public/favicon.ico');
 
 if (fs.existsSync(logoPath)) {
   console.log('✅ Logo trouvé:', logoPath);
-  
-  // Pour l'instant, on copie juste le logo comme favicon
-  // Dans un vrai projet, on utiliserait une librairie comme 'sharp' pour redimensionner
+
+  // Copier le logo comme favicon.ico (Google préfère les fichiers statiques)
   fs.copyFileSync(logoPath, faviconPath);
-  console.log('✅ favicon.ico créé');
-  
-  // Créer les autres tailles (simulation)
+  console.log('✅ favicon.ico créé (copie du logo)');
+
+  // Créer les autres tailles
   const sizes = [16, 32, 180, 192, 512];
   sizes.forEach(size => {
     const targetPath = path.join(__dirname, `../public/favicon-${size}x${size}.png`);
     fs.copyFileSync(logoPath, targetPath);
     console.log(`✅ favicon-${size}x${size}.png créé`);
   });
-  
+
+  // Créer un favicon.ico optimisé pour Google
+  const googleFaviconPath = path.join(__dirname, '../public/google-favicon.ico');
+  fs.copyFileSync(logoPath, googleFaviconPath);
+  console.log('✅ google-favicon.ico créé (optimisé pour Google)');
+
   console.log('🎉 Tous les favicons ont été générés !');
 } else {
   console.error('❌ Logo non trouvé:', logoPath);

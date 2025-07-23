@@ -54,7 +54,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+      { url: '/favicon.ico', sizes: '16x16', type: 'image/x-icon' },
       { url: '/icon', sizes: '32x32', type: 'image/png' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
@@ -63,8 +64,19 @@ export const metadata: Metadata = {
       { url: '/apple-icon', sizes: '180x180', type: 'image/png' },
       { url: '/favicon-180x180.png', sizes: '180x180', type: 'image/png' },
     ],
-    shortcut: ['/favicon.ico'],
+    shortcut: '/favicon.ico',
     other: [
+      {
+        rel: 'icon',
+        url: '/favicon.ico',
+        sizes: 'any',
+        type: 'image/x-icon',
+      },
+      {
+        rel: 'mask-icon',
+        url: '/icon',
+        color: '#ce6801',
+      },
       {
         rel: 'icon',
         url: '/favicon-192x192.png',
@@ -89,6 +101,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
+      <head>
+        {/* Favicon explicite pour Google */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        {/* Meta pour forcer l'indexation du favicon */}
+        <meta name="msapplication-TileColor" content="#ce6801" />
+        <meta name="theme-color" content="#ce6801" />
+      </head>
       <body className={inter.className}>
         {/* Remplacez GA-XXXXXXXXXX par votre ID de mesure Google Analytics */        /*<GoogleAnalytics measurementId="GA-XXXXXXXXXX" />*/
 }

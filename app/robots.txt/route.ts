@@ -12,6 +12,12 @@ export function GET(request: NextRequest) {
 User-agent: *
 Allow: /
 
+# Allow favicon and icons for better indexing
+Allow: /favicon.ico
+Allow: /icon
+Allow: /apple-icon
+Allow: /favicon-*.png
+
 # Disallow admin pages
 Disallow: /admin/
 Disallow: /admin/*
@@ -21,7 +27,10 @@ Disallow: /panier
 Disallow: /commande
 
 # Sitemap
-Sitemap: ${baseUrl}/sitemap.xml`.trim()
+Sitemap: ${baseUrl}/sitemap.xml
+
+# Favicon location for search engines
+# Favicon: ${baseUrl}/favicon.ico`.trim()
 
   return new Response(robotsTxt, {
     headers: {
