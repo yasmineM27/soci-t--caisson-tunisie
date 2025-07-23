@@ -33,7 +33,7 @@ const heroBackgroundImages = [
   "/stc/4.jpg",            // Troisième image
   "/stc/5.jpeg"             // Quatrième image
 ];
-const brochures: Brochure[] = [
+/*const brochures: Brochure[] = [
   {
     id: 1,
     title: "Fiche Technique du Coffret Tunnel Volet Roulant",
@@ -51,12 +51,12 @@ const brochures: Brochure[] = [
     fileSize: "3.1 MB",
     
   },
-];
+];*/
 const slogans: string[] = [
   "Your solution for innovative construction",
   "Construire mieux, isoler plus, dépenser moins.",
   "Caisson Tunisie — L'isolation qui construit l'avenir.",
-];
+]; 
 // Données pour les statistiques
 const stats = [
   {
@@ -188,9 +188,7 @@ export default function Home() {
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1])
 
   return (
-  
-    
-    <div className="flex flex-col min-h-screen">
+     <div className="flex flex-col min-h-screen">
       <Head>
         <meta name="google-site-verification" content="google2b9195924cad711b.html" />
       </Head>
@@ -239,8 +237,6 @@ export default function Home() {
       </section>
 
    <CarouselSlogan />
-      {/* Brochures Section */}
-      <BrochuresSection brochures={brochures} />
 {/* Testimonials Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
