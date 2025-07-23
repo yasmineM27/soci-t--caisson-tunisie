@@ -61,6 +61,29 @@ export function StructuredData({ type, data }: StructuredDataProps) {
   )
 }
 
+interface FAQItem {
+  question: string
+  answer: string
+}
+
+interface FAQStructuredDataProps {
+  faqs: FAQItem[]
+}
+
+interface BreadcrumbItem {
+  name: string
+  url: string
+}
+
+interface BreadcrumbStructuredDataProps {
+  items: BreadcrumbItem[]
+  baseUrl?: string
+}
+
+interface OrganizationStructuredDataProps {
+  baseUrl?: string
+}
+
 export function ProductStructuredData({ product, baseUrl = "https://societe-caisson-tunisie.tn" }: ProductStructuredDataProps) {
   const [isClient, setIsClient] = useState(false)
 
@@ -146,6 +169,135 @@ export function ProductStructuredData({ product, baseUrl = "https://societe-cais
       type="application/ld+json"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(cleanStructuredData),
+      }}
+    />
+  )
+}
+
+export function FAQStructuredData({ faqs }: FAQStructuredDataProps) {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  if (!isClient || !faqs || faqs.length === 0) {
+    return null
+  }
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(faq => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer
+      }
+    }))
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(structuredData),
+      }}
+    />
+  )
+}
+
+export function BreadcrumbStructuredData({ items, baseUrl = "https://societe-caisson-tunisie.tn" }: BreadcrumbStructuredDataProps) {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  if (!isClient || !items || items.length === 0) {
+    return null
+  }
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url.startsWith('http') ? item.url : `${baseUrl}${item.url}`
+    }))
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(structuredData),
+      }}
+    />
+  )
+}
+
+export function OrganizationStructuredData({ baseUrl = "https://societe-caisson-tunisie.tn" }: OrganizationStructuredDataProps) {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  if (!isClient) {
+    return null
+  }
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Société Caisson Tunisie",
+    alternateName: "SCT",
+    url: baseUrl,
+    logo: `${baseUrl}/stc/logo.png`,
+    description: "Spécialiste en fabrication de produits en polystyrène expansé (EPS) depuis 2020. Coffrets tunnel, panneaux isolants, Fish Box et solutions sur mesure.",
+    foundingDate: "2020",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Zone industrielle-Technopole",
+      addressLocality: "Monastir",
+      postalCode: "5036",
+      addressCountry: "TN"
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+216 93 642 505",
+      contactType: "customer service",
+      email: "Caissontunisie20@gmail.com",
+      availableLanguage: ["French", "Arabic"]
+    },
+    sameAs: [
+      "https://www.facebook.com/profile.php?id=61566954398857",
+      "https://www.linkedin.com/in/ste-caisson-tunisie-b89763201/"
+    ],
+    areaServed: {
+      "@type": "Country",
+      name: "Tunisia"
+    },
+    knowsAbout: [
+      "Polystyrène expansé",
+      "Isolation thermique",
+      "Coffrets tunnel",
+      "Panneaux isolants",
+      "Fish Box",
+      "Construction",
+      "Emballage isotherme"
+    ]
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(structuredData),
       }}
     />
   )

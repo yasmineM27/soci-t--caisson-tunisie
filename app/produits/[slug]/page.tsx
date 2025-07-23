@@ -10,8 +10,9 @@ import { View3DButton } from "@/components/view-3d-button"
 import { ProductReviews } from "@/components/product-reviews"
 import { RelatedProducts } from "@/components/related-products"
 import { ProductFaq } from "@/components/product-faq"
-import { ProductStructuredData } from "@/components/seo/structured-data"
+import { ProductStructuredData, FAQStructuredData, BreadcrumbStructuredData } from "@/components/seo/structured-data"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { getProductSEOData, generateKeywordsString } from "@/lib/seo-keywords"
 
 const products = [
   {
@@ -848,23 +849,49 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     return {
       title: "Produit non trouvé - Société Caisson Tunisie",
       description: "Le produit que vous recherchez n'existe pas.",
+      robots: "noindex, nofollow"
     }
   }
 
+  // Utiliser la stratégie de mots-clés SEO optimisée
+  const seoData = getProductSEOData(product.slug)
+  const keywords = generateKeywordsString(product.slug)
+
+  // Description SEO optimisée
+  const seoDescription = `${product.description} ⭐ Note ${product.reviews.average}/5 (${product.reviews.count} avis) ✓ Garantie ${product.warranty} ✓ Livraison ${product.leadTime} ✓ Devis gratuit`
+
   return {
-    title: `${product.name} - Société Caisson Tunisie`,
-    description: product.description,
+    title: `${product.name} - Prix et Devis | Société Caisson Tunisie`,
+    description: seoDescription,
+    keywords: keywords,
+    authors: [{ name: "Société Caisson Tunisie" }],
+    creator: "Société Caisson Tunisie",
+    publisher: "Société Caisson Tunisie",
+    robots: "index, follow",
     openGraph: {
       title: `${product.name} - Société Caisson Tunisie`,
-      description: product.description,
+      description: seoDescription,
+      url: `https://societe-caisson-tunisie.tn/produits/${product.slug}`,
+      siteName: "Société Caisson Tunisie",
       images: [
         {
-          url: product.images[0],
+          url: `https://societe-caisson-tunisie.tn${product.images[0]}`,
           width: 800,
           height: 600,
-          alt: product.name,
+          alt: `${product.name} - Société Caisson Tunisie`,
         },
       ],
+      locale: "fr_TN",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.name} - Société Caisson Tunisie`,
+      description: product.description,
+      images: [`https://societe-caisson-tunisie.tn${product.images[0]}`],
+    },
+    alternates: {
+      canonical: `https://societe-caisson-tunisie.tn/produits/${product.slug}`,
     },
   }
 }
@@ -914,11 +941,11 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 >
                   <Image
                     src={image || "/placeholder.svg"}
-                    alt={`${product.name} - Image ${index + 1}`}
+                    alt={`${product.name} - ${product.description} - Société Caisson Tunisie - Image ${index + 1}`}
                     fill
                     className="object-contain p-4" // Ajout de padding pour les images avec fond
                     priority={index === 0}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px" 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px"
                   />
                 </TabsContent>
               ))}
@@ -938,7 +965,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                   <div className="relative aspect-square w-full overflow-hidden rounded-md border-2 border-transparent group-data-[state=active]:border-primary transition-all">
                     <Image
                       src={image || "/placeholder.svg"}
-                      alt={`${product.name} - Miniature ${index + 1}`}
+                      alt={`${product.name} - Miniature ${index + 1} - Polystyrène expansé Tunisie`}
                       fill
                       className="object-cover group-data-[state=active]:opacity-100 opacity-70 hover:opacity-100 transition-opacity"
                       sizes="100px"
@@ -967,7 +994,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                       : "Fish Box"}
                 </Link>
               )}
-              <h1 className="text-3xl font-bold mt-2 mb-2">{product.name}</h1>
+              <h1 className="text-3xl font-bold mt-2 mb-2">{product.name} - Polystyrène Expansé Tunisie</h1>
 
               <div className="flex items-center gap-2 mb-4">
                 <div className="flex">
@@ -1152,9 +1179,77 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         </div>
       )}*/}
 
+      {/* SEO Content Section */}
+      <div className="mb-16">
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8">
+          <h2 className="text-2xl font-bold mb-6 text-center">
+            Pourquoi choisir {product.name} de Société Caisson Tunisie ?
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold mb-4 text-blue-800">
+                🏆 Expertise Tunisienne en Polystyrène Expansé
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Société Caisson Tunisie est le leader tunisien dans la fabrication de produits en polystyrène expansé (EPS).
+                Notre {product.name.toLowerCase()} combine innovation, qualité et performance pour répondre aux exigences
+                les plus strictes du marché tunisien et international.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-sm">
+                  <Check className="h-4 w-4 text-green-600 mr-2" />
+                  <span>Fabrication 100% tunisienne</span>
+                </li>
+                <li className="flex items-center text-sm">
+                  <Check className="h-4 w-4 text-green-600 mr-2" />
+                  <span>Conformité aux normes européennes</span>
+                </li>
+                <li className="flex items-center text-sm">
+                  <Check className="h-4 w-4 text-green-600 mr-2" />
+                  <span>Livraison rapide en Tunisie</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-4 text-blue-800">
+                💡 Applications et Secteurs d'Activité
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Notre {product.name.toLowerCase()} est idéal pour les professionnels du bâtiment, architectes,
+                et particuliers en Tunisie recherchant des solutions d'isolation thermique performantes et durables.
+              </p>
+              <div className="grid grid-cols-2 gap-2 text-sm">
+                {product.applications?.slice(0, 4).map((app, index) => (
+                  <div key={index} className="flex items-center">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                    <span>{app}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 p-6 bg-white rounded-lg shadow-sm">
+            <h3 className="text-lg font-semibold mb-3 text-center">
+              🎯 Mots-clés associés à ce produit
+            </h3>
+            <div className="flex flex-wrap gap-2 justify-center">
+              {product.tags.map((tag, index) => (
+                <span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                  {tag}
+                </span>
+              ))}
+              <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">polystyrène expansé tunisie</span>
+              <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">isolation thermique</span>
+              <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">EPS Tunisie</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Reviews */}
       <div className="mb-16">
-        <h2 className="text-2xl font-bold mb-6">Avis clients</h2>
+        <h2 className="text-2xl font-bold mb-6">Avis clients vérifiés</h2>
         <ProductReviews productId={product.id} />
       </div>
 
@@ -1193,6 +1288,19 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
           warranty: product.warranty,
           leadTime: product.leadTime
         }}
+        baseUrl="https://societe-caisson-tunisie.tn"
+      />
+
+      {/* FAQ Structured Data */}
+      <FAQStructuredData faqs={product.faq} />
+
+      {/* Breadcrumb Structured Data */}
+      <BreadcrumbStructuredData
+        items={[
+          { name: "Accueil", url: "/" },
+          { name: "Produits", url: "/produits" },
+          { name: product.name, url: `/produits/${product.slug}` }
+        ]}
         baseUrl="https://societe-caisson-tunisie.tn"
       />
     </div>

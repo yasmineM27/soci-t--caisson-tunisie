@@ -20,6 +20,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import Head from 'next/head'
 import CarouselSlogan from '@/components/CarouselSlogan';
 import { useState} from "react"
+import { OrganizationStructuredData } from "@/components/seo/structured-data"
 
 import { GoogleReviews } from "@/components/google-reviews"
 import { StatsSection } from "@/components/stats-section"
@@ -636,6 +637,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Organization Structured Data */}
+      <OrganizationStructuredData baseUrl="https://societe-caisson-tunisie.tn" />
     </div>
   )
 }
